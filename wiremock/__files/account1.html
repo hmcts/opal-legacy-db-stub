@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h1>Account 1</h1>
+<p>Wiremock has served this file up by performing a URL Path Pattern match and extracting part of the path
+  using the Handlebars templating engine to create the filename (i.e. 'account1.html') of this file.
+  See the <a href="https://handlebarsjs.com/guide/" target="_blank">Handlebars website</a></p>
+<p>The <a href="/account/2">/account/2</a> url will serve up a completely different resource.</p>
+<p>Does Handlebars work in the files served up from the <i>__files</i> directory? It should do.</p>
+<p>Here are some examples (see <a href="https://wiremock.org/docs/response-templating/#the-request-model">https://wiremock.org/docs/response-templating/#the-request-model</a> for more details):</p>
+<table>
+  <tbody>
+    <tr>
+      <td><code>{{trim '{{'}} request.url {{trim '}}'}} : </code></td>
+      <td><code>{{ request.url }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.path {{trim '}}'}} : </code></td>
+      <td><code>{{ request.path }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.pathSegments.[0] {{trim '}}'}} : </code></td>
+      <td><code>{{ request.pathSegments.[0] }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.pathSegments.[1] {{trim '}}'}} : </code></td>
+      <td><code>{{ request.pathSegments.[1] }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.method {{trim '}}'}} : </code></td>
+      <td><code>{{ request.method }} </code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.host {{trim '}}'}} : </code></td>
+      <td><code>{{ request.host }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.port {{trim '}}'}} : </code></td>
+      <td><code>{{ request.port }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.baseUrl {{trim '}}'}} : </code></td>
+      <td><code>{{ request.baseUrl }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.headers.Accept {{trim '}}'}} : </code></td>
+      <td><code>{{ request.headers.Accept }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} string-length request.headers.Accept {{trim '}}'}} : </code></td>
+      <td><code>{{ string-length request.headers.Accept }}</code></td>
+      <td><- This is our bespoke Java functionality from class StringLengthExtension.</br>See <a href="https://wiremock.org/docs/extending-wiremock/" target="_blank">https://wiremock.org/docs/extending-wiremock</a></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.headers.Accept-Language {{trim '}}'}} : </code></td>
+      <td><code>{{ request.headers.Accept-Language }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.headers.User-Agent {{trim '}}'}} : </code></td>
+      <td><code>{{ request.headers.User-Agent }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} request.body {{trim '}}'}} : </code></td>
+      <td><code>{{ request.body }}</code></td>
+    </tr>
+    <tr>
+      <td><code>{{trim '{{'}} dbData.accountId {{trim '}}'}} : </code></td>
+      <td><code>{{ dbData.accountId }}</code></td>
+      <td><- This is our bespoke Java functionality from class CustomDataExtension.</br>See <a href="https://wiremock.org/docs/extending-wiremock/" target="_blank">https://wiremock.org/docs/extending-wiremock</a></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

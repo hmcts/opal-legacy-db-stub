@@ -1,0 +1,78 @@
+#!groovy
+
+@Library("Infrastructure")
+
+import uk.gov.hmcts.contino.GradleBuilder
+
+def type = "java"
+def product = "opal"
+def component = "legacy-db-stub"
+
+def branchesToSync = ['demo']
+
+GradleBuilder builder = new GradleBuilder(this, product)
+
+withPipeline(type, product, component) {
+  onMaster {
+    env.WIREMOCK_SERVER_MAPPINGS_PATH = "wiremock"
+    afterAlways('smoketest:staging') {
+      echo "Disabling prod build"
+      sh "rm -rf infrastructure/"
+    }
+  }
+  enableSlackNotifications('#opal-builds')
+  syncBranchesWithMaster(branchesToSync)
+
+  afterAlways('test') {
+    builder.gradle('jacocoTestReport')
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "build/reports/checkstyle",
+      reportFiles          : "main.html",
+      reportName           : "Checkstyle Main Report"
+    ]
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "build/reports/checkstyle",
+      reportFiles          : "test.html",
+      reportName           : "Checkstyle Test Report"
+    ]
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "build/reports/checkstyle",
+      reportFiles          : "integrationTest.html",
+      reportName           : "Checkstyle Integration Test Report"
+    ]
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "build/reports/tests/test",
+      reportFiles          : "index.html",
+      reportName           : "Unit Tests Report"
+    ]
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "build/reports/pmd",
+      reportFiles          : "main.html",
+      reportName           : "PMD Report"
+    ]
+  }
+
+  afterFailure('test') {
+    junit '**/test-results/integration/*.xml'
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/account/.*"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "text/html"
+    },
+    "bodyFileName": "account{{ request.pathSegments.[1] }}.html"
+  }
+}
