@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "PUT",
+    "urlPath": "/test"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "result": "putted"
+    }
+  }
+}
