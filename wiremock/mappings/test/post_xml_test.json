@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/test",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "text/xml"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "equalToXml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><test>request</test>"
+      }
+    ]
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "text/xml"
+    },
+    "body":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><test>response</test>"
+  }
+}
