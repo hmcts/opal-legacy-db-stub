@@ -1,0 +1,31 @@
+server:
+  port: 4553
+
+management:
+  endpoint:
+    health:
+      show-details: "always"
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health, info, prometheus
+
+springdoc:
+  packagesToScan: uk.gov.hmcts.opal.legacy.stub.controllers
+  writer-with-order-by-keys: true
+
+spring:
+  config:
+    import: "optional:configtree:/mnt/secrets/opal/"
+  application:
+    name: Opal Legacy DB Stub
+
+wiremock:
+  server:
+    host: 127.0.0.1
+    mappings-path: ${WIREMOCK_SERVER_MAPPINGS_PATH:wiremock}
+
+azure:
+  application-insights:
+    instrumentation-key: ${opal.AppInsightsInstrumentationKey:00000000-0000-0000-0000-000000000000}

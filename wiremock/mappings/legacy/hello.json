@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/hello"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "text/html"
+    },
+    "body":"<!DOCTYPE html>\n<html>\n<body>\n\n<h1>Opal Legacy DB Stub Service</h1>\n<p>This service uses Wiremock mappings to simulate the legacy DB for integration testing in environments where the actual Legacy service may not be available.</p>\n\n</body>\n</html>"
+  }
+}
