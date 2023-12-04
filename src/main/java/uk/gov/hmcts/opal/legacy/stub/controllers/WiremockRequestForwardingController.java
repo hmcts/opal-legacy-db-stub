@@ -87,7 +87,8 @@ public class WiremockRequestForwardingController {
             HttpMethod httpMethod) throws IOException, InterruptedException {
 
         var requestPath = new AntPathMatcher().extractPathWithinPattern(CATCH_ALL_PATH, request.getRequestURI());
-        var requestBuilder = newBuilder(URI.create(getMockHttpServerUrl(requestPath)))
+        var requestQuery = "?" + request.getQueryString();
+        var requestBuilder = newBuilder(URI.create(getMockHttpServerUrl(requestPath + requestQuery)))
                 .method(httpMethod.name(), bodyPublisher);
 
         transferRequestHeaders(request, requestBuilder);

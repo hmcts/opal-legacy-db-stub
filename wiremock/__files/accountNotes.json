@@ -1,0 +1,9 @@
+{
+  "noteId": 100,
+  "noteType": "FinancialNote",
+  "associatedRecordType": "Payment",
+  "associatedRecordId": "AABB11",
+  "noteText": "£100 payment received",
+  "postedDate": "2023-12-04T12:30:00",
+  "postedBy": "JohnDoe"
+}
