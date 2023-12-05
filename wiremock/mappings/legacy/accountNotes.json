@@ -1,19 +1,19 @@
 {
   "request": {
-    "method": "GET",
+    "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "getDefendantAccount"
+        "equalTo": "postAccountNotes"
       }
     }
-},
+  },
   "response": {
     "status": 200,
     "headers": {
       "Content-Type": "application/json"
     },
     "transformers": ["response-template"],
-    "bodyFileName": "defendantAccount.json"
+    "bodyFileName": "accountNotes.json"
   }
 }
