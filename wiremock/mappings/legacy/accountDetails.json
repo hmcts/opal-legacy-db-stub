@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "getAccountDetails"
+      }
+    }
+},
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformers": ["response-template"],
+    "bodyFileName": "accountDetails.json"
+  }
+}
