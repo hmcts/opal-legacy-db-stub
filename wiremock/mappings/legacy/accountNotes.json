@@ -13,7 +13,9 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "transformers": ["response-template"],
+    "transformers": [
+      "response-template"
+    ],
     "bodyFileName": "accountNotes.json"
   }
 }
