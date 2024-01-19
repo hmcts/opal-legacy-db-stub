@@ -1,10 +1,10 @@
 {
   "request": {
-    "method": "GET",
+    "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "getAccountDetails"
+        "equalTo": "searchDefendantAccounts"
       }
     }
   },
@@ -16,6 +16,6 @@
     "transformers": [
       "response-template"
     ],
-    "bodyFileName": "accountDetails.json"
+    "bodyFileName": "accountNotes.json"
   }
 }
