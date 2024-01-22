@@ -1,28 +1,92 @@
 {
-  "defendantAccountId": 500000000,
-  "accountNumber": "10000000000A",
-  "fullName": "Ms Anna K Graham",
-  "accountCT": "Greater London",
-  "address": "Lumber House, 54 Gordon Road, Maidstone, Kent",
-  "postCode": "MA4 1AL",
-  "dob": "1980-02-03",
-  "detailsChanged": "2024-01-03",
-  "lastCourtAppAndCourtCode": "2024-01-04 2812",
-  "lastMovement": "2024-01-02",
-  "commentField": [
-    "Comment for Notes 500000000"
-  ],
-  "pcr": "090000000A",
-  "paymentDetails": "2025-10-12 By Date",
-  "lumpSum": null,
-  "commencing": null,
-  "daysInDefault": 120,
-  "sentencedDate": "2023-11-03",
-  "lastEnforcement": "REM",
-  "override": "2723",
-  "enforcer": 100,
-  "enforcementCourt": 2812,
-  "imposed": 700.58,
-  "amountPaid": 200.00,
-  "balance": 500.58
+  "defendant_account": {
+    "defendant_account_id": 12345,
+    "account_number": "ACCT-123",
+    "amount_imposed": 1000.00,
+    "amount_paid": 500.00,
+    "account_balance": 500.00,
+    "business_unit_id": 9876,
+    "business_unit_name": "Business ABC",
+    "account_status": "Active",
+    "originator_name": "John Doe",
+    "imposed_hearing_date": "2023-01-15",
+    "imposing_court_code": 456,
+    "last_hearing_date": "2023-12-10",
+    "last_hearing_court_code": 789,
+    "last_changed_date": "2023-12-15",
+    "last_movement_date": "2023-12-20",
+    "collection_order": true,
+    "enforcing_court_code": 123,
+    "last_enforcement": "2024-01-05",
+    "enf_override_result_id": "ENF-001",
+    "enf_override_enforcer_code": 567,
+    "enf_override_tfo_lja_code": 890,
+    "prosecutor_case_reference": "CASE-123",
+    "account_comments": "This is a test account.",
+    "payment_terms": {
+      "terms_date": "2023-01-20",
+      "terms_type_code": "TERM-001",
+      "instalment_amount": 250.00,
+      "instalment_period": "Monthly",
+      "instalment_lump_sum": 0.00,
+      "jail_days": 0,
+      "wording": "Payment due on the 5th of each month."
+    },
+    "parties": {
+      "party": [
+        {
+          "party_id": 1,
+          "association_type": "Defendant",
+          "debtor": true,
+          "organisation": false,
+          "organisation_name": null,
+          "surname": "Doe",
+          "forenames": "John",
+          "initials": "J",
+          "title": "Mr.",
+          "birth_date": "1980-05-15",
+          "age": 42,
+          "national_insurance_number": "AB123456C",
+          "last_changed_date": "2023-06-10",
+          "full_name": "Mr. John Doe",
+          "address_line_1": "123 Main Street",
+          "address_line_2": "Apt 4B",
+          "address_line_3": null,
+          "address_line_4": null,
+          "address_line_5": null,
+          "postcode": "ABC123"
+        }
+      ]
+    },
+    "impositions": {
+      "imposition": [
+        {
+          "imposition_id": 1,
+          "posted_date": "2023-02-01",
+          "result_id": "RES-001",
+          "imposed_date": "2023-01-15",
+          "imposing_court_code": 456,
+          "imposed_amount": 1000.00,
+          "paid_amount": 500.00,
+          "offence_title": "Speeding Ticket",
+          "creditor_account_number": "CRED-001",
+          "creditor_name": "State of XYZ"
+        }
+      ]
+    },
+    "account_activities": {
+      "account_activity": [
+        {
+          "activity_id": 1,
+          "activity_type": "Payment",
+          "activity_type_code": "PAY-001",
+          "activity_text": "Received payment of $500.00",
+          "posted_date": "2023-02-05",
+          "posted_by": "John Doe",
+          "amount": 500.00
+        }
+      ]
+    }
+  }
 }
+
