@@ -16,6 +16,6 @@
     "transformers": [
       "response-template"
     ],
-    "bodyFileName": "accountNotes.json"
+    "bodyFileName": "accountSearch.json"
   }
 }
