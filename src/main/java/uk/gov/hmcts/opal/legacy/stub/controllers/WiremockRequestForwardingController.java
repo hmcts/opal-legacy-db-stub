@@ -41,7 +41,7 @@ public class WiremockRequestForwardingController {
 
     private static final String CATCH_ALL_PATH = "**";
     private static final Set<String> EXCLUDED_HEADERS = Set.of(
-            "host", "connection", "accept-encoding", "content-length", "transfer-encoding"
+            "host", "connection", "accept-encoding", "content-length", "transfer-encoding", "upgrade"
     );
 
     @Value("${wiremock.server.host}")
@@ -100,12 +100,11 @@ public class WiremockRequestForwardingController {
         var requestBuilder = newBuilder(URI.create(getMockHttpServerUrl(requestPath)))
                 .method(httpMethod.name(), bodyPublisher);
 
-        transferRequestHeaders(request, requestBuilder);
-
-
         log.info(":forwardRequest: request: {}", requestBuilder.build());
         Optional.ofNullable(requstBody).ifPresent(body -> log.info(":forwardRequest: body: {}", body));
         logRequestHeaders(request);
+
+        transferRequestHeaders(request, requestBuilder);
 
         var httpResponse = httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
 
