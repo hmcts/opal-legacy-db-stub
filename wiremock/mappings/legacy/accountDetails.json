@@ -1,6 +1,6 @@
 {
   "request": {
-    "method": "GET",
+    "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
