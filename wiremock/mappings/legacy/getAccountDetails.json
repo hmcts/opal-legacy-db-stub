@@ -4,7 +4,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "postAccountNotes"
+        "equalTo": "getAccountDetails"
       }
     }
   },
@@ -13,9 +13,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "transformers": [
-      "response-template"
-    ],
-    "bodyFileName": "accountNotes.json"
+    "bodyFileName": "legacy/getAccountDetails.json"
   }
 }

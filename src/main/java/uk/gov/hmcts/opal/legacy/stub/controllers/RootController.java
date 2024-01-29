@@ -38,21 +38,17 @@ public class RootController {
                         <li><a href="hello" target="_blank">/hello</a> - This url uses a Wiremock <i>mappings</i> file
                         (found in the <i>mappings</i> directory) called <i>hello.json</i> that specifies both a mapping
                         url path to match, and an actual response body (which could be text, HTML, JSON, etc).</li>
-                        <li><a href="account" target="_blank">/account</a> - This url uses a Wiremock <i>mappings</i>
-                        file (found in the <i>mappings</i> directory) called <i>defendantAccount.json</i> to specify
-                        both a url path to match, and another file name (file found in <i>__files</i> directory) to
-                        return as the response body.</li>
-                        <li><a href="file.html" target="_blank">/file.html</a> - This url returns a file found in the
+                        <li><a href="poc_file.html" target="_blank">/file.html</a> - This url returns a file found in the
                         <i>__files</i> directory that is returned directly, with no mapping process performed by
                         Wiremock.</li>
                         <li><a href="template/123456/abcde" target="_blank">/template/xxxxx/yyyyy</a> - This url uses a
                         Wiremock <i>mappings</i> file (found in the <i>mappings</i> directory) called
-                        <i>template.json</i> that uses both <a href='https://wiremock.org/docs/request-matching/'
+                        <i>poc_template.json</i> that uses both <a href='https://wiremock.org/docs/request-matching/'
                         target='_blank'>request matching</a> and the <a href="https://handlebarsjs.com/guide/"
                         target="_blank">Handlebars templating</a> engine to extract data from the request and
                         populate it into the response.</li>
                         <li><a href="account/1" target="_blank">/account/1</a> - This url uses a Wiremock
-                        <i>mappings</i> file called <i>handlebars.json</i> that takes part of the url path to
+                        <i>mappings</i> file called <i>poc_handlebars.json</i> that takes part of the url path to
                         derive a filename in the <i>__files</i> directory that gets served up as the response
                         body. Try also <a href="account/2" target="_blank">/account/2</a> that responds with
                         a different body file</li>

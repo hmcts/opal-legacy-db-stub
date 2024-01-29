@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/template/.*"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "text/html"
+    },
+    "body":"<!DOCTYPE html>\n<html>\n<body>\n\n<h1>Path Pattern Matching (using regex)</h1>\n\n<h2>Path segment 1: {{request.pathSegments.[1]}}</h2>\n\n<h2>Path segment 2: {{request.pathSegments.[2]}}</h2>\n\n<p>It is possible to use regex pattern matching on the url path and then use the templating engine to extract various data items from the path/request and populate the response with that data.</p>\n\n<p>For more info on request mapping, see the docs at <a href='https://wiremock.org/docs/request-matching/' target='_blank'>Wiremock documentation, request matching</a></p>\n\n<p>This file is <i>poc_template.json</i></p>\n\n</body>\n</html>"
+  }
+}

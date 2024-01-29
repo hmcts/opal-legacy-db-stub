@@ -4,7 +4,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "getAccountDetails"
+        "equalTo": "searchDefendantAccounts"
       }
     }
   },
@@ -13,9 +13,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "transformers": [
-      "response-template"
-    ],
-    "bodyFileName": "accountDetails.json"
+    "bodyFileName": "legacy/searchDefendantAccounts.json"
   }
 }
