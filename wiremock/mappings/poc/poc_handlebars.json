@@ -8,6 +8,6 @@
     "headers": {
       "Content-Type": "text/html"
     },
-    "bodyFileName": "account{{ request.pathSegments.[1] }}.html"
+    "bodyFileName": "poc/poc_account{{ request.pathSegments.[1] }}.html"
   }
 }

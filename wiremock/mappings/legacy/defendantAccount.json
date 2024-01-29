@@ -13,7 +13,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "transformers": ["response-template"],
-    "bodyFileName": "defendantAccount.json"
+    "bodyFileName": "legacy/defendantAccount.json"
   }
 }
