@@ -81,7 +81,7 @@
           "activity_type": "Payment",
           "activity_type_code": "PAY-001",
           "activity_text": "Received payment of $500.00",
-          "posted_date": "2023-02-05",
+          "posted_date": "2023-02-05 20:02:02",
           "posted_by": "John Doe",
           "amount": 500.00
         }
