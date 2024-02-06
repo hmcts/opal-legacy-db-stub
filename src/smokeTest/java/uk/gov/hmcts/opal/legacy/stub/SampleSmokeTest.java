@@ -18,11 +18,11 @@ class SampleSmokeTest {
     private final TestRestTemplate restTemplate = new TestRestTemplate();
 
     @Test
-    public void rootUrlShouldBeAvailable() {
+    void rootUrlShouldBeAvailable() {
         ResponseEntity<String> response =
                 restTemplate.getForEntity("http://localhost:" + port + "/", String.class);
 
-        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(HttpStatus.OK, response.getStatusCode(), "Should return 200 ok");
     }
 
 }
