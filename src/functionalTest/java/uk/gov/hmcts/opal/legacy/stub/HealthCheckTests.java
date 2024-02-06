@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class HealthCheckTests {
+class HealthCheckTests {
 
     @LocalServerPort
     private int port;
@@ -18,10 +18,10 @@ public class HealthCheckTests {
     private final TestRestTemplate restTemplate = new TestRestTemplate();
 
     @Test
-    public void healthCheck_shouldReturnOK() {
+    void healthCheckShouldReturnOk() {
         ResponseEntity<String> response = restTemplate.getForEntity(
                 "http://localhost:" + port + "/health", String.class);
 
-        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(HttpStatus.OK, response.getStatusCode(), "Should return 200 ok");
     }
 }
