@@ -2,6 +2,7 @@
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
+
     "queryParameters": {
       "actionType": {
         "equalTo": "getAccountDetails"
@@ -11,8 +12,8 @@
   "response": {
     "status": 200,
     "headers": {
-      "Content-Type": "application/json"
+      "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/getAccountDetails.json"
+    "bodyFileName": "legacy/getAccountDetails.xml"
   }
 }
