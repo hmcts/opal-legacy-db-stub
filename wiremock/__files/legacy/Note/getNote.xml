@@ -1,0 +1,10 @@
+<NoteEntity>
+  <noteId>1</noteId>
+  <noteType>NT</noteType>
+  <associatedRecordType>Example Record Type</associatedRecordType>
+  <associatedRecordId>Example Record ID</associatedRecordId>
+  <noteText>Example Note Text</noteText>
+  <postedDate>2022-12-01T12:00:00</postedDate>
+  <postedBy>Example Posted By</postedBy>
+  <postedByUserId>1</postedByUserId>
+</NoteEntity>

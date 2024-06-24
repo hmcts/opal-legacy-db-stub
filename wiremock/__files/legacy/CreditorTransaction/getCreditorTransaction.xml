@@ -1,0 +1,18 @@
+<CreditorTransactionEntity>
+  <creditorTransactionId>1</creditorTransactionId>
+  <creditorAccountId>123456</creditorAccountId>
+  <postedDate>2022-12-01T12:00:00</postedDate>
+  <postedBy>Example User</postedBy>
+  <postedByUser>
+    <!-- UserEntity XML representation goes here -->
+  </postedByUser>
+  <transactionType>TT01</transactionType>
+  <transactionAmount>100.00</transactionAmount>
+  <impositionResultId>IR01</impositionResultId>
+  <paymentProcessed>true</paymentProcessed>
+  <paymentReference>PR01</paymentReference>
+  <status>S</status>
+  <statusDate>2022-12-02T12:00:00</statusDate>
+  <associatedRecordType>ART01</associatedRecordType>
+  <associatedRecordId>AR01</associatedRecordId>
+</CreditorTransactionEntity>

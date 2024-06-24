@@ -1,0 +1,26 @@
+<ImpositionEntity>
+  <impositionId>1</impositionId>
+  <defendantAccount>
+    <!-- DefendantAccountEntity XML representation goes here -->
+  </defendantAccount>
+  <postedDate>2022-12-01T12:00:00</postedDate>
+  <postedBy>Example User</postedBy>
+  <postedByUser>
+    <!-- UserEntity XML representation goes here -->
+  </postedByUser>
+  <originalPostedDate>2022-12-01T12:00:00</originalPostedDate>
+  <resultId>R01</resultId>
+  <imposingCourt>
+    <!-- CourtEntity XML representation goes here -->
+  </imposingCourt>
+  <imposedDate>2022-12-02T12:00:00</imposedDate>
+  <imposedAmount>100.00</imposedAmount>
+  <paidAmount>50.00</paidAmount>
+  <offenceId>1</offenceId>
+  <creditorAccount>
+    <!-- CreditorAccountEntity XML representation goes here -->
+  </creditorAccount>
+  <unitFineAdjusted>false</unitFineAdjusted>
+  <unitFineUnits>10</unitFineUnits>
+  <completed>false</completed>
+</ImpositionEntity>

@@ -1,0 +1,11 @@
+<DocumentEntity>
+  <documentId>1</documentId>
+  <recipient>Rec1</recipient>
+  <documentLanguage>EN</documentLanguage>
+  <signatureSource>SS1</signatureSource>
+  <priority>1</priority>
+  <headerType>HT1</headerType>
+  <documentElements>
+    <!-- Document elements in JSON format goes here -->
+  </documentElements>
+</DocumentEntity>

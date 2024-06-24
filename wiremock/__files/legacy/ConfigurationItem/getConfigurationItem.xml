@@ -1,0 +1,11 @@
+<ConfigurationItemEntity>
+  <configurationItemId>1</configurationItemId>
+  <itemName>Example Item</itemName>
+  <businessUnitId>1</businessUnitId>
+  <itemValue>Value1</itemValue>
+  <itemValues>
+    <value>Value1</value>
+    <value>Value2</value>
+    <value>Value3</value>
+  </itemValues>
+</ConfigurationItemEntity>

@@ -1,0 +1,21 @@
+<BusinessUnitUserEntity>
+  <businessUnitUserId>BUU01</businessUnitUserId>
+  <businessUnit>
+    <businessUnitId>1</businessUnitId>
+    <businessUnitName>Example Business Unit</businessUnitName>
+    <businessUnitCode>BU01</businessUnitCode>
+    <businessUnitType>Type1</businessUnitType>
+    <accountNumberPrefix>AN</accountNumberPrefix>
+    <parentBusinessUnit>
+      <businessUnitId>2</businessUnitId>
+      <businessUnitName>Parent Business Unit</businessUnitName>
+      <businessUnitCode>PBU</businessUnitCode>
+      <businessUnitType>Type2</businessUnitType>
+      <accountNumberPrefix>PAN</accountNumberPrefix>
+    </parentBusinessUnit>
+    <opalDomain>Example Domain</opalDomain>
+  </businessUnit>
+  <user>
+    <!-- User entity XML representation goes here -->
+  </user>
+</BusinessUnitUserEntity>

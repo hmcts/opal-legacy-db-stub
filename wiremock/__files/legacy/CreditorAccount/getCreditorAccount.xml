@@ -1,0 +1,22 @@
+<CreditorAccountEntity>
+  <creditorAccountId>1</creditorAccountId>
+  <businessUnit>
+    <!-- BusinessUnitEntity XML representation goes here -->
+  </businessUnit>
+  <accountsNumber>123456</accountsNumber>
+  <creditorAccountType>CAT01</creditorAccountType>
+  <prosecutionService>true</prosecutionService>
+  <majorCreditor>
+    <!-- MajorCreditorEntity XML representation goes here -->
+  </majorCreditor>
+  <minorCreditorPartyId>2</minorCreditorPartyId>
+  <fromSuspense>false</fromSuspense>
+  <holdPayout>false</holdPayout>
+  <payByBacs>true</payByBacs>
+  <bankSortCode>123456</bankSortCode>
+  <bankAccountNumber>1234567890</bankAccountNumber>
+  <bankAccountName>Example Account</bankAccountName>
+  <bankAccountReference>Example Reference</bankAccountReference>
+  <bankAccountType>A</bankAccountType>
+  <lastChangedDate>2022-12-01T12:00:00</lastChangedDate>
+</CreditorAccountEntity>

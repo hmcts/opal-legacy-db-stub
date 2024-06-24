@@ -1,0 +1,23 @@
+<PartyEntity>
+  <partyId>1</partyId>
+  <organisation>true</organisation>
+  <organisationName>Example Organisation</organisationName>
+  <surname>Example Surname</surname>
+  <forenames>Example Forenames</forenames>
+  <initials>EF</initials>
+  <title>Mr</title>
+  <addressLine1>Example Address Line 1</addressLine1>
+  <addressLine2>Example Address Line 2</addressLine2>
+  <addressLine3>Example Address Line 3</addressLine3>
+  <addressLine4>Example Address Line 4</addressLine4>
+  <addressLine5>Example Address Line 5</addressLine5>
+  <postcode>EX1 1EX</postcode>
+  <accountType>Example Account Type</accountType>
+  <dateOfBirth>1980-01-01</dateOfBirth>
+  <age>42</age>
+  <niNumber>AB123456C</niNumber>
+  <lastChangedDate>2022-12-01T12:00:00</lastChangedDate>
+  <defendantAccounts>
+    <!-- List of DefendantAccountPartiesEntity XML representations goes here -->
+  </defendantAccounts>
+</PartyEntity>

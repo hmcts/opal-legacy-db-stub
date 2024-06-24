@@ -1,0 +1,10 @@
+<PrisonEntity>
+  <prisonId>1</prisonId>
+  <businessUnit>
+    <!-- BusinessUnitEntity XML representation goes here -->
+  </businessUnit>
+  <prisonCode>PC01</prisonCode>
+  <addressEntity>
+    <!-- AddressEntity XML representation goes here -->
+  </addressEntity>
+</PrisonEntity>

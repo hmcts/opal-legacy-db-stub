@@ -1,0 +1,21 @@
+<DefendantTransactionEntity>
+  <defendantTransactionId>1</defendantTransactionId>
+  <defendantAccount>
+    <!-- DefendantAccountEntity XML representation goes here -->
+  </defendantAccount>
+  <postedDate>2022-12-01</postedDate>
+  <postedBy>Example User</postedBy>
+  <transactionType>TT01</transactionType>
+  <transactionAmount>100.00</transactionAmount>
+  <paymentMethod>PM01</paymentMethod>
+  <paymentReference>PR01</paymentReference>
+  <text>Example Text</text>
+  <status>S</status>
+  <statusDate>2022-12-02</statusDate>
+  <statusAmount>100.00</statusAmount>
+  <writeOffCode>WOC01</writeOffCode>
+  <associatedRecordType>ART01</associatedRecordType>
+  <associatedRecordId>AR01</associatedRecordId>
+  <imposedAmount>100.00</imposedAmount>
+  <postedByUserId>1</postedByUserId>
+</DefendantTransactionEntity>

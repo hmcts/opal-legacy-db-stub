@@ -1,0 +1,22 @@
+<CourtFeeEntity>
+  <courtFeeId>1</courtFeeId>
+  <businessUnit>
+    <businessUnitId>1</businessUnitId>
+    <businessUnitName>Example Business Unit</businessUnitName>
+    <businessUnitCode>BU01</businessUnitCode>
+    <businessUnitType>Type1</businessUnitType>
+    <accountNumberPrefix>AN</accountNumberPrefix>
+    <parentBusinessUnit>
+      <businessUnitId>2</businessUnitId>
+      <businessUnitName>Parent Business Unit</businessUnitName>
+      <businessUnitCode>PBU</businessUnitCode>
+      <businessUnitType>Type2</businessUnitType>
+      <accountNumberPrefix>PAN</accountNumberPrefix>
+    </parentBusinessUnit>
+    <opalDomain>Example Domain</opalDomain>
+  </businessUnit>
+  <courtFeeCode>CF01</courtFeeCode>
+  <description>Example Court Fee</description>
+  <amount>100.00</amount>
+  <statsCode>SC01</statsCode>
+</CourtFeeEntity>

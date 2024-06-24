@@ -1,0 +1,12 @@
+<OffenceEntity>
+  <offenceId>1</offenceId>
+  <cjsCode>CJS01</cjsCode>
+  <businessUnit>
+    <!-- BusinessUnitEntity XML representation goes here -->
+  </businessUnit>
+  <offenceTitle>Example Offence Title</offenceTitle>
+  <offenceTitleCy>Example Offence Title CY</offenceTitleCy>
+  <dateUsedTo>2022-12-01T12:00:00</dateUsedTo>
+  <offenceOas>Example Offence OAS</offenceOas>
+  <offenceOasCy>Example Offence OAS CY</offenceOasCy>
+</OffenceEntity>

@@ -1,0 +1,15 @@
+<AmendmentEntity>
+  <amendmentId>1</amendmentId>
+  <businessUnit>
+    <!-- BusinessUnitEntity fields go here -->
+  </businessUnit>
+  <associatedRecordType>RecordTypeExample</associatedRecordType>
+  <associatedRecordId>RecordIdExample</associatedRecordId>
+  <amendedDate>2022-12-01T12:00:00</amendedDate>
+  <amendedBy>AmenderExample</amendedBy>
+  <fieldCode>10</fieldCode>
+  <oldValue>OldValueExample</oldValue>
+  <newValue>NewValueExample</newValue>
+  <caseReference>CaseReferenceExample</caseReference>
+  <functionCode>FunctionCodeExample</functionCode>
+</AmendmentEntity>

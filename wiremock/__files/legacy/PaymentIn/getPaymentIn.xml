@@ -1,0 +1,17 @@
+<PaymentInEntity>
+  <paymentInId>1</paymentInId>
+  <tillEntity>
+    <!-- TillEntity XML representation goes here -->
+  </tillEntity>
+  <paymentAmount>100.00</paymentAmount>
+  <paymentDate>2022-12-01T12:00:00</paymentDate>
+  <paymentMethod>PM</paymentMethod>
+  <destinationType>D</destinationType>
+  <allocationType>Example Allocation Type</allocationType>
+  <associatedRecordType>Example Record Type</associatedRecordType>
+  <associatedRecordId>Example Record ID</associatedRecordId>
+  <thirdPartyPayerName>Example Payer Name</thirdPartyPayerName>
+  <additionalInformation>Example Additional Information</additionalInformation>
+  <receipt>true</receipt>
+  <allocated>true</allocated>
+</PaymentInEntity>
