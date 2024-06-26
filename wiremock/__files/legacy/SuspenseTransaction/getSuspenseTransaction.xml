@@ -1,4 +1,4 @@
-<SuspenseTransactionEntity>
+<suspenseTransactionEntity>
   <suspenseTransactionId>1</suspenseTransactionId>
   <suspenseItem>
     <!-- SuspenseItemEntity XML representation goes here -->
@@ -14,4 +14,4 @@
   <associatedRecordId>Example Record ID</associatedRecordId>
   <text>Example Text</text>
   <reversed>N</reversed>
-</SuspenseTransactionEntity>
+</suspenseTransactionEntity>

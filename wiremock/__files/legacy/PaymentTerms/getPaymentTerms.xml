@@ -1,4 +1,4 @@
-<PaymentTermsEntity>
+<paymentTermsEntity>
   <paymentTermsId>1</paymentTermsId>
   <defendantAccount>
     <!-- DefendantAccountEntity XML representation goes here -->
@@ -14,4 +14,4 @@
   <extension>true</extension>
   <accountBalance>300.00</accountBalance>
   <postedByUserId>1</postedByUserId>
-</PaymentTermsEntity>
+</paymentTermsEntity>

@@ -1,4 +1,4 @@
-<PaymentInEntity>
+<paymentInEntity>
   <paymentInId>1</paymentInId>
   <tillEntity>
     <!-- TillEntity XML representation goes here -->
@@ -14,4 +14,4 @@
   <additionalInformation>Example Additional Information</additionalInformation>
   <receipt>true</receipt>
   <allocated>true</allocated>
-</PaymentInEntity>
+</paymentInEntity>

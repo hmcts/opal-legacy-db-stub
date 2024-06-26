@@ -1,4 +1,4 @@
-<MisDebtorEntity>
+<misDebtorEntity>
   <misDebtorId>1</misDebtorId>
   <businessUnit>
     <!-- BusinessUnitEntity XML representation goes here -->
@@ -18,4 +18,4 @@
   <amountImposed>1000.00</amountImposed>
   <amountPaid>500.00</amountPaid>
   <amountOutstanding>500.00</amountOutstanding>
-</MisDebtorEntity>
+</misDebtorEntity>

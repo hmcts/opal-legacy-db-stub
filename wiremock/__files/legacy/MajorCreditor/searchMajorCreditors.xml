@@ -1,0 +1,18 @@
+<legacyMajorCreditorSearchResults>
+  <majorCreditorEntity>
+    <majorCreditorId>1</majorCreditorId>
+    <businessUnit> <!-- BusinessUnitEntity XML representation goes here --> </businessUnit>
+    <majorCreditorCode>MCC01</majorCreditorCode>
+    <contactName>Example Contact Name</contactName>
+    <contactTelephone>1234567890</contactTelephone>
+    <contactEmail>example@email.com</contactEmail>
+  </majorCreditorEntity>
+  <majorCreditorEntity>
+    <majorCreditorId>1</majorCreditorId>
+    <businessUnit> <!-- BusinessUnitEntity XML representation goes here --> </businessUnit>
+    <majorCreditorCode>MCC01</majorCreditorCode>
+    <contactName>Example Contact Name</contactName>
+    <contactTelephone>1234567890</contactTelephone>
+    <contactEmail>example@email.com</contactEmail>
+  </majorCreditorEntity>
+</legacyMajorCreditorSearchResults>

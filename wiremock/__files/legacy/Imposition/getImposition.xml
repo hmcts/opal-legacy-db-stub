@@ -1,4 +1,4 @@
-<ImpositionEntity>
+<impositionEntity>
   <impositionId>1</impositionId>
   <defendantAccount>
     <!-- DefendantAccountEntity XML representation goes here -->
@@ -23,4 +23,4 @@
   <unitFineAdjusted>false</unitFineAdjusted>
   <unitFineUnits>10</unitFineUnits>
   <completed>false</completed>
-</ImpositionEntity>
+</impositionEntity>

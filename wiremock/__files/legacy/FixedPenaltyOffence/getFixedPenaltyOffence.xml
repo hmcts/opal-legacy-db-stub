@@ -1,4 +1,4 @@
-<FixedPenaltyOffenceEntity>
+<fixedPenaltyOffenceEntity>
   <defendantAccountId>1</defendantAccountId>
   <ticketNumber>TN01</ticketNumber>
   <vehicleRegistration>VR01</vehicleRegistration>
@@ -6,4 +6,4 @@
   <noticeNumber>NN01</noticeNumber>
   <issuedDate>2022-12-01</issuedDate>
   <licenceNumber>LN01</licenceNumber>
-</FixedPenaltyOffenceEntity>
+</fixedPenaltyOffenceEntity>

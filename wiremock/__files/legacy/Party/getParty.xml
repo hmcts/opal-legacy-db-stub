@@ -1,4 +1,4 @@
-<PartyEntity>
+<partyEntity>
   <partyId>1</partyId>
   <organisation>true</organisation>
   <organisationName>Example Organisation</organisationName>
@@ -20,4 +20,4 @@
   <defendantAccounts>
     <!-- List of DefendantAccountPartiesEntity XML representations goes here -->
   </defendantAccounts>
-</PartyEntity>
+</partyEntity>

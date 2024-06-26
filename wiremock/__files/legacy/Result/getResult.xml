@@ -1,4 +1,4 @@
-<ResultEntity>
+<resultEntity>
   <resultId>1</resultId>
   <resultTitle>Example Result Title</resultTitle>
   <resultTitleCy>Example Result Title CY</resultTitleCy>
@@ -22,4 +22,4 @@
   <preventPaymentCard>true</preventPaymentCard>
   <listsMonies>true</listsMonies>
   <userEntries>Example User Entries</userEntries>
-</ResultEntity>
+</resultEntity>

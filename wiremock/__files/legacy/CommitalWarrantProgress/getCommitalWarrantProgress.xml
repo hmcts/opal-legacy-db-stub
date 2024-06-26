@@ -1,4 +1,4 @@
-<CommittalWarrantProgressEntity>
+<committalWarrantProgressEntity>
   <defendantAccountId>123456</defendantAccountId>
   <enforcement>
     <!-- Enforcement entity XML representation goes here -->
@@ -10,4 +10,4 @@
   <prison>
     <!-- Prison entity XML representation goes here -->
   </prison>
-</CommittalWarrantProgressEntity>
+</committalWarrantProgressEntity>

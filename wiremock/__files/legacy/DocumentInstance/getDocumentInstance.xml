@@ -1,4 +1,4 @@
-<DocumentInstanceEntity>
+<documentInstanceEntity>
   <documentInstanceId>1</documentInstanceId>
   <document>
     <!-- DocumentEntity XML representation goes here -->
@@ -9,4 +9,4 @@
   <generatedDate>2022-12-01T12:00:00</generatedDate>
   <generatedBy>Example User</generatedBy>
   <content>Example Content</content>
-</DocumentInstanceEntity>
+</documentInstanceEntity>

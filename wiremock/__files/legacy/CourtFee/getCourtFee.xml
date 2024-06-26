@@ -1,4 +1,4 @@
-<CourtFeeEntity>
+<courtFeeEntity>
   <courtFeeId>1</courtFeeId>
   <businessUnit>
     <businessUnitId>1</businessUnitId>
@@ -19,4 +19,4 @@
   <description>Example Court Fee</description>
   <amount>100.00</amount>
   <statsCode>SC01</statsCode>
-</CourtFeeEntity>
+</courtFeeEntity>

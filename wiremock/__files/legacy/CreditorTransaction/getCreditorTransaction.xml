@@ -1,4 +1,4 @@
-<CreditorTransactionEntity>
+<LCreditorTransactionEntity>
   <creditorTransactionId>1</creditorTransactionId>
   <creditorAccountId>123456</creditorAccountId>
   <postedDate>2022-12-01T12:00:00</postedDate>

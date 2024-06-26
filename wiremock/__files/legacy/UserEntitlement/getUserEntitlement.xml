@@ -1,4 +1,4 @@
-<UserEntitlementEntity>
+<userEntitlementEntity>
   <userEntitlementId>1</userEntitlementId>
   <businessUnitUser>
     <!-- BusinessUnitUserEntity XML representation goes here -->
@@ -6,4 +6,4 @@
   <applicationFunction>
     <!-- ApplicationFunctionEntity XML representation goes here -->
   </applicationFunction>
-</UserEntitlementEntity>
+</userEntitlementEntity>

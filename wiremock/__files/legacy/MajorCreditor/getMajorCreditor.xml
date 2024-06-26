@@ -1,4 +1,4 @@
-<MajorCreditorEntity>
+<majorCreditorEntity>
   <majorCreditorId>1</majorCreditorId>
   <businessUnit>
     <!-- BusinessUnitEntity XML representation goes here -->
@@ -7,4 +7,4 @@
   <contactName>Example Contact Name</contactName>
   <contactTelephone>1234567890</contactTelephone>
   <contactEmail>example@email.com</contactEmail>
-</MajorCreditorEntity>
+</majorCreditorEntity>

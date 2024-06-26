@@ -1,4 +1,4 @@
-<NoteEntity>
+<noteEntity>
   <noteId>1</noteId>
   <noteType>NT</noteType>
   <associatedRecordType>Example Record Type</associatedRecordType>
@@ -7,4 +7,4 @@
   <postedDate>2022-12-01T12:00:00</postedDate>
   <postedBy>Example Posted By</postedBy>
   <postedByUserId>1</postedByUserId>
-</NoteEntity>
+</noteEntity>

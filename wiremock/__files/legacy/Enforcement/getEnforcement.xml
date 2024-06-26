@@ -1,4 +1,4 @@
-<EnforcementEntity>
+<enforcementEntity>
   <enforcementId>1</enforcementId>
   <defendantAccount>
     <!-- DefendantAccountEntity XML representation goes here -->
@@ -19,4 +19,4 @@
   </hearingCourt>
   <accountType>AT01</accountType>
   <postedByUserId>1</postedByUserId>
-</EnforcementEntity>
+</enforcementEntity>

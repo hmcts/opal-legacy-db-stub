@@ -1,11 +1,11 @@
 <accountTransferEntity>
   <accountTransferId>1</accountTransferId>
   <businessUnit>
-    <business_unit_id>100</business_unit_id>
+    <businessUnitId>100</businessUnitId>
     <!-- Other fields of BusinessUnitEntity -->
   </businessUnit>
   <defendantAccount>
-    <defendant_account_id>200</defendant_account_id>
+    <defendantAccountId>200</defendantAccountId>
     <!-- Other fields of DefendantAccountEntity -->
   </defendantAccount>
   <initiatedDate>2022-04-01T12:00:00</initiatedDate>

@@ -1,4 +1,4 @@
-<AmendmentEntity>
+<amendmentEntity>
   <amendmentId>1</amendmentId>
   <businessUnit>
     <!-- BusinessUnitEntity fields go here -->
@@ -12,4 +12,4 @@
   <newValue>NewValueExample</newValue>
   <caseReference>CaseReferenceExample</caseReference>
   <functionCode>FunctionCodeExample</functionCode>
-</AmendmentEntity>
+</amendmentEntity>

@@ -1,0 +1,32 @@
+<legacyPaymentTermsSearchResults>
+  <paymentTermsEntity>
+    <paymentTermsId>1</paymentTermsId>
+    <defendantAccount> <!-- DefendantAccountEntity XML representation goes here --> </defendantAccount>
+    <postedDate>2022-12-01</postedDate>
+    <postedBy>Example Posted By</postedBy>
+    <termsTypeCode>Example Terms Type Code</termsTypeCode>
+    <effectiveDate>2022-12-01</effectiveDate>
+    <instalmentPeriod>Example Instalment Period</instalmentPeriod>
+    <instalmentAmount>100.00</instalmentAmount>
+    <instalmentLumpSum>200.00</instalmentLumpSum>
+    <jailDays>30</jailDays>
+    <extension>true</extension>
+    <accountBalance>300.00</accountBalance>
+    <postedByUserId>1</postedByUserId>
+  </paymentTermsEntity>
+  <paymentTermsEntity>
+    <paymentTermsId>1</paymentTermsId>
+    <defendantAccount> <!-- DefendantAccountEntity XML representation goes here --> </defendantAccount>
+    <postedDate>2022-12-01</postedDate>
+    <postedBy>Example Posted By</postedBy>
+    <termsTypeCode>Example Terms Type Code</termsTypeCode>
+    <effectiveDate>2022-12-01</effectiveDate>
+    <instalmentPeriod>Example Instalment Period</instalmentPeriod>
+    <instalmentAmount>100.00</instalmentAmount>
+    <instalmentLumpSum>200.00</instalmentLumpSum>
+    <jailDays>30</jailDays>
+    <extension>true</extension>
+    <accountBalance>300.00</accountBalance>
+    <postedByUserId>1</postedByUserId>
+  </paymentTermsEntity>
+</legacyPaymentTermsSearchResults>

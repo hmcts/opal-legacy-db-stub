@@ -1,4 +1,4 @@
-<DocumentEntity>
+<documentEntity>
   <documentId>1</documentId>
   <recipient>Rec1</recipient>
   <documentLanguage>EN</documentLanguage>
@@ -8,4 +8,4 @@
   <documentElements>
     <!-- Document elements in JSON format goes here -->
   </documentElements>
-</DocumentEntity>
+</documentEntity>

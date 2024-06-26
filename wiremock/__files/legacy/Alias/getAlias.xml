@@ -1,4 +1,4 @@
-<AliasEntity>
+<aliasEntity>
   <aliasId>1</aliasId>
   <party>
     <partyId>123</partyId>
@@ -8,4 +8,4 @@
   <forenames>John</forenames>
   <initials>JS</initials>
   <sequenceNumber>1</sequenceNumber>
-</AliasEntity>
+</aliasEntity>

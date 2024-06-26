@@ -1,4 +1,4 @@
-<LogAuditDetailEntity>
+<logAuditDetailEntity>
   <logAuditDetailId>1</logAuditDetailId>
   <userId>1</userId>
   <logTimestamp>2022-12-01T12:00:00</logTimestamp>
@@ -10,4 +10,4 @@
     <!-- BusinessUnitEntity XML representation goes here -->
   </businessUnit>
   <jsonRequest>{"key": "value"}</jsonRequest>
-</LogAuditDetailEntity>
+</logAuditDetailEntity>

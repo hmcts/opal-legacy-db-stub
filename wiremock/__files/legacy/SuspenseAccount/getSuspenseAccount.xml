@@ -1,7 +1,7 @@
-<SuspenseAccountEntity>
+<suspenseAccountEntity>
   <suspenseAccountId>1</suspenseAccountId>
   <businessUnit>
     <!-- BusinessUnitEntity XML representation goes here -->
   </businessUnit>
   <accountNumber>1234567890</accountNumber>
-</SuspenseAccountEntity>
+</suspenseAccountEntity>

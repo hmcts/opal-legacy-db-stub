@@ -1,4 +1,4 @@
-<LocalJusticeAreaEntity>
+<localJusticeAreaEntity>
   <localJusticeAreaId>1</localJusticeAreaId>
   <ljaCode>LJA01</ljaCode>
   <addressLine4>Example Address Line 4</addressLine4>
@@ -7,4 +7,4 @@
   <address>
     <!-- AddressEntity XML representation goes here -->
   </address>
-</LocalJusticeAreaEntity>
+</localJusticeAreaEntity>

@@ -1,0 +1,86 @@
+<legacyDefendantAccountSearchResults>
+  <defendantAccountEntity>
+    <defendantAccountId>1</defendantAccountId>
+    <businessUnit> <!-- BusinessUnitEntity XML representation goes here --> </businessUnit>
+    <accountNumber>123456</accountNumber>
+    <imposedHearingDate>2022-12-01</imposedHearingDate>
+    <imposingCourtId>1</imposingCourtId>
+    <amountImposed>100.00</amountImposed>
+    <amountPaid>50.00</amountPaid>
+    <accountBalance>50.00</accountBalance>
+    <accountStatus>A</accountStatus>
+    <completedDate>2022-12-02</completedDate>
+    <enforcingCourt> <!-- CourtEntity XML representation goes here --> </enforcingCourt>
+    <lastHearingCourt> <!-- CourtEntity XML representation goes here --> </lastHearingCourt>
+    <lastHearingDate>2022-12-03</lastHearingDate>
+    <lastMovementDate>2022-12-04</lastMovementDate>
+    <lastEnforcement>LE01</lastEnforcement>
+    <lastChangedDate>2022-12-05</lastChangedDate>
+    <originatorName>Example Originator</originatorName>
+    <originatorReference>OR01</originatorReference>
+    <originatorType>OT01</originatorType>
+    <allowWriteoffs>true</allowWriteoffs>
+    <allowCheques>false</allowCheques>
+    <chequeClearancePeriod>10</chequeClearancePeriod>
+    <creditTransferClearancePeriod>5</creditTransferClearancePeriod>
+    <enforcementOverrideResultId>EOR01</enforcementOverrideResultId>
+    <enforcementOverrideEnforcerId>2</enforcementOverrideEnforcerId>
+    <enforcementOverrideTfoLjaId>3</enforcementOverrideTfoLjaId>
+    <unitFineDetail>Example Detail</unitFineDetail>
+    <unitFineValue>10.00</unitFineValue>
+    <collectionOrder>true</collectionOrder>
+    <collectionOrderEffectiveDate>2022-12-06</collectionOrderEffectiveDate>
+    <furtherStepsNoticeDate>2022-12-07</furtherStepsNoticeDate>
+    <confiscationOrderDate>2022-12-08</confiscationOrderDate>
+    <fineRegistrationDate>2022-12-09</fineRegistrationDate>
+    <consolidatedAccountType>C</consolidatedAccountType>
+    <paymentCardRequested>true</paymentCardRequested>
+    <paymentCardRequestedDate>2022-12-10</paymentCardRequestedDate>
+    <paymentCardRequestedBy>Example User</paymentCardRequestedBy>
+    <prosecutorCaseReference>PCR01</prosecutorCaseReference>
+    <enforcementCaseStatus>ECS01</enforcementCaseStatus>
+    <parties> <!-- List of DefendantAccountPartiesEntity XML representations goes here --> </parties>
+  </defendantAccountEntity>
+  <defendantAccountEntity>
+    <defendantAccountId>1</defendantAccountId>
+    <businessUnit> <!-- BusinessUnitEntity XML representation goes here --> </businessUnit>
+    <accountNumber>123456</accountNumber>
+    <imposedHearingDate>2022-12-01</imposedHearingDate>
+    <imposingCourtId>1</imposingCourtId>
+    <amountImposed>100.00</amountImposed>
+    <amountPaid>50.00</amountPaid>
+    <accountBalance>50.00</accountBalance>
+    <accountStatus>A</accountStatus>
+    <completedDate>2022-12-02</completedDate>
+    <enforcingCourt> <!-- CourtEntity XML representation goes here --> </enforcingCourt>
+    <lastHearingCourt> <!-- CourtEntity XML representation goes here --> </lastHearingCourt>
+    <lastHearingDate>2022-12-03</lastHearingDate>
+    <lastMovementDate>2022-12-04</lastMovementDate>
+    <lastEnforcement>LE01</lastEnforcement>
+    <lastChangedDate>2022-12-05</lastChangedDate>
+    <originatorName>Example Originator</originatorName>
+    <originatorReference>OR01</originatorReference>
+    <originatorType>OT01</originatorType>
+    <allowWriteoffs>true</allowWriteoffs>
+    <allowCheques>false</allowCheques>
+    <chequeClearancePeriod>10</chequeClearancePeriod>
+    <creditTransferClearancePeriod>5</creditTransferClearancePeriod>
+    <enforcementOverrideResultId>EOR01</enforcementOverrideResultId>
+    <enforcementOverrideEnforcerId>2</enforcementOverrideEnforcerId>
+    <enforcementOverrideTfoLjaId>3</enforcementOverrideTfoLjaId>
+    <unitFineDetail>Example Detail</unitFineDetail>
+    <unitFineValue>10.00</unitFineValue>
+    <collectionOrder>true</collectionOrder>
+    <collectionOrderEffectiveDate>2022-12-06</collectionOrderEffectiveDate>
+    <furtherStepsNoticeDate>2022-12-07</furtherStepsNoticeDate>
+    <confiscationOrderDate>2022-12-08</confiscationOrderDate>
+    <fineRegistrationDate>2022-12-09</fineRegistrationDate>
+    <consolidatedAccountType>C</consolidatedAccountType>
+    <paymentCardRequested>true</paymentCardRequested>
+    <paymentCardRequestedDate>2022-12-10</paymentCardRequestedDate>
+    <paymentCardRequestedBy>Example User</paymentCardRequestedBy>
+    <prosecutorCaseReference>PCR01</prosecutorCaseReference>
+    <enforcementCaseStatus>ECS01</enforcementCaseStatus>
+    <parties> <!-- List of DefendantAccountPartiesEntity XML representations goes here --> </parties>
+  </defendantAccountEntity>
+</legacyDefendantAccountSearchResults>

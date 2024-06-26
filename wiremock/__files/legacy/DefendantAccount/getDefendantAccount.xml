@@ -1,4 +1,4 @@
-<DefendantAccountEntity>
+<defendantAccountEntity>
   <defendantAccountId>1</defendantAccountId>
   <businessUnit>
     <!-- BusinessUnitEntity XML representation goes here -->
@@ -47,4 +47,4 @@
   <parties>
     <!-- List of DefendantAccountPartiesEntity XML representations goes here -->
   </parties>
-</DefendantAccountEntity>
+</defendantAccountEntity>

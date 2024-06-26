@@ -1,4 +1,4 @@
-<BusinessUnitUserEntity>
+<businessUnitUserEntity>
   <businessUnitUserId>BUU01</businessUnitUserId>
   <businessUnit>
     <businessUnitId>1</businessUnitId>
@@ -18,4 +18,4 @@
   <user>
     <!-- User entity XML representation goes here -->
   </user>
-</BusinessUnitUserEntity>
+</businessUnitUserEntity>

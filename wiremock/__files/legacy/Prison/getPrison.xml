@@ -1,4 +1,4 @@
-<PrisonEntity>
+<prisonEntity>
   <prisonId>1</prisonId>
   <businessUnit>
     <!-- BusinessUnitEntity XML representation goes here -->
@@ -7,4 +7,4 @@
   <addressEntity>
     <!-- AddressEntity XML representation goes here -->
   </addressEntity>
-</PrisonEntity>
+</prisonEntity>

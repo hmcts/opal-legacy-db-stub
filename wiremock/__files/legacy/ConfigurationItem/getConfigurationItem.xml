@@ -1,4 +1,4 @@
-<ConfigurationItemEntity>
+<configurationItemEntity>
   <configurationItemId>1</configurationItemId>
   <itemName>Example Item</itemName>
   <businessUnitId>1</businessUnitId>
@@ -8,4 +8,4 @@
     <value>Value2</value>
     <value>Value3</value>
   </itemValues>
-</ConfigurationItemEntity>
+</configurationItemEntity>

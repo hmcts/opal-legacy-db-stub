@@ -1,4 +1,4 @@
-<DebtorDetailEntity>
+<debtorDetailEntity>
   <partyId>1</partyId>
   <telephoneHome>1234567890</telephoneHome>
   <telephoneBusiness>0987654321</telephoneBusiness>
@@ -21,4 +21,4 @@
   <documentLanguageDate>2022-12-01</documentLanguageDate>
   <hearingLanguage>English</hearingLanguage>
   <hearingLanguageDate>2022-12-02</hearingLanguageDate>
-</DebtorDetailEntity>
+</debtorDetailEntity>

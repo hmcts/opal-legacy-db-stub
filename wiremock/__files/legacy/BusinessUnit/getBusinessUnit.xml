@@ -1,4 +1,4 @@
-<BusinessUnitEntity>
+<businessUnitEntity>
   <businessUnitId>1</businessUnitId>
   <businessUnitName>Example Business Unit</businessUnitName>
   <businessUnitCode>BU01</businessUnitCode>
@@ -12,4 +12,4 @@
     <accountNumberPrefix>PAN</accountNumberPrefix>
   </parentBusinessUnit>
   <opalDomain>Example Domain</opalDomain>
-</BusinessUnitEntity>
+</businessUnitEntity>

@@ -1,4 +1,4 @@
-<CreditorAccountEntity>
+<creditorAccountEntity>
   <creditorAccountId>1</creditorAccountId>
   <businessUnit>
     <!-- BusinessUnitEntity XML representation goes here -->
@@ -19,4 +19,4 @@
   <bankAccountReference>Example Reference</bankAccountReference>
   <bankAccountType>A</bankAccountType>
   <lastChangedDate>2022-12-01T12:00:00</lastChangedDate>
-</CreditorAccountEntity>
+</creditorAccountEntity>
