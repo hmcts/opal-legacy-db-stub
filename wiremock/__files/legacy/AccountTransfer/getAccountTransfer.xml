@@ -1,0 +1,19 @@
+<accountTransferEntity>
+  <accountTransferId>1</accountTransferId>
+  <businessUnit>
+    <businessUnitId>100</businessUnitId>
+    <!-- Other fields of BusinessUnitEntity -->
+  </businessUnit>
+  <defendantAccount>
+    <defendantAccountId>200</defendantAccountId>
+    <!-- Other fields of DefendantAccountEntity -->
+  </defendantAccount>
+  <initiatedDate>2022-04-01T12:00:00</initiatedDate>
+  <initiatedBy>John Doe</initiatedBy>
+  <printedDate>2022-04-02T12:00:00</printedDate>
+  <printedBy>Jane Doe</printedBy>
+  <documentInstanceId>300</documentInstanceId>
+  <destinationLjaId>400</destinationLjaId>
+  <reason>Transfer Reason</reason>
+  <reminderDate>2022-04-03T12:00:00</reminderDate>
+</accountTransferEntity>

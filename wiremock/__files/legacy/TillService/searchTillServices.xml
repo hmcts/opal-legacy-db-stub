@@ -1,0 +1,14 @@
+<legacyTillServiceSearchResults>
+  <tillEntity>
+    <tillId>1</tillId>
+    <businessUnitId>1</businessUnitId>
+    <tillNumber>1</tillNumber>
+    <ownedBy>Example Owner</ownedBy>
+  </tillEntity>
+  <tillEntity>
+    <tillId>1</tillId>
+    <businessUnitId>1</businessUnitId>
+    <tillNumber>1</tillNumber>
+    <ownedBy>Example Owner</ownedBy>
+  </tillEntity>
+</legacyTillServiceSearchResults>

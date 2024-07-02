@@ -1,0 +1,12 @@
+<legacyUserEntitlementSearchResults>
+  <userEntitlementEntity>
+    <userEntitlementId>1</userEntitlementId>
+    <businessUnitUser> <!-- BusinessUnitUserEntity XML representation goes here --> </businessUnitUser>
+    <applicationFunction> <!-- ApplicationFunctionEntity XML representation goes here --> </applicationFunction>
+  </userEntitlementEntity>
+  <userEntitlementEntity>
+    <userEntitlementId>1</userEntitlementId>
+    <businessUnitUser> <!-- BusinessUnitUserEntity XML representation goes here --> </businessUnitUser>
+    <applicationFunction> <!-- ApplicationFunctionEntity XML representation goes here --> </applicationFunction>
+  </userEntitlementEntity>
+</legacyUserEntitlementSearchResults>
