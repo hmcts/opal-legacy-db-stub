@@ -1,0 +1,18 @@
+<legacyLocalJusticeAreaSearchResults>
+  <localJusticeAreaEntity>
+    <localJusticeAreaId>1</localJusticeAreaId>
+    <ljaCode>LJA01</ljaCode>
+    <addressLine4>Example Address Line 4</addressLine4>
+    <addressLine5>Example Address Line 5</addressLine5>
+    <endDate>2022-12-01T12:00:00</endDate>
+    <address> <!-- AddressEntity XML representation goes here --> </address>
+  </localJusticeAreaEntity>
+  <localJusticeAreaEntity>
+    <localJusticeAreaId>1</localJusticeAreaId>
+    <ljaCode>LJA01</ljaCode>
+    <addressLine4>Example Address Line 4</addressLine4>
+    <addressLine5>Example Address Line 5</addressLine5>
+    <endDate>2022-12-01T12:00:00</endDate>
+    <address> <!-- AddressEntity XML representation goes here --> </address>
+  </localJusticeAreaEntity>
+</legacyLocalJusticeAreaSearchResults>

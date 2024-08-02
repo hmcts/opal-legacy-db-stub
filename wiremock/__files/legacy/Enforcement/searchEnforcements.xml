@@ -1,0 +1,34 @@
+<legacyEnforcementSearchResults>
+  <enforcementEntity>
+    <enforcementId>1</enforcementId>
+    <defendantAccount> <!-- DefendantAccountEntity XML representation goes here --> </defendantAccount>
+    <postedDate>2022-12-01T12:00:00</postedDate>
+    <postedBy>Example User</postedBy>
+    <resultId>R01</resultId>
+    <reason>Example Reason</reason>
+    <enforcer> <!-- EnforcerEntity XML representation goes here --> </enforcer>
+    <jailDays>10</jailDays>
+    <warrantReference>WR01</warrantReference>
+    <caseReference>CR01</caseReference>
+    <hearingDate>2022-12-02T12:00:00</hearingDate>
+    <hearingCourt> <!-- CourtEntity XML representation goes here --> </hearingCourt>
+    <accountType>AT01</accountType>
+    <postedByUserId>1</postedByUserId>
+  </enforcementEntity>
+  <enforcementEntity>
+    <enforcementId>1</enforcementId>
+    <defendantAccount> <!-- DefendantAccountEntity XML representation goes here --> </defendantAccount>
+    <postedDate>2022-12-01T12:00:00</postedDate>
+    <postedBy>Example User</postedBy>
+    <resultId>R01</resultId>
+    <reason>Example Reason</reason>
+    <enforcer> <!-- EnforcerEntity XML representation goes here --> </enforcer>
+    <jailDays>10</jailDays>
+    <warrantReference>WR01</warrantReference>
+    <caseReference>CR01</caseReference>
+    <hearingDate>2022-12-02T12:00:00</hearingDate>
+    <hearingCourt> <!-- CourtEntity XML representation goes here --> </hearingCourt>
+    <accountType>AT01</accountType>
+    <postedByUserId>1</postedByUserId>
+  </enforcementEntity>
+</legacyEnforcementSearchResults>

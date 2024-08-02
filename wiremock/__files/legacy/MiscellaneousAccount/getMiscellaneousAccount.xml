@@ -1,0 +1,10 @@
+<miscellaneousAccountEntity>
+  <miscellaneousAccountId>1</miscellaneousAccountId>
+  <businessUnit>
+    <!-- BusinessUnitEntity XML representation goes here -->
+  </businessUnit>
+  <accountNumber>AN01</accountNumber>
+  <party>
+    <!-- PartyEntity XML representation goes here -->
+  </party>
+</miscellaneousAccountEntity>

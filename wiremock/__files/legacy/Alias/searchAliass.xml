@@ -1,0 +1,22 @@
+<legacyAliasSearchResults>
+  <aliasEntity>
+    <aliasId>1</aliasId>
+    <party>
+      <partyId>123</partyId> <!-- Other fields of PartyEntity -->
+    </party>
+    <surname>Smith</surname>
+    <forenames>John</forenames>
+    <initials>JS</initials>
+    <sequenceNumber>1</sequenceNumber>
+  </aliasEntity>
+  <aliasEntity>
+    <aliasId>1</aliasId>
+    <party>
+      <partyId>123</partyId> <!-- Other fields of PartyEntity -->
+    </party>
+    <surname>Smith</surname>
+    <forenames>John</forenames>
+    <initials>JS</initials>
+    <sequenceNumber>1</sequenceNumber>
+  </aliasEntity>
+</legacyAliasSearchResults>

@@ -1,0 +1,13 @@
+<committalWarrantProgressEntity>
+  <defendantAccountId>123456</defendantAccountId>
+  <enforcement>
+    <!-- Enforcement entity XML representation goes here -->
+  </enforcement>
+  <amount>1000.00</amount>
+  <bodyReceiptDate>2022-12-01T12:00:00</bodyReceiptDate>
+  <certificatePartADate>2022-12-02T12:00:00</certificatePartADate>
+  <certificatePartBDate>2022-12-03T12:00:00</certificatePartBDate>
+  <prison>
+    <!-- Prison entity XML representation goes here -->
+  </prison>
+</committalWarrantProgressEntity>

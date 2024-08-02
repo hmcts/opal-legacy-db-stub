@@ -1,0 +1,12 @@
+<legacySuspenseAccountSearchResults>
+  <suspenseAccountEntity>
+    <suspenseAccountId>1</suspenseAccountId>
+    <businessUnit> <!-- BusinessUnitEntity XML representation goes here --> </businessUnit>
+    <accountNumber>1234567890</accountNumber>
+  </suspenseAccountEntity>
+  <suspenseAccountEntity>
+    <suspenseAccountId>1</suspenseAccountId>
+    <businessUnit> <!-- BusinessUnitEntity XML representation goes here --> </businessUnit>
+    <accountNumber>1234567890</accountNumber>
+  </suspenseAccountEntity>
+</legacySuspenseAccountSearchResults>
