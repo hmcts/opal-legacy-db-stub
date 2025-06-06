@@ -1,0 +1,10 @@
+<PO pono="1">
+  <PNAME>Po_1</PNAME>
+  <CUSTNAME>GET_GMAS_TEST</CUSTNAME>
+  <SHIPADDR>
+    <STREET>1033, Main Street</STREET>
+    <CITY>Sunnyvale</CITY>
+    <STATE>CA</STATE>
+  </SHIPADDR>
+  <SOURCE>LegacyStubService</SOURCE>
+</PO>
