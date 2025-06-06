@@ -1,0 +1,25 @@
+<resultEntity>
+  <resultId>1</resultId>
+  <resultTitle>Example Result Title</resultTitle>
+  <resultTitleCy>Example Result Title CY</resultTitleCy>
+  <resultType>Example Result Type</resultType>
+  <active>true</active>
+  <imposition>true</imposition>
+  <impositionCategory>Example Imposition Category</impositionCategory>
+  <impositionAllocationPriority>1</impositionAllocationPriority>
+  <impositionAccruing>true</impositionAccruing>
+  <impositionCreditor>Example Imposition Creditor</impositionCreditor>
+  <enforcement>true</enforcement>
+  <enforcementOverride>true</enforcementOverride>
+  <furtherEnforcementWarn>true</furtherEnforcementWarn>
+  <furtherEnforcementDisallow>true</furtherEnforcementDisallow>
+  <enforcementHold>true</enforcementHold>
+  <requiresEnforcer>true</requiresEnforcer>
+  <generatesHearing>true</generatesHearing>
+  <collectionOrder>true</collectionOrder>
+  <extendTtpDisallow>true</extendTtpDisallow>
+  <extendTtpPreserveLastEnf>true</extendTtpPreserveLastEnf>
+  <preventPaymentCard>true</preventPaymentCard>
+  <listsMonies>true</listsMonies>
+  <userEntries>Example User Entries</userEntries>
+</resultEntity>

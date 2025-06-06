@@ -1,0 +1,22 @@
+<legacyCourtSearchResults>
+  <courtEntity>
+    <courtId>1</courtId>
+    <courtCode>100</courtCode>
+    <parentCourt>
+      <courtId>2</courtId>
+      <courtCode>200</courtCode> <!-- Additional parent court fields here -->
+    </parentCourt>
+    <localJusticeArea> <!-- LocalJusticeAreaEntity XML representation goes here --> </localJusticeArea>
+    <nationalCourtCode>NCC01</nationalCourtCode>
+  </courtEntity>
+  <courtEntity>
+    <courtId>1</courtId>
+    <courtCode>100</courtCode>
+    <parentCourt>
+      <courtId>2</courtId>
+      <courtCode>200</courtCode> <!-- Additional parent court fields here -->
+    </parentCourt>
+    <localJusticeArea> <!-- LocalJusticeAreaEntity XML representation goes here --> </localJusticeArea>
+    <nationalCourtCode>NCC01</nationalCourtCode>
+  </courtEntity>
+</legacyCourtSearchResults>

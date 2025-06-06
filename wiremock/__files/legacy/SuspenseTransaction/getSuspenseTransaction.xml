@@ -1,0 +1,17 @@
+<suspenseTransactionEntity>
+  <suspenseTransactionId>1</suspenseTransactionId>
+  <suspenseItem>
+    <!-- SuspenseItemEntity XML representation goes here -->
+  </suspenseItem>
+  <postedDate>2022-12-01T12:00:00</postedDate>
+  <postedBy>Example Posted By</postedBy>
+  <postedByUser>
+    <!-- UserEntity XML representation goes here -->
+  </postedByUser>
+  <transactionType>TT</transactionType>
+  <amount>100.00</amount>
+  <associatedRecordType>Example Record Type</associatedRecordType>
+  <associatedRecordId>Example Record ID</associatedRecordId>
+  <text>Example Text</text>
+  <reversed>N</reversed>
+</suspenseTransactionEntity>

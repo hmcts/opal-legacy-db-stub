@@ -1,0 +1,11 @@
+<suspenseItemEntity>
+  <suspenseItemId>1</suspenseItemId>
+  <suspenseAccount>
+    <!-- SuspenseAccountEntity XML representation goes here -->
+  </suspenseAccount>
+  <suspenseItemNumber>1</suspenseItemNumber>
+  <suspenseItemType>Example Type</suspenseItemType>
+  <createdDate>2022-12-01T12:00:00</createdDate>
+  <paymentMethod>PM</paymentMethod>
+  <courtFeeId>1</courtFeeId>
+</suspenseItemEntity>

@@ -1,0 +1,50 @@
+<legacyDebtorDetailSearchResults>
+  <debtorDetailEntity>
+    <partyId>1</partyId>
+    <telephoneHome>1234567890</telephoneHome>
+    <telephoneBusiness>0987654321</telephoneBusiness>
+    <telephoneMobile>1122334455</telephoneMobile>
+    <email1>example1@email.com</email1>
+    <email2>example2@email.com</email2>
+    <vehicleMake>Example Make</vehicleMake>
+    <vehicleRegistration>EX1234</vehicleRegistration>
+    <employerName>Example Employer</employerName>
+    <employerAddressLine1>Address Line 1</employerAddressLine1>
+    <employerAddressLine2>Address Line 2</employerAddressLine2>
+    <employerAddressLine3>Address Line 3</employerAddressLine3>
+    <employerAddressLine4>Address Line 4</employerAddressLine4>
+    <employerAddressLine5>Address Line 5</employerAddressLine5>
+    <employerPostcode>12345</employerPostcode>
+    <employerReference>ER123</employerReference>
+    <employerTelephone>1234567890</employerTelephone>
+    <employerEmail>employer@email.com</employerEmail>
+    <documentLanguage>English</documentLanguage>
+    <documentLanguageDate>2022-12-01</documentLanguageDate>
+    <hearingLanguage>English</hearingLanguage>
+    <hearingLanguageDate>2022-12-02</hearingLanguageDate>
+  </debtorDetailEntity>
+  <debtorDetailEntity>
+    <partyId>1</partyId>
+    <telephoneHome>1234567890</telephoneHome>
+    <telephoneBusiness>0987654321</telephoneBusiness>
+    <telephoneMobile>1122334455</telephoneMobile>
+    <email1>example1@email.com</email1>
+    <email2>example2@email.com</email2>
+    <vehicleMake>Example Make</vehicleMake>
+    <vehicleRegistration>EX1234</vehicleRegistration>
+    <employerName>Example Employer</employerName>
+    <employerAddressLine1>Address Line 1</employerAddressLine1>
+    <employerAddressLine2>Address Line 2</employerAddressLine2>
+    <employerAddressLine3>Address Line 3</employerAddressLine3>
+    <employerAddressLine4>Address Line 4</employerAddressLine4>
+    <employerAddressLine5>Address Line 5</employerAddressLine5>
+    <employerPostcode>12345</employerPostcode>
+    <employerReference>ER123</employerReference>
+    <employerTelephone>1234567890</employerTelephone>
+    <employerEmail>employer@email.com</employerEmail>
+    <documentLanguage>English</documentLanguage>
+    <documentLanguageDate>2022-12-01</documentLanguageDate>
+    <hearingLanguage>English</hearingLanguage>
+    <hearingLanguageDate>2022-12-02</hearingLanguageDate>
+  </debtorDetailEntity>
+</legacyDebtorDetailSearchResults>

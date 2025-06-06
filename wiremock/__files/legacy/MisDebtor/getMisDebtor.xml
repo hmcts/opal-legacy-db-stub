@@ -1,0 +1,21 @@
+<misDebtorEntity>
+  <misDebtorId>1</misDebtorId>
+  <businessUnit>
+    <!-- BusinessUnitEntity XML representation goes here -->
+  </businessUnit>
+  <debtorName>Example Debtor Name</debtorName>
+  <accountCategory>A</accountCategory>
+  <arrearsCategory>A</arrearsCategory>
+  <accountNumber>AN01</accountNumber>
+  <accountStartDate>2022-12-01T12:00:00</accountStartDate>
+  <termsType>T</termsType>
+  <instalmentAmount>100.00</instalmentAmount>
+  <lumpSum>500.00</lumpSum>
+  <termsDate>2022-12-01T12:00:00</termsDate>
+  <daysInJail>10</daysInJail>
+  <dateLastMovement>2022-12-01T12:00:00</dateLastMovement>
+  <lastEnforcement>ENF01</lastEnforcement>
+  <amountImposed>1000.00</amountImposed>
+  <amountPaid>500.00</amountPaid>
+  <amountOutstanding>500.00</amountOutstanding>
+</misDebtorEntity>
