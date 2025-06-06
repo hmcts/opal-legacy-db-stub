@@ -188,7 +188,7 @@ repositories {
 }
 
 ext {
-  log4JVersion = "2.22.1"
+  log4JVersion = "2.24.3"
 }
 
 ext['tomcat.version'] = '10.1.40'
