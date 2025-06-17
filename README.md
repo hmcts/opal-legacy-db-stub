@@ -1,6 +1,71 @@
 # opal-legacy-db-stub
 This is the stub test service for replicating the legacy GoB DB in environments where it is not available.
 
+## Developement
+
+### 'Mocking' an XML Legacy Response
+
+In order to mock most legacy responses, you'll need to create 2 files:
+1. A 'mapping' file to describe the incoming HTTP request to match, with a description of the response.
+You'll create this within a **subfolder** within the [./wiremock/mappings/legacy]() folder
+2. A file that the contains the 'raw' XML response to the request.
+You'll create this within a **subfolder** within the [./wiremock/__files/legacy]() folder.
+
+#### Example Mapping File
+Found in [./wiremock/mappings/legacy/BusinessUnit/getBusinessUnit.json]()
+```json
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "getBusinessUnit"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/BusinessUnit/getBusinessUnit.xml"
+  }
+}
+```
+There are usually just 2 important things to change in your copy of one of these files:
+1. In the top 'request' half, you'll need to change the 'actionType' to match that from the fines service.
+E.g. change "getBusinessUnit" to "LIBRA.of_create_defendant_account"
+2. In the bottom 'response' half, you'll need to change the 'bodyFileName' to a 'shortened' link to your
+'raw' XML mock response.
+
+#### Example 'Raw' XML Response File
+Found in [./wiremock/__files/legacy/BusinessUnit/getBusinessUnit.xml]()
+```xml
+<businessUnitEntity>
+  <businessUnitId>1</businessUnitId>
+  <businessUnitName>Example Business Unit</businessUnitName>
+  <businessUnitCode>BU01</businessUnitCode>
+  <businessUnitType>Type1</businessUnitType>
+  <accountNumberPrefix>AN</accountNumberPrefix>
+  <parentBusinessUnit>
+    <businessUnitId>2</businessUnitId>
+    <businessUnitName>Parent Business Unit</businessUnitName>
+    <businessUnitCode>PBU</businessUnitCode>
+    <businessUnitType>Type2</businessUnitType>
+    <accountNumberPrefix>PAN</accountNumberPrefix>
+  </parentBusinessUnit>
+  <opalDomain>Example Domain</opalDomain>
+</businessUnitEntity>
+```
+
+### 'Other' Development
+It's not expected that this Legacy DB Stub service will be needed beyond just supplying raw XML responses
+to incoming POST HTTP requests as described above. Wiremock does provide the capability to create
+more 'involved' responses depending upon the request, and some tests were done in this regard when the
+repository was original created. If interested, run this service and see http://localhost:4553/ as a
+starting point.
+
 ## Building and deploying the application
 
 ### Building the application
