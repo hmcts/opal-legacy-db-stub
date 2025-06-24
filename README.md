@@ -35,9 +35,10 @@ Found in [./wiremock/mappings/legacy/BusinessUnit/getBusinessUnit.json]()
 ```
 There are usually just 2 important things to change in your copy of one of these files:
 1. In the top 'request' half, you'll need to change the 'actionType' to match that from the fines service.
-E.g. change "getBusinessUnit" to "LIBRA.of_create_defendant_account"
+E.g. change "getBusinessUnit" to "LIBRA.of_create_defendant_account". For further info, see
+https://wiremock.org/docs/request-matching/ (the JSON code examples)
 2. In the bottom 'response' half, you'll need to change the 'bodyFileName' to a 'shortened' link to your
-'raw' XML mock response.
+'raw' XML mock response. See https://wiremock.org/docs/response-templating/ for more info.
 
 #### Example 'Raw' XML Response File
 Found in [./wiremock/__files/legacy/BusinessUnit/getBusinessUnit.xml]()

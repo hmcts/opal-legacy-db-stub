@@ -1,5 +1,4 @@
 {
-  "priority": 99,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
@@ -7,10 +6,13 @@
       "actionType": {
         "equalTo": "LIBRA.of_create_defendant_account"
       }
-    }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.business_unit_id == '500')]"
+    } ]
   },
   "response": {
-    "status": 200,
+    "status": 500,
     "headers": {
       "Content-Type": "application/xml"
     },
