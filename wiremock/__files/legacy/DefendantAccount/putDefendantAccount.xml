@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defendantAccountEntity>
+    <defendant_account_id>1</defendant_account_id>
+    <account_number>100A</account_number>
+    <account_status>L</account_status>
+    <account_balance>500.58</account_balance>
+    <amount_paid>200</amount_paid>
+    <amount_imposed>1000.00</amount_imposed>
+    <business_unit_id>78</business_unit_id>
+    <business_unit_name>Business Unit A</business_unit_name>
+    <organisation>true</organisation>
+    <organisation_name>Acme Ltd</organisation_name>
+    <imposing_court_code>123</imposing_court_code>
+    <enforcing_court_code>456</enforcing_court_code>
+    <collection_order>true</collection_order>
+</defendantAccountEntity>
