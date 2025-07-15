@@ -1,7 +1,9 @@
-<legacyDefendantAccountSearchResults>
+<?xml version="1.0" encoding="UTF-8"?>
+<defendantAccountsSearchResults>
   <defendantAccountEntity>
     <defendantAccountId>1</defendantAccountId>
-    <businessUnit> <!-- BusinessUnitEntity XML representation goes here --> </businessUnit>
+    <business_unit_id>200</business_unit_id>
+    <business_unit_name>Sample BU</business_unit_name>
     <accountNumber>123456</accountNumber>
     <imposedHearingDate>2022-12-01</imposedHearingDate>
     <imposingCourtId>1</imposingCourtId>
@@ -41,9 +43,11 @@
     <enforcementCaseStatus>ECS01</enforcementCaseStatus>
     <parties> <!-- List of DefendantAccountPartiesEntity XML representations goes here --> </parties>
   </defendantAccountEntity>
+
   <defendantAccountEntity>
     <defendantAccountId>1</defendantAccountId>
-    <businessUnit> <!-- BusinessUnitEntity XML representation goes here --> </businessUnit>
+    <business_unit_id>200</business_unit_id>
+    <business_unit_name>Sample BU</business_unit_name>
     <accountNumber>123456</accountNumber>
     <imposedHearingDate>2022-12-01</imposedHearingDate>
     <imposingCourtId>1</imposingCourtId>
@@ -83,4 +87,4 @@
     <enforcementCaseStatus>ECS01</enforcementCaseStatus>
     <parties> <!-- List of DefendantAccountPartiesEntity XML representations goes here --> </parties>
   </defendantAccountEntity>
-</legacyDefendantAccountSearchResults>
+</defendantAccountsSearchResults>
