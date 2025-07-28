@@ -3,13 +3,13 @@
   <businessUnit>
     <!-- BusinessUnitEntity XML representation goes here -->
   </businessUnit>
-  <accountNumber>123456</accountNumber>
+  <accountNumber>100A</accountNumber>
   <imposedHearingDate>2022-12-01</imposedHearingDate>
   <imposingCourtId>1</imposingCourtId>
   <amountImposed>100.00</amountImposed>
-  <amountPaid>50.00</amountPaid>
-  <accountBalance>50.00</accountBalance>
-  <accountStatus>A</accountStatus>
+  <amountPaid>200.0</amountPaid>
+  <accountBalance>500.58</accountBalance>
+  <accountStatus>L</accountStatus>
   <completedDate>2022-12-02</completedDate>
   <enforcingCourt>
     <!-- CourtEntity XML representation goes here -->

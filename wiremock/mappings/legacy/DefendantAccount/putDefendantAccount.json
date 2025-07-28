@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "putDefendantAccount"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/DefendantAccount/putDefendantAccount.xml"
+  }
+}

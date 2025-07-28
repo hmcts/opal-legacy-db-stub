@@ -1,90 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <defendantAccountsSearchResults>
-  <defendantAccountEntity>
-    <defendantAccountId>1</defendantAccountId>
-    <business_unit_id>200</business_unit_id>
-    <business_unit_name>Sample BU</business_unit_name>
-    <accountNumber>123456</accountNumber>
-    <imposedHearingDate>2022-12-01</imposedHearingDate>
-    <imposingCourtId>1</imposingCourtId>
-    <amountImposed>100.00</amountImposed>
-    <amountPaid>50.00</amountPaid>
-    <accountBalance>50.00</accountBalance>
-    <accountStatus>A</accountStatus>
-    <completedDate>2022-12-02</completedDate>
-    <enforcingCourt> <!-- CourtEntity XML representation goes here --> </enforcingCourt>
-    <lastHearingCourt> <!-- CourtEntity XML representation goes here --> </lastHearingCourt>
-    <lastHearingDate>2022-12-03</lastHearingDate>
-    <lastMovementDate>2022-12-04</lastMovementDate>
-    <lastEnforcement>LE01</lastEnforcement>
-    <lastChangedDate>2022-12-05</lastChangedDate>
-    <originatorName>Example Originator</originatorName>
-    <originatorReference>OR01</originatorReference>
-    <originatorType>OT01</originatorType>
-    <allowWriteoffs>true</allowWriteoffs>
-    <allowCheques>false</allowCheques>
-    <chequeClearancePeriod>10</chequeClearancePeriod>
-    <creditTransferClearancePeriod>5</creditTransferClearancePeriod>
-    <enforcementOverrideResultId>EOR01</enforcementOverrideResultId>
-    <enforcementOverrideEnforcerId>2</enforcementOverrideEnforcerId>
-    <enforcementOverrideTfoLjaId>3</enforcementOverrideTfoLjaId>
-    <unitFineDetail>Example Detail</unitFineDetail>
-    <unitFineValue>10.00</unitFineValue>
-    <collectionOrder>true</collectionOrder>
-    <collectionOrderEffectiveDate>2022-12-06</collectionOrderEffectiveDate>
-    <furtherStepsNoticeDate>2022-12-07</furtherStepsNoticeDate>
-    <confiscationOrderDate>2022-12-08</confiscationOrderDate>
-    <fineRegistrationDate>2022-12-09</fineRegistrationDate>
-    <consolidatedAccountType>C</consolidatedAccountType>
-    <paymentCardRequested>true</paymentCardRequested>
-    <paymentCardRequestedDate>2022-12-10</paymentCardRequestedDate>
-    <paymentCardRequestedBy>Example User</paymentCardRequestedBy>
-    <prosecutorCaseReference>PCR01</prosecutorCaseReference>
-    <enforcementCaseStatus>ECS01</enforcementCaseStatus>
-    <parties> <!-- List of DefendantAccountPartiesEntity XML representations goes here --> </parties>
-  </defendantAccountEntity>
+    <count>1</count>
+    <defendantAccountEntity>
+        <defendant_account_id>1</defendant_account_id>
+        <account_number>100A</account_number>
+        <business_unit_id>78</business_unit_id>
+        <business_unit_name>Business Unit A</business_unit_name>
+        <business_unit_name>Business Unit A</business_unit_name>
+        <organisation>true</organisation>
+        <organisation_name>Acme Ltd</organisation_name>
+        <account_balance>150.50</account_balance>
+        <court>780000000185</court>
+        <parties>
+        <defendantAccountPartiesEntity>
+        <associationType>Defendant</associationType>
 
-  <defendantAccountEntity>
-    <defendantAccountId>1</defendantAccountId>
-    <business_unit_id>200</business_unit_id>
-    <business_unit_name>Sample BU</business_unit_name>
-    <accountNumber>123456</accountNumber>
-    <imposedHearingDate>2022-12-01</imposedHearingDate>
-    <imposingCourtId>1</imposingCourtId>
-    <amountImposed>100.00</amountImposed>
-    <amountPaid>50.00</amountPaid>
-    <accountBalance>50.00</accountBalance>
-    <accountStatus>A</accountStatus>
-    <completedDate>2022-12-02</completedDate>
-    <enforcingCourt> <!-- CourtEntity XML representation goes here --> </enforcingCourt>
-    <lastHearingCourt> <!-- CourtEntity XML representation goes here --> </lastHearingCourt>
-    <lastHearingDate>2022-12-03</lastHearingDate>
-    <lastMovementDate>2022-12-04</lastMovementDate>
-    <lastEnforcement>LE01</lastEnforcement>
-    <lastChangedDate>2022-12-05</lastChangedDate>
-    <originatorName>Example Originator</originatorName>
-    <originatorReference>OR01</originatorReference>
-    <originatorType>OT01</originatorType>
-    <allowWriteoffs>true</allowWriteoffs>
-    <allowCheques>false</allowCheques>
-    <chequeClearancePeriod>10</chequeClearancePeriod>
-    <creditTransferClearancePeriod>5</creditTransferClearancePeriod>
-    <enforcementOverrideResultId>EOR01</enforcementOverrideResultId>
-    <enforcementOverrideEnforcerId>2</enforcementOverrideEnforcerId>
-    <enforcementOverrideTfoLjaId>3</enforcementOverrideTfoLjaId>
-    <unitFineDetail>Example Detail</unitFineDetail>
-    <unitFineValue>10.00</unitFineValue>
-    <collectionOrder>true</collectionOrder>
-    <collectionOrderEffectiveDate>2022-12-06</collectionOrderEffectiveDate>
-    <furtherStepsNoticeDate>2022-12-07</furtherStepsNoticeDate>
-    <confiscationOrderDate>2022-12-08</confiscationOrderDate>
-    <fineRegistrationDate>2022-12-09</fineRegistrationDate>
-    <consolidatedAccountType>C</consolidatedAccountType>
-    <paymentCardRequested>true</paymentCardRequested>
-    <paymentCardRequestedDate>2022-12-10</paymentCardRequestedDate>
-    <paymentCardRequestedBy>Example User</paymentCardRequestedBy>
-    <prosecutorCaseReference>PCR01</prosecutorCaseReference>
-    <enforcementCaseStatus>ECS01</enforcementCaseStatus>
-    <parties> <!-- List of DefendantAccountPartiesEntity XML representations goes here --> </parties>
-  </defendantAccountEntity>
+        <party>
+            <surname>Graham</surname>
+            <forenames>Anna K</forenames>
+            <initials>A.K.G.</initials>
+            <birth_date>1990-01-01</birth_date>
+            <address_line_1>Lumber House</address_line_1>
+            <national_insurance_number>AB123456C</national_insurance_number>
+            <postcode>AB1 2CD</postcode>
+        </party>
+        </defendantAccountPartiesEntity>
+        </parties>
+        <aliases>
+            <alias>
+                <alias_number>1</alias_number>
+                <surname>Smith</surname>
+                <forenames>Johnny</forenames>
+            </alias>
+            <alias>
+                <alias_number>2</alias_number>
+                <surname>Brown</surname>
+                <forenames>J</forenames>
+            </alias>
+        </aliases>
+    </defendantAccountEntity>
 </defendantAccountsSearchResults>

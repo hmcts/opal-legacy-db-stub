@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "searchDefendantAccounts"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "contains": "\"surname\":\"Wilson\""
+      },
+      {
+        "contains": "\"court\":\"780000000185\""
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/DefendantAccount/defendantAccountsSearch_noResults.xml"
+  }
+}

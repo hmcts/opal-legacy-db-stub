@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<legacyAccountDetailsResponseDto>
+    <defendant_account>
+        <defendant_account_id>1</defendant_account_id>
+        <account_number>100A</account_number>
+        <business_unit_id>78</business_unit_id>
+        <business_unit_name>Business Unit A</business_unit_name>
+        <organisation>true</organisation>
+        <organisation_name>Acme Ltd</organisation_name>
+        <last_hearing_date>2024-07-01</last_hearing_date>
+        <last_hearing_court_code>123</last_hearing_court_code>
+        <last_movement_date>2024-07-10</last_movement_date>
+        <last_changed_date>2024-07-12</last_changed_date>
+        <prosecutor_case_reference>PCR01</prosecutor_case_reference>
+        <last_enforcement>LE01</last_enforcement>
+        <enf_override_result_id>OVR123</enf_override_result_id>
+        <enf_override_enforcer_code>ENF999</enf_override_enforcer_code>
+        <enforcing_court_code>COURT001</enforcing_court_code>
+        <imposed_hearing_date>2024-06-01</imposed_hearing_date>
+        <amount_imposed>100.00</amount_imposed>
+        <amount_paid>50.00</amount_paid>
+        <account_balance>50.00</account_balance>
+
+        <parties>
+            <party>
+                <organisation>false</organisation>
+                <organisation_name>Acme Ltd</organisation_name>
+                <surname>Doe</surname>
+                <forenames>John</forenames>
+                <birth_date>1990-01-01</birth_date>
+                <postcode>AB1 2CD</postcode>
+                <address_line_1>123 Test Street</address_line_1>
+                <address_line_2>Suite 100</address_line_2>
+                <address_line_3>District Center</address_line_3>
+                <address_line_4>Region</address_line_4>
+                <address_line_5>United Kingdom</address_line_5>
+            </party>
+        </parties>
+
+        <payment_terms>
+            <terms_type_code>I</terms_type_code>
+            <instalment_amount>25.00</instalment_amount>
+            <instalment_period>M</instalment_period>
+            <terms_date>2024-06-15</terms_date>
+            <instalment_lump_sum>0.00</instalment_lump_sum>
+            <jail_days>0</jail_days>
+        </payment_terms>
+
+        <account_activities>
+            <account_activity>
+                <activity_text>First reminder issued</activity_text>
+                <posted_date>2024-07-05</posted_date>
+            </account_activity>
+        </account_activities>
+
+        <account_comments>Comment about the account</account_comments>
+    </defendant_account>
+</legacyAccountDetailsResponseDto>

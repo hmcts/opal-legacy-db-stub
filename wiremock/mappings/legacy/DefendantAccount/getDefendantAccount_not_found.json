@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "getDefendantAccount"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "contains": "<defendant_account_id>999</defendant_account_id>"
+      }
+    ]
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "body": "<error><message>Defendant account not found</message></error>"
+  }
+}
