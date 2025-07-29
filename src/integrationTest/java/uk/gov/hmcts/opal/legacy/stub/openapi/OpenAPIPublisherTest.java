@@ -30,7 +30,8 @@ class OpenAPIPublisherTest {
 
     @DisplayName("Generate swagger documentation")
     @Test
-    @SuppressWarnings("PMD.JUnitTestsShouldIncludeAssert")
+    // This test does not need to assert anything, it just generates the OpenAPI specs.
+    @SuppressWarnings("PMD.UnitTestShouldIncludeAssert")
     void generateDocs() throws Exception {
         byte[] specs = mvc.perform(get("/v3/api-docs"))
             .andExpect(status().isOk())

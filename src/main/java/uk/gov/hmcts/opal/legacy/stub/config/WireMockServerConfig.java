@@ -34,21 +34,21 @@ public class WireMockServerConfig {
     public WireMockServer wireMockServer() {
         LOG.info("WireMock mappings file path: {}", mappingsPath);
 
-        var wireMockServer = new WireMockServer(getWireMockConfig());
+        WireMockServer wireMockServer = new WireMockServer(getWireMockConfig());
 
         LOG.info("Stubs registered with wiremock");
         wireMockServer.getStubMappings().forEach(w -> LOG.info("\nRequest : {}, \nResponse: {}", w.getRequest(),
-                w.getResponse()));
+            w.getResponse()));
 
         return wireMockServer;
     }
 
     private WireMockConfiguration getWireMockConfig() {
-        var mappingDirectory = new File(mappingsPath + MAPPINGS_DIRECTORY_NAME);
+        File mappingDirectory = new File(mappingsPath + MAPPINGS_DIRECTORY_NAME);
         LOG.info("Mappings directory path: {}", mappingDirectory.getAbsolutePath());
 
         WireMockConfiguration config = WireMockConfiguration.wireMockConfig().stubCorsEnabled(false)
-                .dynamicHttpsPort().dynamicPort().globalTemplating(true).extensions(bespokeBehaviourExtensions());
+            .dynamicHttpsPort().dynamicPort().globalTemplating(true).extensions(bespokeBehaviourExtensions());
 
         if (mappingDirectory.isDirectory()) {
             return config.usingFilesUnderDirectory(mappingsPath);
@@ -59,10 +59,10 @@ public class WireMockServerConfig {
     }
 
     public static Extension[] bespokeBehaviourExtensions() {
-        return new Extension[] { new StringLengthExtension(), new CustomDataExtension()};
+        return new Extension[]{new StringLengthExtension(), new CustomDataExtension()};
     }
 
-    private static class StringLengthExtension implements TemplateHelperProviderExtension {
+    private static final class StringLengthExtension implements TemplateHelperProviderExtension {
         @Override
         public String getName() {
             return "custom-helpers";
@@ -70,12 +70,12 @@ public class WireMockServerConfig {
 
         @Override
         public Map<String, Helper<?>> provideTemplateHelpers() {
-            Helper<Object> helper = (context, options) ->  context.toString().length();
+            Helper<Object> helper = (context, options) -> context.toString().length();
             return Map.of("string-length", helper);
         }
     }
 
-    private static class CustomDataExtension implements TemplateModelDataProviderExtension {
+    private static final class CustomDataExtension implements TemplateModelDataProviderExtension {
 
 
         @Override
