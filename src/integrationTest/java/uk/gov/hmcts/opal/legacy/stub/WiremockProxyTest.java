@@ -4,10 +4,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -23,33 +23,47 @@ class WiremockProxyTest extends IntegrationTestBase {
 
     @Test
     void forwardsGetRequests() {
-        var result = this.restTemplate.getForEntity(uri, Map.class);
+        ResponseEntity<TestResponse> result = this.restTemplate.getForEntity(uri, TestResponse.class);
 
-        assertThat(result.getBody().get("result")).isEqualTo("content");
+        assertThat(result.getBody().getResult()).isEqualTo("content");
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
 
     @Test
     void forwardsPostRequests() {
-        var result = this.restTemplate.postForEntity(uri, "{}", Map.class);
+        ResponseEntity<TestResponse> result = this.restTemplate.postForEntity(uri, "{}", TestResponse.class);
 
-        assertThat(result.getBody().get("result")).isEqualTo("posted");
+        assertThat(result.getBody().getResult()).isEqualTo("posted");
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.CREATED);
     }
 
     @Test
     void forwardsPutRequests() {
-        var result = this.restTemplate.exchange(uri, HttpMethod.PUT, null, Map.class);
+        ResponseEntity<TestResponse> result = this.restTemplate.exchange(uri, HttpMethod.PUT, null, TestResponse.class);
 
-        assertThat(result.getBody().get("result")).isEqualTo("putted");
+        assertThat(result.getBody().getResult()).isEqualTo("putted");
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
 
     @Test
     void forwardsDeleteRequests() {
-        var result = this.restTemplate.exchange(uri, HttpMethod.DELETE, null, Map.class);
+        ResponseEntity<TestResponse> result =
+            this.restTemplate.exchange(uri, HttpMethod.DELETE, null, TestResponse.class);
 
         assertThat(result.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
 
+    //False Positive
+    @SuppressWarnings("PMD.TestClassWithoutTestCases")
+    static class TestResponse {
+        private String result;
+
+        public String getResult() {
+            return result;
+        }
+
+        public void setResult(String result) {
+            this.result = result;
+        }
+    }
 }
