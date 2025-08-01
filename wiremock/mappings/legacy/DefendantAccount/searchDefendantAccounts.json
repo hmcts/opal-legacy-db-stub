@@ -6,8 +6,11 @@
       "actionType": {
         "equalTo": "searchDefendantAccounts"
       }
-    }
+    },"bodyPatterns": [
+      { "matchesJsonPath": "$[?(@=='AB1 2CD')]"}
+    ]
   },
+
   "response": {
     "status": 200,
     "headers": {

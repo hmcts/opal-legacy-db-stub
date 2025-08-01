@@ -1,4 +1,5 @@
 {
+  "priority": 1,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
@@ -8,9 +9,7 @@
       }
     },
     "bodyPatterns": [
-      {
-        "contains": "<defendant_account_id>999</defendant_account_id>"
-      }
+      { "matchesJsonPath": "$[?(@== 2]" }
     ]
   },
   "response": {

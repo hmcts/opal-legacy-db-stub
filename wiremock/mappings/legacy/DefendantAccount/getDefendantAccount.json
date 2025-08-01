@@ -6,7 +6,9 @@
       "actionType": {
         "equalTo": "getDefendantAccount"
       }
-    }
+    },"bodyPatterns": [
+      { "matchesJsonPath": "$[?(@== 1]" }
+    ]
   },
   "response": {
     "status": 200,

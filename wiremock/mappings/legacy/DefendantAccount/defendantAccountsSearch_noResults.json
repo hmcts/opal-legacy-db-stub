@@ -1,19 +1,15 @@
 {
+  "priority": 1,
   "request": {
     "method": "POST",
-    "urlPath": "/opal",
+    "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
         "equalTo": "searchDefendantAccounts"
       }
     },
     "bodyPatterns": [
-      {
-        "contains": "\"surname\":\"Wilson\""
-      },
-      {
-        "contains": "\"court\":\"780000000185\""
-      }
+      { "matchesJsonPath": "$.defendant[?(@.surname=='Jones')]" }
     ]
   },
   "response": {
