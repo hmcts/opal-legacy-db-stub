@@ -6,7 +6,15 @@
       "actionType": {
         "equalTo": "getAccountDetails"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.defendant_account_id",
+          "equalTo": "1"
+        }
+      }
+    ]
   },
   "response": {
     "status": 200,

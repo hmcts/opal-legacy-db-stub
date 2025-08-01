@@ -6,7 +6,15 @@
       "actionType": {
         "equalTo": "getDefendantAccount"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.accountNumber",
+          "equalTo": "100A"
+        }
+      }
+    ]
   },
   "response": {
     "status": 200,

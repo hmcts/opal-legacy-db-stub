@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<defendantAccountsSearchResults>
+<response>
     <count>1</count>
-    <defendantAccountEntity>
+    <defendant_accounts>
+        <defendant_accounts_element>
         <defendant_account_id>1</defendant_account_id>
         <account_number>100A</account_number>
-        <business_unit_id>78</business_unit_id>
-        <business_unit_name>Business Unit A</business_unit_name>
-        <business_unit_name>Business Unit A</business_unit_name>
-        <organisation>true</organisation>
-        <organisation_name>Acme Ltd</organisation_name>
-        <account_balance>150.50</account_balance>
-        <court>780000000185</court>
-        <parties>
-        <defendantAccountPartiesEntity>
-        <associationType>Defendant</associationType>
-
-        <party>
-            <surname>Graham</surname>
-            <forenames>Anna K</forenames>
-            <initials>A.K.G.</initials>
-            <birth_date>1990-01-01</birth_date>
-            <address_line_1>Lumber House</address_line_1>
+            <organisation>true</organisation>
+            <defendant_title>Acme Ltd</defendant_title>
+            <defendant_firstnames>Johnny</defendant_firstnames>
+            <defendant_surname>Smith</defendant_surname>
+            <birth_date>1980-01-01</birth_date>
             <national_insurance_number>AB123456C</national_insurance_number>
+            <parent_guardian_surname>Jones</parent_guardian_surname>
+            <parent_guardian_firstnames>Sarah</parent_guardian_firstnames>
+            <aliases>
+                <aliases_element>
+                    <alias_number>1</alias_number>
+                    <surname>Smith</surname>
+                    <forenames>Johnny</forenames>
+                </aliases_element>
+                <aliases_element>
+                    <alias_number>2</alias_number>
+                    <organisation_name>London</organisation_name>
+                </aliases_element>
+            </aliases>
+            <address_line_1>Lumber House</address_line_1>
             <postcode>AB1 2CD</postcode>
-        </party>
-        </defendantAccountPartiesEntity>
-        </parties>
-        <aliases>
-            <alias>
-                <alias_number>1</alias_number>
-                <surname>Smith</surname>
-                <forenames>Johnny</forenames>
-            </alias>
-            <alias>
-                <alias_number>2</alias_number>
-                <surname>Brown</surname>
-                <forenames>J</forenames>
-            </alias>
-        </aliases>
-    </defendantAccountEntity>
-</defendantAccountsSearchResults>
+            <business_unit_name>Business Unit A</business_unit_name>
+            <business_unit_id>78</business_unit_id>
+            <prosecutor_case_reference>123</prosecutor_case_reference>
+            <last_enforcement_action>321</last_enforcement_action>
+            <account_balance>150.50</account_balance>
+        </defendant_accounts_element>
+    </defendant_accounts>
+</response>
