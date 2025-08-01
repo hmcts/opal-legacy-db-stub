@@ -6,8 +6,14 @@
       "actionType": {
         "equalTo": "getDefendantAccount"
       }
-    },"bodyPatterns": [
-      { "matchesJsonPath": "$[?(@== 1]" }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.accountNumber",
+          "equalTo": "100A"
+        }
+      }
     ]
   },
   "response": {

@@ -9,7 +9,12 @@
       }
     },
     "bodyPatterns": [
-      { "matchesJsonPath": "$.defendant[?(@.surname=='Jones')]" }
+      {
+        "matchesJsonPath": {
+          "expression": "$.surname",
+          "equalTo": "ShouldNotMatchAnythingXYZ"
+        }
+      }
     ]
   },
   "response": {

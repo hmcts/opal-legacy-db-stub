@@ -6,11 +6,16 @@
       "actionType": {
         "equalTo": "searchDefendantAccounts"
       }
-    },"bodyPatterns": [
-      { "matchesJsonPath": "$[?(@=='AB1 2CD')]"}
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.postcode",
+          "equalTo": "AB1 2CD"
+        }
+      }
     ]
   },
-
   "response": {
     "status": 200,
     "headers": {

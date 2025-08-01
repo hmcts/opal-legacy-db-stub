@@ -9,7 +9,12 @@
       }
     },
     "bodyPatterns": [
-      { "matchesJsonPath": "$[?(@== 2]" }
+      {
+        "matchesJsonPath": {
+          "expression": "$.accountNumber",
+          "equalTo": "2"
+        }
+      }
     ]
   },
   "response": {
