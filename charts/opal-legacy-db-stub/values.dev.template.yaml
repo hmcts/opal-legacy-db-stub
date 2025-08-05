@@ -2,3 +2,5 @@
 java:
   image: ${IMAGE_NAME}
   ingressHost: ${SERVICE_FQDN}
+  environment:
+    APPLICATIONINSIGHTS_ROLE_NAME: "opal-fines-service-pr-${CHANGE_ID}"
