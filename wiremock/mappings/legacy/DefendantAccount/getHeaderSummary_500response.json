@@ -4,11 +4,11 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.of_create_defendant_account"
+        "equalTo": "LIBRA.get_header_summary"
       }
     },
     "bodyPatterns" : [ {
-      "matchesJsonPath" : "$[?(@.business_unit_id == '500')]"
+      "matchesJsonPath" : "$[?(@.defendant_account_id == '500')]"
     } ]
   },
   "response": {
