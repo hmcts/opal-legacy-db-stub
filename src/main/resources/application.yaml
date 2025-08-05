@@ -1,5 +1,6 @@
 server:
   port: 4553
+  forward-headers-strategy: native
 
 management:
   endpoint:
