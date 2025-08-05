@@ -93,7 +93,10 @@ public class WiremockRequestForwardingController {
             String requestBody) throws IOException, InterruptedException {
 
         String requestPath = new AntPathMatcher().extractPathWithinPattern(CATCH_ALL_PATH, request.getRequestURI());
-
+        if (requestPath == null) {
+            requestPath = "";
+        }
+        requestPath = requestPath.replaceAll("^/+", ""); // Remove all leading slashes
         if (request.getQueryString() != null) {
             requestPath += "?" + request.getQueryString();
         }
@@ -145,6 +148,10 @@ public class WiremockRequestForwardingController {
         String scheme = Optional.ofNullable(request.getHeader("x-forwarded-proto"))
                 .orElse(request.getScheme());
 
-        return scheme + "://" + mockHttpServerHost + ":" + mockHttpServer.portNumber() + "/" + requestPath;
+        String baseUrl = scheme + "://" + mockHttpServerHost + ":" + mockHttpServer.portNumber();
+        if (!requestPath.isEmpty()) {
+            baseUrl += "/" + requestPath;
+        }
+        return baseUrl;
     }
 }
