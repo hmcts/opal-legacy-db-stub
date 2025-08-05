@@ -115,9 +115,13 @@ public class WiremockRequestForwardingController {
         log.info(":forwardRequest: response body: {}\n", httpResponse.body());
         log.info(":forwardRequest: response status: {}\n", httpResponse.statusCode());
         log.info(":forwardRequest: response headers: {}\n", httpResponse.headers().toString());
+        MultiValueMap<String, String> responseHeaders = copyResponseHeaders(httpResponse);
+        request.getHeaderNames().asIterator().forEachRemaining(headerName -> {
+            responseHeaders.add(headerName, request.getHeader(headerName));
+        });
         return new ResponseEntity<>(
             httpResponse.body().getBytes(),
-            copyResponseHeaders(httpResponse),
+            responseHeaders,
             httpResponse.statusCode()
         );
 
