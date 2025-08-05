@@ -137,8 +137,8 @@ sonarqube {
   properties {
     property "sonar.projectName", "${rootProject.name}"
     property "sonar.projectKey", "uk.gov.hmcts.opal:stub-services"
-    property "sonar.exclusions", sonarExclusions.join(', ')
-    property 'sonar.coverage.exclusions', "**/uk/gov/hmcts/opal/stub/**"
+    property 'sonar.exclusions', "**/**"
+    property 'sonar.coverage.exclusions', "**/**"
     property "sonar.gradle.skipCompile", 'true'
   }
 }
