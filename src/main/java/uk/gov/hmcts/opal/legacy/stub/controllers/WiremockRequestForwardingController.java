@@ -147,8 +147,9 @@ public class WiremockRequestForwardingController {
     private String getMockHttpServerUrl(HttpServletRequest request, String requestPath) {
         String scheme = Optional.ofNullable(request.getHeader("x-forwarded-proto"))
                 .orElse(request.getScheme());
+        int port = scheme.equals("https") ? mockHttpServer.httpsPort() : mockHttpServer.httpPort();
 
-        String baseUrl = scheme + "://" + mockHttpServerHost + ":" + mockHttpServer.portNumber();
+        String baseUrl = scheme + "://" + mockHttpServerHost + ":" + port;
         if (!requestPath.isEmpty()) {
             baseUrl += "/" + requestPath;
         }

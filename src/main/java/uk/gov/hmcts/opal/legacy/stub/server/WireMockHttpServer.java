@@ -34,7 +34,12 @@ public class WireMockHttpServer implements MockHttpServer {
     }
 
     @Override
-    public int portNumber() {
+    public int httpPort() {
         return wireMockServer.port();
+    }
+
+    @Override
+    public int httpsPort() {
+        return wireMockServer.httpsPort();
     }
 }
