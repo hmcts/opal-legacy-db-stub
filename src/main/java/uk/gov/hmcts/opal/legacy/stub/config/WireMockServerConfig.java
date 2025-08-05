@@ -47,8 +47,12 @@ public class WireMockServerConfig {
         File mappingDirectory = new File(mappingsPath + MAPPINGS_DIRECTORY_NAME);
         LOG.info("Mappings directory path: {}", mappingDirectory.getAbsolutePath());
 
-        WireMockConfiguration config = WireMockConfiguration.wireMockConfig().stubCorsEnabled(false)
-            .dynamicHttpsPort().dynamicPort().globalTemplating(true).extensions(bespokeBehaviourExtensions());
+        WireMockConfiguration config = WireMockConfiguration.wireMockConfig()
+            .stubCorsEnabled(false)
+            .dynamicHttpsPort()
+            .dynamicPort()
+            .globalTemplating(true)
+            .extensions(bespokeBehaviourExtensions());
 
         if (mappingDirectory.isDirectory()) {
             return config.usingFilesUnderDirectory(mappingsPath);

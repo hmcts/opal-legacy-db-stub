@@ -44,6 +44,9 @@ public class WiremockRequestForwardingController {
         "host", "connection", "accept-encoding", "content-length", "transfer-encoding", "upgrade"
     );
 
+    @Value("${wiremock.server.protocol}")
+    private String mockHttpServerProtocol;
+
     @Value("${wiremock.server.host}")
     private String mockHttpServerHost;
 
@@ -142,6 +145,6 @@ public class WiremockRequestForwardingController {
     }
 
     private String getMockHttpServerUrl(String requestPath) {
-        return "https://" + mockHttpServerHost + ":" + mockHttpServer.portNumber() + requestPath;
+        return mockHttpServerProtocol + "://" + mockHttpServerHost + ":" + mockHttpServer.portNumber() + requestPath;
     }
 }

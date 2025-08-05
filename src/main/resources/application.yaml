@@ -23,6 +23,7 @@ spring:
 
 wiremock:
   server:
+    protocol: ${WIREMOCK_PROTOCOL:http}
     host: 127.0.0.1
     mappings-path: ${WIREMOCK_SERVER_MAPPINGS_PATH:wiremock}
 

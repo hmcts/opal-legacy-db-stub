@@ -11,3 +11,4 @@ java:
         - name: app-insights-connection-string
           alias: app-insights-connection-string
   environment:
+    WIREMOCK_PROTOCOL: https
