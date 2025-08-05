@@ -145,6 +145,12 @@ public class WiremockRequestForwardingController {
     }
 
     private String getMockHttpServerUrl(String requestPath) {
-        return mockHttpServerProtocol + "://" + mockHttpServerHost + ":" + mockHttpServer.portNumber() + requestPath;
+        int port;
+        if (mockHttpServerProtocol.equalsIgnoreCase("https")) {
+            port = mockHttpServer.httpsPort();
+        } else {
+            port = mockHttpServer.httpPort();
+        }
+        return mockHttpServerProtocol + "://" + mockHttpServerHost + ":" + port + requestPath;
     }
 }
