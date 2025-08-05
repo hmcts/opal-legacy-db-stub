@@ -113,7 +113,8 @@ public class WiremockRequestForwardingController {
             httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
 
         log.info(":forwardRequest: response body: {}\n", httpResponse.body());
-
+        log.info(":forwardRequest: response status: {}\n", httpResponse.statusCode());
+        log.info(":forwardRequest: response headers: {}\n", httpResponse.headers().toString());
         return new ResponseEntity<>(
             httpResponse.body().getBytes(),
             copyResponseHeaders(httpResponse),
