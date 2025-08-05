@@ -10,7 +10,12 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import uk.gov.hmcts.opal.legacy.stub.server.MockHttpServer;
 
 import java.io.IOException;
@@ -27,6 +32,9 @@ import static java.net.http.HttpRequest.Builder;
 import static java.net.http.HttpRequest.newBuilder;
 import static java.util.Locale.ENGLISH;
 
+/**
+ * Stand up a REST controller that captures all incoming REST requests and forwards them to the Wiremock instance.
+ */
 @RestController
 @RequestMapping("/")
 @Slf4j(topic = "WiremockRequestForwardingController")
@@ -74,6 +82,10 @@ public class WiremockRequestForwardingController {
         return forwardRequest(request, BodyPublishers.noBody(), HttpMethod.DELETE, null);
     }
 
+    /**
+     * This deconstructs the original request URL and rebuilds it into a new request to target at
+     * the Wiremock instance.
+     */
     private ResponseEntity<byte[]> forwardRequest(
             HttpServletRequest request,
             BodyPublisher bodyPublisher,
