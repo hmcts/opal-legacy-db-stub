@@ -27,7 +27,7 @@ public class ApplicationConfig {
                 public X509Certificate[] getAcceptedIssuers() {
                     return new X509Certificate[0];
                 }
-                
+
                 public void checkClientTrusted(X509Certificate[] certs, String authType) {
                     // Trust all client certificates
                 }
@@ -40,8 +40,12 @@ public class ApplicationConfig {
         SSLContext sslContext = SSLContext.getInstance("TLS");
         sslContext.init(null, trustAllCerts, new SecureRandom());
 
+        SSLParameters sslParameters = new SSLParameters();
+        sslParameters.setEndpointIdentificationAlgorithm(""); // Disable endpoint ID check (hostname verification)
+
         return HttpClient.newBuilder()
                 .sslContext(sslContext)
+                .sslParameters(sslParameters)
                 .build();
     }
 
