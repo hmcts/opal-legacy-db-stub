@@ -130,6 +130,7 @@ project.tasks['check'].dependsOn integration
 def sonarExclusions = [
   '**/uk/gov/hmcts/opal/stub/services/config/**',
   '**/uk/gov/hmcts/opal/stub/services/Application.java',
+  '**/uk/gov/hmcts/opal/stub/**',
 ]
 
 sonarqube {
