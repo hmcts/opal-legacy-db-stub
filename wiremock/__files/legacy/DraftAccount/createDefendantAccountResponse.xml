@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<legacyCreateDefendantAccountResponse>
+<response>
   <defendant_account_id>777</defendant_account_id>
   <defendant_account_number>77-007</defendant_account_number>
-</legacyCreateDefendantAccountResponse>
+</response>
