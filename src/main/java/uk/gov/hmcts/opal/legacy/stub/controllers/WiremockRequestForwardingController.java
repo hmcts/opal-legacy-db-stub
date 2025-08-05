@@ -148,9 +148,9 @@ public class WiremockRequestForwardingController {
         int port;
         String protocol;
 
-        if (mockHttpServerUseHttps) {//NOSONAR Tested using http
-            port = mockHttpServer.httpsPort();//NOSONAR Tested using http
-            protocol = "https";//NOSONAR Tested using http
+        if (mockHttpServerUseHttps) {
+            port = mockHttpServer.httpsPort();
+            protocol = "https";
         } else {
             port = mockHttpServer.httpPort();
             protocol = "http";
