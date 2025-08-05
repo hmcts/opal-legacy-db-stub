@@ -23,7 +23,7 @@ spring:
 
 wiremock:
   server:
-    protocol: ${WIREMOCK_PROTOCOL:http}
+    use-https: ${WIREMOCK_USE_HTTPS:false}
     host: 127.0.0.1
     mappings-path: ${WIREMOCK_SERVER_MAPPINGS_PATH:wiremock}
 
