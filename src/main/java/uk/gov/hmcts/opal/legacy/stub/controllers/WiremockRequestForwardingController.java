@@ -85,7 +85,7 @@ public class WiremockRequestForwardingController {
     }
 
     @DeleteMapping(CATCH_ALL_PATH)
-    public ResponseEntity<Object> forwardDeleteRequests(HttpServletRequest request)
+    public ResponseEntity<byte[]> forwardDeleteRequests(HttpServletRequest request)
         throws IOException, InterruptedException {
         return forwardRequest(request, BodyPublishers.noBody(), HttpMethod.DELETE, null);
     }
