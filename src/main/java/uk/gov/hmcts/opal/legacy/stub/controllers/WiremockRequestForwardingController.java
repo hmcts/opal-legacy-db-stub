@@ -65,27 +65,27 @@ public class WiremockRequestForwardingController {
     }
 
     @GetMapping(CATCH_ALL_PATH)
-    public ResponseEntity<byte[]> forwardGetRequests(HttpServletRequest request)
+    public ResponseEntity<Object> forwardGetRequests(HttpServletRequest request)
         throws IOException, InterruptedException {
         return forwardRequest(request, BodyPublishers.noBody(), HttpMethod.GET, null);
     }
 
     @PostMapping(CATCH_ALL_PATH)
-    public ResponseEntity<byte[]> forwardPostRequests(HttpServletRequest request)
+    public ResponseEntity<Object> forwardPostRequests(HttpServletRequest request)
         throws IOException, InterruptedException {
         String requestBody = IOUtils.toString(request.getInputStream());
         return forwardRequest(request, BodyPublishers.ofString(requestBody), HttpMethod.POST, requestBody);
     }
 
     @PutMapping(CATCH_ALL_PATH)
-    public ResponseEntity<byte[]> forwardPutRequests(HttpServletRequest request)
+    public ResponseEntity<Object> forwardPutRequests(HttpServletRequest request)
         throws IOException, InterruptedException {
         String requestBody = IOUtils.toString(request.getInputStream());
         return forwardRequest(request, BodyPublishers.ofString(requestBody), HttpMethod.PUT, requestBody);
     }
 
     @DeleteMapping(CATCH_ALL_PATH)
-    public ResponseEntity<byte[]> forwardDeleteRequests(HttpServletRequest request)
+    public ResponseEntity<Object> forwardDeleteRequests(HttpServletRequest request)
         throws IOException, InterruptedException {
         return forwardRequest(request, BodyPublishers.noBody(), HttpMethod.DELETE, null);
     }
@@ -94,7 +94,7 @@ public class WiremockRequestForwardingController {
      * This deconstructs the original request URL and rebuilds it into a new request to target at
      * the Wiremock instance.
      */
-    private ResponseEntity<byte[]> forwardRequest(
+    private ResponseEntity<Object> forwardRequest(
         HttpServletRequest request,
         BodyPublisher bodyPublisher,
         HttpMethod httpMethod,
@@ -120,7 +120,7 @@ public class WiremockRequestForwardingController {
 
         log.info(":forwardRequest: response body: {}\n", httpResponse.body());
         return new ResponseEntity<>(
-            httpResponse.body().getBytes(),
+            httpResponse.body(),
             copyResponseHeaders(httpResponse),
             httpResponse.statusCode()
         );
