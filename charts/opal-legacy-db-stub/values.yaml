@@ -10,3 +10,5 @@ java:
 #        - name: AppInsightsInstrumentationKey
 #          alias: azure.application-insights.instrumentation-key
   environment:
+    LOGGING_LEVEL_ORG_SPRINGFRAMEWORK: DEBUG
+    LOGGING_LEVEL_COM_GITHUB_TOMAKEHURST_WIREMOCK: DEBUG

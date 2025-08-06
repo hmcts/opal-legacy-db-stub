@@ -1,5 +1,6 @@
 server:
   port: 4553
+  forward-headers-strategy: native
 
 management:
   endpoint:
@@ -23,7 +24,7 @@ spring:
 
 wiremock:
   server:
-    host: 127.0.0.1
+    host: localhost
     mappings-path: ${WIREMOCK_SERVER_MAPPINGS_PATH:wiremock}
 
 azure:

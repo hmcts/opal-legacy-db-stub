@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 import java.util.Set;
 
@@ -41,7 +42,7 @@ public class WiremockRequestForwardingController {
 
     private static final String CATCH_ALL_PATH = "**";
     private static final Set<String> EXCLUDED_HEADERS = Set.of(
-        "host", "connection", "accept-encoding", "content-length", "transfer-encoding", "upgrade"
+            "host", "connection", "accept-encoding", "content-length", "transfer-encoding", "upgrade"
     );
 
     @Value("${wiremock.server.host}")
@@ -57,27 +58,27 @@ public class WiremockRequestForwardingController {
 
     @GetMapping(CATCH_ALL_PATH)
     public ResponseEntity<byte[]> forwardGetRequests(HttpServletRequest request)
-        throws IOException, InterruptedException {
+            throws IOException, InterruptedException {
         return forwardRequest(request, BodyPublishers.noBody(), HttpMethod.GET, null);
     }
 
     @PostMapping(CATCH_ALL_PATH)
     public ResponseEntity<byte[]> forwardPostRequests(HttpServletRequest request)
-        throws IOException, InterruptedException {
+            throws IOException, InterruptedException {
         String requestBody = IOUtils.toString(request.getInputStream());
         return forwardRequest(request, BodyPublishers.ofString(requestBody), HttpMethod.POST, requestBody);
     }
 
     @PutMapping(CATCH_ALL_PATH)
     public ResponseEntity<byte[]> forwardPutRequests(HttpServletRequest request)
-        throws IOException, InterruptedException {
+            throws IOException, InterruptedException {
         String requestBody = IOUtils.toString(request.getInputStream());
         return forwardRequest(request, BodyPublishers.ofString(requestBody), HttpMethod.PUT, requestBody);
     }
 
     @DeleteMapping(CATCH_ALL_PATH)
     public ResponseEntity<byte[]> forwardDeleteRequests(HttpServletRequest request)
-        throws IOException, InterruptedException {
+            throws IOException, InterruptedException {
         return forwardRequest(request, BodyPublishers.noBody(), HttpMethod.DELETE, null);
     }
 
@@ -86,37 +87,39 @@ public class WiremockRequestForwardingController {
      * the Wiremock instance.
      */
     private ResponseEntity<byte[]> forwardRequest(
-        HttpServletRequest request,
-        BodyPublisher bodyPublisher,
-        HttpMethod httpMethod,
-        String requstBody) throws IOException, InterruptedException {
+            HttpServletRequest request,
+            BodyPublisher bodyPublisher,
+            HttpMethod httpMethod,
+            String requestBody) throws IOException, InterruptedException {
 
         String requestPath = new AntPathMatcher().extractPathWithinPattern(CATCH_ALL_PATH, request.getRequestURI());
-
+        if (requestPath == null) {
+            requestPath = "";
+        }
+        requestPath = requestPath.replaceAll("^/+", ""); // Remove all leading slashes
         if (request.getQueryString() != null) {
             requestPath += "?" + request.getQueryString();
         }
 
-        Builder requestBuilder = newBuilder(URI.create(getMockHttpServerUrl(requestPath)))
-            .method(httpMethod.name(), bodyPublisher);
+        String targetUrl = getMockHttpServerUrl(request, requestPath);
+        Builder requestBuilder = newBuilder(URI.create(targetUrl))
+                .method(httpMethod.name(), bodyPublisher);
 
         log.info(":forwardRequest: request: {}", requestBuilder.build());
-        Optional.ofNullable(requstBody).ifPresent(body -> log.info(":forwardRequest: body: {}", body));
+        Optional.ofNullable(requestBody).ifPresent(body -> log.info(":forwardRequest: body: {}", body));
         logRequestHeaders(request);
-
         transferRequestHeaders(request, requestBuilder);
 
         HttpResponse<String> httpResponse =
-            httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
+                httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
 
         log.info(":forwardRequest: response body: {}\n", httpResponse.body());
 
-        return new ResponseEntity<>(
-            httpResponse.body().getBytes(),
-            copyResponseHeaders(httpResponse),
-            httpResponse.statusCode()
-        );
-
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.addAll(copyResponseHeaders(httpResponse));
+        return ResponseEntity.status(httpResponse.statusCode())
+                .headers(responseHeaders)
+                .body(httpResponse.body().getBytes(StandardCharsets.UTF_8));
     }
 
     private void logRequestHeaders(HttpServletRequest request) {
@@ -141,7 +144,15 @@ public class WiremockRequestForwardingController {
         return headers;
     }
 
-    private String getMockHttpServerUrl(String requestPath) {
-        return "http://" + mockHttpServerHost + ":" + mockHttpServer.portNumber() + requestPath;
+    private String getMockHttpServerUrl(HttpServletRequest request, String requestPath) {
+        String scheme = Optional.ofNullable(request.getHeader("x-forwarded-proto"))
+                .orElse(request.getScheme());
+        int port = scheme.equals("https") ? mockHttpServer.httpsPort() : mockHttpServer.httpPort();
+
+        String baseUrl = scheme + "://" + mockHttpServerHost + ":" + port;
+        if (!requestPath.isEmpty()) {
+            baseUrl += "/" + requestPath;
+        }
+        return baseUrl;
     }
 }
