@@ -44,6 +44,11 @@ public class WiremockRequestForwardingController {
         "host", "connection", "accept-encoding", "content-length", "transfer-encoding", "upgrade"
     );
 
+    private static final Set<String> EXCLUDED_RESPONSE_HEADERS = Set.of(
+        "transfer-encoding", "connection", "content-length", "keep-alive", "proxy-authenticate",
+        "proxy-authorization", "te", "trailer", "upgrade"
+    );
+
     @Value("${wiremock.server.use-https}")
     private boolean mockHttpServerUseHttps;
 
@@ -113,15 +118,9 @@ public class WiremockRequestForwardingController {
             httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
 
         log.info(":forwardRequest: response body: {}\n", httpResponse.body());
-        log.info(":forwardRequest: response status: {}\n", httpResponse.statusCode());
-        log.info(":forwardRequest: response headers: {}\n", httpResponse.headers().toString());
-        MultiValueMap<String, String> responseHeaders = copyResponseHeaders(httpResponse);
-        request.getHeaderNames().asIterator().forEachRemaining(headerName -> {
-            responseHeaders.add(headerName, request.getHeader(headerName));
-        });
         return new ResponseEntity<>(
             httpResponse.body().getBytes(),
-            responseHeaders,
+            copyResponseHeaders(httpResponse),
             httpResponse.statusCode()
         );
 
@@ -143,9 +142,14 @@ public class WiremockRequestForwardingController {
         });
     }
 
+
     private MultiValueMap<String, String> copyResponseHeaders(HttpResponse<?> response) {
-        MultiValueMap<String, String> headers = new HttpHeaders();
-        response.headers().map().forEach(headers::addAll);
+        HttpHeaders headers = new HttpHeaders();
+        response.headers().map().forEach((key, values) -> {
+            if (!EXCLUDED_RESPONSE_HEADERS.contains(key.toLowerCase())) {
+                headers.addAll(key, values);
+            }
+        });
         return headers;
     }
 
