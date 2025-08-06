@@ -25,7 +25,6 @@ import static java.util.Collections.list;
 
 @Configuration
 @SuppressWarnings({
-    "PMD.UnusedPrivateMethod",
     "HideUtilityClassConstructor",
 })
 public class DevBeans {
@@ -36,6 +35,7 @@ public class DevBeans {
             TimeZone.setDefault(TimeZone.getTimeZone(UTC));
         }
     }
+
     @Component
     @Slf4j
     @RequiredArgsConstructor
@@ -59,17 +59,17 @@ public class DevBeans {
 
         private void logRequest(ContentCachingRequestWrapper request) {
             StringBuilder builder = new StringBuilder();
-            builder.append(headersToString(list(request.getHeaderNames()), request::getHeader));
-            builder.append(new String(request.getContentAsByteArray()));
+            builder.append(headersToString(list(request.getHeaderNames()), request::getHeader))
+                .append(new String(request.getContentAsByteArray()));
             log.info("Request: {} {}: {}?{}", request.getMethod(), request.getRequestURI(),
                 Optional.ofNullable(request.getQueryString()).orElse(""), builder);
         }
 
         private void logResponse(ContentCachingResponseWrapper response) throws IOException {
             StringBuilder builder = new StringBuilder();
-            builder.append(headersToString(response.getHeaderNames(), response::getHeader));
-            builder.append("%s=%s".formatted("content-type", response.getContentType())).append('\n');
-            builder.append(new String(response.getContentAsByteArray()));
+            builder.append(headersToString(response.getHeaderNames(), response::getHeader))
+                .append("content-type=").append(response.getContentType()).append('\n')
+                .append(new String(response.getContentAsByteArray()));
             log.info("Response: {}", builder);
             response.copyBodyToResponse();
         }
@@ -78,7 +78,7 @@ public class DevBeans {
             StringBuilder builder = new StringBuilder();
             for (String headerName : headerNames) {
                 String header = headerValueResolver.apply(headerName);
-                builder.append("%s=%s".formatted(headerName, header)).append('\n');
+                builder.append(headerName).append('=').append(header).append('\n');
             }
             return builder.toString();
         }
