@@ -65,20 +65,20 @@ public class WiremockRequestForwardingController {
     }
 
     @GetMapping(CATCH_ALL_PATH)
-    public ResponseEntity<Object> forwardGetRequests(HttpServletRequest request)
+    public ResponseEntity<byte[]> forwardGetRequests(HttpServletRequest request)
         throws IOException, InterruptedException {
         return forwardRequest(request, BodyPublishers.noBody(), HttpMethod.GET, null);
     }
 
     @PostMapping(CATCH_ALL_PATH)
-    public ResponseEntity<Object> forwardPostRequests(HttpServletRequest request)
+    public ResponseEntity<byte[]> forwardPostRequests(HttpServletRequest request)
         throws IOException, InterruptedException {
         String requestBody = IOUtils.toString(request.getInputStream());
         return forwardRequest(request, BodyPublishers.ofString(requestBody), HttpMethod.POST, requestBody);
     }
 
     @PutMapping(CATCH_ALL_PATH)
-    public ResponseEntity<Object> forwardPutRequests(HttpServletRequest request)
+    public ResponseEntity<byte[]> forwardPutRequests(HttpServletRequest request)
         throws IOException, InterruptedException {
         String requestBody = IOUtils.toString(request.getInputStream());
         return forwardRequest(request, BodyPublishers.ofString(requestBody), HttpMethod.PUT, requestBody);
@@ -94,7 +94,7 @@ public class WiremockRequestForwardingController {
      * This deconstructs the original request URL and rebuilds it into a new request to target at
      * the Wiremock instance.
      */
-    private ResponseEntity<Object> forwardRequest(
+    private ResponseEntity<byte[]> forwardRequest(
         HttpServletRequest request,
         BodyPublisher bodyPublisher,
         HttpMethod httpMethod,
@@ -115,9 +115,8 @@ public class WiremockRequestForwardingController {
 
         transferRequestHeaders(request, requestBuilder);
 
-        HttpResponse<String> httpResponse =
-            httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
-
+        HttpResponse<byte[]> httpResponse =
+            httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofByteArray());
         log.info(":forwardRequest: response body: {}\n", httpResponse.body());
         return new ResponseEntity<>(
             httpResponse.body(),
