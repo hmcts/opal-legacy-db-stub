@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.Set;
 
@@ -144,9 +145,9 @@ public class WiremockRequestForwardingController {
 
 
     private MultiValueMap<String, String> copyResponseHeaders(HttpResponse<?> response) {
-        HttpHeaders headers = new HttpHeaders();
+        MultiValueMap<String, String> headers = new HttpHeaders();
         response.headers().map().forEach((key, values) -> {
-            if (!EXCLUDED_RESPONSE_HEADERS.contains(key.toLowerCase())) {
+            if (!EXCLUDED_RESPONSE_HEADERS.contains(key.toLowerCase(Locale.getDefault()))) {
                 headers.addAll(key, values);
             }
         });
