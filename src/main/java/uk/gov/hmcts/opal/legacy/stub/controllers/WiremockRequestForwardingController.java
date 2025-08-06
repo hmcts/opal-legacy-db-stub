@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.Set;
 
@@ -43,6 +44,14 @@ public class WiremockRequestForwardingController {
     private static final Set<String> EXCLUDED_HEADERS = Set.of(
         "host", "connection", "accept-encoding", "content-length", "transfer-encoding", "upgrade"
     );
+
+    private static final Set<String> EXCLUDED_RESPONSE_HEADERS = Set.of(
+        "transfer-encoding", "connection", "content-length", "keep-alive", "proxy-authenticate",
+        "proxy-authorization", "te", "trailer", "upgrade"
+    );
+
+    @Value("${wiremock.server.use-https}")
+    private boolean mockHttpServerUseHttps;
 
     @Value("${wiremock.server.host}")
     private String mockHttpServerHost;
@@ -106,13 +115,11 @@ public class WiremockRequestForwardingController {
 
         transferRequestHeaders(request, requestBuilder);
 
-        HttpResponse<String> httpResponse =
-            httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
-
+        HttpResponse<byte[]> httpResponse =
+            httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofByteArray());
         log.info(":forwardRequest: response body: {}\n", httpResponse.body());
-
         return new ResponseEntity<>(
-            httpResponse.body().getBytes(),
+            httpResponse.body(),
             copyResponseHeaders(httpResponse),
             httpResponse.statusCode()
         );
@@ -135,13 +142,28 @@ public class WiremockRequestForwardingController {
         });
     }
 
+
     private MultiValueMap<String, String> copyResponseHeaders(HttpResponse<?> response) {
         MultiValueMap<String, String> headers = new HttpHeaders();
-        response.headers().map().forEach(headers::addAll);
+        response.headers().map().forEach((key, values) -> {
+            if (!EXCLUDED_RESPONSE_HEADERS.contains(key.toLowerCase(Locale.getDefault()))) {
+                headers.addAll(key, values);
+            }
+        });
         return headers;
     }
 
     private String getMockHttpServerUrl(String requestPath) {
-        return "http://" + mockHttpServerHost + ":" + mockHttpServer.portNumber() + requestPath;
+        int port;
+        String protocol;
+
+        if (mockHttpServerUseHttps) {
+            port = mockHttpServer.httpsPort();
+            protocol = "https";
+        } else {
+            port = mockHttpServer.httpPort();
+            protocol = "http";
+        }
+        return protocol + "://" + mockHttpServerHost + ":" + port + requestPath;
     }
 }

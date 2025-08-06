@@ -139,13 +139,15 @@ project.tasks['check'].dependsOn integration
 def sonarExclusions = [
   '**/uk/gov/hmcts/opal/stub/services/config/**',
   '**/uk/gov/hmcts/opal/stub/services/Application.java',
+  '**/uk/gov/hmcts/opal/stub/**',
 ]
 
 sonarqube {
   properties {
     property "sonar.projectName", "${rootProject.name}"
     property "sonar.projectKey", "uk.gov.hmcts.opal:stub-services"
-    property "sonar.exclusions", sonarExclusions.join(', ')
+    property 'sonar.exclusions', "**/**"
+    property 'sonar.coverage.exclusions', "**/**"
     property "sonar.gradle.skipCompile", 'true'
   }
 }

@@ -23,9 +23,16 @@ spring:
 
 wiremock:
   server:
+    use-https: ${WIREMOCK_USE_HTTPS:false}
     host: 127.0.0.1
     mappings-path: ${WIREMOCK_SERVER_MAPPINGS_PATH:wiremock}
 
 azure:
   application-insights:
     instrumentation-key: ${opal.AppInsightsInstrumentationKey:00000000-0000-0000-0000-000000000000}
+logging:
+  level:
+    root: debug
+    org:
+      apache:
+        coyote: ERROR
