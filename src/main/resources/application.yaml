@@ -33,3 +33,6 @@ azure:
 logging:
   level:
     root: debug
+    org:
+      apache:
+        coyote: ERROR
