@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <count>1</count>
+  <creditor_accounts>
+    <creditor_account_id>CA123456</creditor_account_id>
+    <account_number>ACC-987654</account_number>
+    <organisation>true</organisation>
+    <organisation_name>Acme Corp Ltd</organisation_name>
+    <!--
+    <firstnames>Jane</firstnames>
+    <surname>Doe</surname>
+    -->
+    <address_line_1>123 Main Street</address_line_1>
+    <postcode>AB1 2CD</postcode>
+    <business_unit_name>Finance Department</business_unit_name>
+    <business_unit_id>BU123</business_unit_id>
+    <defendant>
+      <organisation_name>Example Holdings PLC</organisation_name>
+      <!--
+      <defendant_firstnames>John</defendant_firstnames>
+      <defendant_surname>Smith</defendant_surname>
+      -->
+    </defendant>
+    <defendant_account_id>DA001</defendant_account_id>
+    <account_balance>1000.00</account_balance>
+  </creditor_accounts>
+</response>
