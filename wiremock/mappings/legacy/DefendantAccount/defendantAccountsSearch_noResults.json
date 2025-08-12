@@ -11,7 +11,7 @@
     "bodyPatterns": [
       {
         "matchesJsonPath": {
-          "expression": "$.surname",
+          "expression": "defendant.surname",
           "equalTo": "ShouldNotMatchAnythingXYZ"
         }
       }
