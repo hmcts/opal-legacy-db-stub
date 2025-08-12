@@ -141,7 +141,7 @@ public class WiremockRequestForwardingController {
     private MultiValueMap<String, String> copyResponseHeaders(HttpResponse<?> response) {
         MultiValueMap<String, String> headers = new HttpHeaders();
         response.headers().map().forEach((key, values) -> {
-            if (!key.startsWith(":") && !key.equalsIgnoreCase("transfer-encoding")) { // Ignore pseudo headers
+            if (!key.equalsIgnoreCase("transfer-encoding") && !key.startsWith(":")) { // Ignore pseudo headers
                 headers.addAll(key, values);
             }
         });
