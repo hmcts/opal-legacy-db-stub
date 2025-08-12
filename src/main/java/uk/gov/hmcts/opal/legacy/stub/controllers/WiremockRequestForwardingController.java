@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 import java.util.Set;
 
@@ -106,16 +107,18 @@ public class WiremockRequestForwardingController {
 
         transferRequestHeaders(request, requestBuilder);
 
-        HttpResponse<String> httpResponse =
-            httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
+        HttpResponse<byte[]> httpResponse =
+                httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofByteArray());
 
-        log.info(":forwardRequest: response body: {}\n", httpResponse.body());
+        log.info(":forwardRequest: response body: {}\n", new String(httpResponse.body(), StandardCharsets.UTF_8));
+
 
         return new ResponseEntity<>(
-            httpResponse.body().getBytes(),
-            copyResponseHeaders(httpResponse),
-            httpResponse.statusCode()
+                httpResponse.body(),
+                copyResponseHeaders(httpResponse),
+                httpResponse.statusCode()
         );
+
 
     }
 
