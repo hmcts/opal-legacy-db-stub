@@ -10,7 +10,7 @@
     "bodyPatterns": [
       {
         "matchesJsonPath": {
-          "expression": "$.postcode",
+          "expression": "defendant.postcode",
           "equalTo": "AB1 2CD"
         }
       }
