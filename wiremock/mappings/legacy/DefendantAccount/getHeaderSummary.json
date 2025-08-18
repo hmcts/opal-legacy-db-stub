@@ -1,6 +1,6 @@
 {
+  "priority": 2,
   "request": {
-    "priority": 2,
     "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
