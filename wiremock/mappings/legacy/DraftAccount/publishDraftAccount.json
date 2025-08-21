@@ -5,7 +5,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.of_create_defendant_account"
+        "equalTo": "createAccount"
       }
     }
   },
