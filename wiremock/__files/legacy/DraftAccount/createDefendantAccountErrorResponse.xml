@@ -1,0 +1,6 @@
+<response>
+    <error_response>
+        <error_code>-20004</error_code>
+        <error_message>Result FCOST is not valid</error_message>
+    </error_response>
+</response>

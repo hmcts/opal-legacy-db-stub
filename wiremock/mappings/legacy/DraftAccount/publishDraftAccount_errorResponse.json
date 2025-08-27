@@ -1,0 +1,22 @@
+{
+  "priority": 99,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.of_create_defendant_account"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.business_unit_id == '501')]"
+    } ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/DraftAccount/createDefendantAccountErrorResponse.xml"
+  }
+}
