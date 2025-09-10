@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <version>1</version>
+
+  <payment_terms>
+    <days_in_default>120</days_in_default>
+    <date_days_default_imposed>2025-10-12</date_days_default_imposed>
+    <reason_for_extension></reason_for_extension>
+
+    <payment_terms_type>
+      <payment_terms_type_code>B</payment_terms_type_code>
+    </payment_terms_type>
+
+    <effective_date>2025-10-12</effective_date>
+
+    <installment_period>
+      <installment_period_code>W</installment_period_code>
+    </installment_period>
+
+    <lump_sum_amount>0.00</lump_sum_amount>
+    <installment_amount>0.00</installment_amount>
+  </payment_terms>
+
+  <posted_details>
+    <posted_date>2023-11-03</posted_date>
+    <posted_by>01000000A</posted_by>
+    <posted_name></posted_name>
+  </posted_details>
+
+  <payment_card_last_requested>2024-01-01</payment_card_last_requested>
+  <date_last_amended>2024-01-03</date_last_amended>
+  <extension>false</extension>
+  <last_enforcement>REM</last_enforcement>
+</response>
