@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+    <version>1</version>
+    <defendant_account_party>
+        <defendant_account_party_type>Defendant</defendant_account_party_type>
+        <is_debtor>true</is_debtor>
+
+        <party_details>
+            <party_id>77</party_id>
+            <organisation_flag>false</organisation_flag>
+            <individual_details>
+                <title>Mr</title>
+                <forenames>Alex</forenames>
+                <surname>Graham</surname>
+                <date_of_birth>1980-02-03</date_of_birth>
+                <age>33</age>
+                <national_insurance_number>A11111A</national_insurance_number>
+            </individual_details>
+        </party_details>
+
+        <address>
+            <address_line_1>Lumber House</address_line_1>
+            <address_line_2>77 Gordon Road</address_line_2>
+            <address_line_3>Maidstone, Kent</address_line_3>
+            <postcode>MA4 1AL</postcode>
+        </address>
+
+        <contact_details>
+            <primary_email_address>a@example.com</primary_email_address>
+            <mobile_telephone_number>07123</mobile_telephone_number>
+        </contact_details>
+
+        <vehicle_details>
+            <vehicle_make_and_model>Toyota Prius</vehicle_make_and_model>
+            <vehicle_registration>AB77CDE</vehicle_registration>
+        </vehicle_details>
+
+        <employer_details>
+            <employer_name>Tesco Ltd</employer_name>
+            <employer_reference>EMPREF77</employer_reference>
+            <employer_email_address>employer77@company.com</employer_email_address>
+            <employer_telephone_number>02079997777</employer_telephone_number>
+            <employer_address>
+                <address_line_1>123 Employer Road</address_line_1>
+                <postcode>EMP1 2AA</postcode>
+            </employer_address>
+        </employer_details>
+
+        <language_preferences>
+            <document_language_preference>
+                <language_code>EN</language_code>
+            </document_language_preference>
+            <hearing_language_preference>
+                <language_code>EN</language_code>
+            </hearing_language_preference>
+        </language_preferences>
+    </defendant_account_party>
+</response>
