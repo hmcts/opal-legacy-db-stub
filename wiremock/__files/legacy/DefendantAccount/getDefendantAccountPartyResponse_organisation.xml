@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+    <version>1</version>
+    <defendant_account_party>
+        <defendant_account_party_type>Defendant</defendant_account_party_type>
+        <is_debtor>true</is_debtor>
+
+        <party_details>
+            <party_id>555</party_id>
+            <organisation_flag>true</organisation_flag>
+            <organisation_details>
+                <organisation_name>TechCorp Solutions Ltd</organisation_name>
+                <organisation_aliases/>
+            </organisation_details>
+        </party_details>
+
+        <address>
+            <address_line_1>1 TechCorp Way</address_line_1>
+            <address_line_2>Business Park</address_line_2>
+            <address_line_3>London</address_line_3>
+            <postcode>TC1 1TC</postcode>
+        </address>
+    </defendant_account_party>
+</response>

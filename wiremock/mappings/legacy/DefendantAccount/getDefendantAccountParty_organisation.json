@@ -1,0 +1,19 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": { "equalTo": "LIBRA.get_defendant_account_party" }
+    },
+    "bodyPatterns": [
+      { "matchesJsonPath": "$[?(@.defendant_account_id == '555' || @.defendantAccountId == '555')]" },
+      { "matchesJsonPath": "$[?(@.defendant_account_party_id == '555' || @.defendantAccountPartyId == '555')]" }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/xml" },
+    "bodyFileName": "legacy/DefendantAccount/getDefendantAccountPartyResponse_organisation.xml"
+  }
+}
