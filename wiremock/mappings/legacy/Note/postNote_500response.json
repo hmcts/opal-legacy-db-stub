@@ -9,7 +9,7 @@
     },
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.note_text == 'FAIL')]"
+        "matchesJsonPath": "$[?(@.version == 5)]"
       }
     ]
   },
