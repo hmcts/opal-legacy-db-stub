@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <version>1</version>
+  <activity_note>
+    <record_type>defendant_accounts</record_type>
+    <record_id>ABC12345</record_id>
+    <note_text>Payment received and recorded.</note_text>
+    <note_type>AA</note_type>
+  </activity_note>
+</response>
