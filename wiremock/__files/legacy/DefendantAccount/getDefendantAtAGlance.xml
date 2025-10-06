@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <version>1</version>
+  <defendant_account_id>DEF-ACC-00012345</defendant_account_id>
+  <account_number>ACCT-9876543210</account_number>
+  <debtor_type>Defendant</debtor_type>
+  <is_youth>false</is_youth>
+
+  <!-- party_details -->
+  <party_details>
+    <party_id>PD-10001</party_id>
+    <organisation_flag>false</organisation_flag>
+    <individual_details>
+      <title>Mr</title>
+      <forenames>Alex James</forenames>
+      <surname>Rivers</surname>
+      <date_of_birth>1989-05-23</date_of_birth>
+      <age>36</age>
+      <national_insurance_number>QQ123456C</national_insurance_number>
+      <individual_aliases>
+        <individual_aliases_element>
+          <alias_id>IA-1</alias_id>
+          <sequence_number>1</sequence_number>
+          <surname>Rivera</surname>
+          <forenames>AJ</forenames>
+        </individual_aliases_element>
+      </individual_aliases>
+    </individual_details>
+  </party_details>
+
+  <!-- address_details -->
+  <address>
+    <address_line_1>10 Example Street</address_line_1>
+    <address_line_2>Flat 2B</address_line_2>
+    <address_line_3>Sample District</address_line_3>
+    <address_line_4>Sampletown</address_line_4>
+    <address_line_5>Exampleshire</address_line_5>
+    <postcode>AB1 2CD</postcode>
+  </address>
+
+  <!-- language_preferences -->
+  <language_preferences>
+    <document_language_preference>
+      <language_code>EN</language_code>
+    </document_language_preference>
+    <hearing_language_preference>
+      <language_code>EN</language_code>
+    </hearing_language_preference>
+  </language_preferences>
+
+  <!-- payment_terms_summary -->
+  <payment_terms_summary>
+    <payment_terms_type>
+      <payment_terms_type_code>P</payment_terms_type_code>
+    </payment_terms_type>
+    <effective_date>2025-10-01</effective_date>
+    <instalment_period>
+      <instalment_period_code>M</instalment_period_code>
+    </instalment_period>
+    <lump_sum_amount>0.00</lump_sum_amount>
+    <instalment_amount>50.00</instalment_amount>
+  </payment_terms_summary>
+
+  <!-- enforcement_status_summary -->
+  <enforcement_status_summary>
+    <last_enforcement_action>
+      <last_enforcement_action_id>LEA-20250920</last_enforcement_action_id>
+      <last_enforcement_action_title>Letter sent</last_enforcement_action_title>
+    </last_enforcement_action>
+    <collection_order_made>false</collection_order_made>
+    <default_days_in_jail>0</default_days_in_jail>
+    <enforcement_override>
+      <enforcement_override_result>
+        <enforcement_override_result_id>EOR-01</enforcement_override_result_id>
+        <enforcement_override_result_name>Hold action pending review</enforcement_override_result_name>
+      </enforcement_override_result>
+      <enforcer>
+        <enforcer_id>101</enforcer_id>
+        <enforcer_name>South Region Enforcement</enforcer_name>
+      </enforcer>
+      <lja>
+        <lja_id>501</lja_id>
+        <lja_name>Sample LJA Name</lja_name>
+      </lja>
+    </enforcement_override>
+    <last_movement_date>2025-09-30</last_movement_date>
+  </enforcement_status_summary>
+
+  <!-- comments_and_notes -->
+  <comments_and_notes>
+    <account_comment>Account imported from legacy system on 2025-09-01.</account_comment>
+    <free_text_note_1>Customer agreed to monthly instalments.</free_text_note_1>
+    <free_text_note_2>Preferred contact: letter.</free_text_note_2>
+    <free_text_note_3>Next review due after three payments.</free_text_note_3>
+  </comments_and_notes>
+</response>
