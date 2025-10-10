@@ -1,11 +1,10 @@
 {
-  "priority": 99,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "createAccount"
+        "equalTo": "LIBRA.search_minor_creditors"
       }
     }
   },
@@ -14,6 +13,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DraftAccount/createDefendantAccountResponse.xml"
+    "bodyFileName": "legacy/MinorCreditor/searchMinorCreditors.xml"
   }
 }

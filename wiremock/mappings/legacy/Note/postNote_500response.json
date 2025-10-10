@@ -4,12 +4,14 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "createAccount"
+        "equalTo": "LIBRA.add_note"
       }
     },
-    "bodyPatterns" : [ {
-      "matchesJsonPath" : "$[?(@.business_unit_id == '500')]"
-    } ]
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.version == 5)]"
+      }
+    ]
   },
   "response": {
     "status": 500,

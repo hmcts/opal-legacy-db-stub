@@ -1,11 +1,11 @@
 {
-  "priority": 99,
+  "priority": 2,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "createAccount"
+        "equalTo": "LIBRA.getDefendantAtAGlance"
       }
     }
   },
@@ -14,6 +14,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DraftAccount/createDefendantAccountResponse.xml"
+    "bodyFileName": "legacy/DefendantAccount/getDefendantAtAGlance.xml"
   }
 }
