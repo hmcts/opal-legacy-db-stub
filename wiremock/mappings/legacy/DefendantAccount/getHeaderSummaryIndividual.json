@@ -7,13 +7,21 @@
       "actionType": {
         "equalTo": "LIBRA.get_header_summary"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.defendant_account_id",
+          "equalTo": "77"
+        }
+      }
+    ]
   },
   "response": {
     "status": 200,
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/getHeaderSummaryResponse.xml"
+    "bodyFileName": "legacy/DefendantAccount/getHeaderSummaryResponseIndividual.xml"
   }
 }

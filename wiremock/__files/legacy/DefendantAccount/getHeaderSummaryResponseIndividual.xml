@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <version>1</version>
+  <defendant_account_id>77</defendant_account_id>
+  <account_number>177A</account_number>
+  <defendant_party_id>7</defendant_party_id>
+  <parent_guardian_party_id>1</parent_guardian_party_id>
+  <debtor_type>Defendant</debtor_type>
+  <is_youth>false</is_youth>
+
+  <account_status_reference>
+    <account_status_code>L</account_status_code>
+  </account_status_reference>
+
+  <account_type>Fine</account_type>
+  <prosecutor_case_reference>5</prosecutor_case_reference>
+  <fixed_penalty_ticket_number>888</fixed_penalty_ticket_number>
+
+  <business_unit_summary>
+    <business_unit_id>78</business_unit_id>
+    <business_unit_name>Avon</business_unit_name>
+    <business_unit_code>78</business_unit_code>
+    <welsh_speaking>N</welsh_speaking>
+  </business_unit_summary>
+
+  <payment_state_summary>
+    <imposed_amount>700.58</imposed_amount>
+    <arrears_amount>300.00</arrears_amount>
+    <paid_amount>200.00</paid_amount>
+    <account_balance>5000.00</account_balance>
+  </payment_state_summary>
+
+  <party_details>
+    <party_id>7</party_id>
+    <organisation_flag>N</organisation_flag>
+
+    <individual_details>
+      <title>Ms</title>
+      <first_names>Anna</first_names>
+      <surname>Graham</surname>
+      <age>27</age>
+      <national_insurance_number>A11111A</national_insurance_number>
+
+      <individual_aliases>
+        <individual_alias>
+          <alias_id>1</alias_id>
+          <sequence_number>1</sequence_number>
+          <surname>Graham</surname>
+          <forenames>Anna</forenames>
+        </individual_alias>
+      </individual_aliases>
+    </individual_details>
+  </party_details>
+</response>
