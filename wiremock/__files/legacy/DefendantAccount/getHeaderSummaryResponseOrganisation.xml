@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+    <version>1</version>
+    <defendant_account_id>10001</defendant_account_id>
+    <account_number>10001A</account_number>
+    <defendant_party_id>9</defendant_party_id>
+    <parent_guardian_party_id></parent_guardian_party_id>
+    <debtor_type>Defendant</debtor_type>
+    <is_youth>false</is_youth>
+
+    <account_status_reference>
+        <account_status_code>L</account_status_code>
+    </account_status_reference>
+
+    <account_type>Fine</account_type>
+    <prosecutor_case_reference>ORG-REF-10001</prosecutor_case_reference>
+    <fixed_penalty_ticket_number>999</fixed_penalty_ticket_number>
+
+    <business_unit_summary>
+        <business_unit_id>78</business_unit_id>
+        <business_unit_name>Avon</business_unit_name>
+        <business_unit_code>78</business_unit_code>
+        <welsh_speaking>N</welsh_speaking>
+    </business_unit_summary>
+
+    <payment_state_summary>
+        <imposed_amount>1200.00</imposed_amount>
+        <arrears_amount>450.00</arrears_amount>
+        <paid_amount>750.00</paid_amount>
+        <account_balance>450.00</account_balance>
+    </payment_state_summary>
+
+    <party_details>
+        <party_id>9</party_id>
+        <organisation_flag>true</organisation_flag>
+
+        <organisation_details>
+            <organisation_name>Kings Arms</organisation_name>
+            <organisation_aliases>
+                <organisation_alias>
+                    <alias_id>1</alias_id>
+                    <sequence_number>1</sequence_number>
+                    <organisation_name>Kings Arms Ltd</organisation_name>
+                </organisation_alias>
+                <organisation_alias>
+                    <alias_id>2</alias_id>
+                    <sequence_number>2</sequence_number>
+                    <organisation_name>Kings Arms Holdings</organisation_name>
+                </organisation_alias>
+            </organisation_aliases>
+        </organisation_details>
+    </party_details>
+</response>
