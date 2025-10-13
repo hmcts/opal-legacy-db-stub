@@ -3,7 +3,7 @@
     <version>1</version>
     <defendant_account_id>10001</defendant_account_id>
     <account_number>10001A</account_number>
-    <defendant_party_id>9</defendant_party_id>
+    <defendant_party_id>10001</defendant_party_id>
     <parent_guardian_party_id></parent_guardian_party_id>
     <debtor_type>Defendant</debtor_type>
     <is_youth>false</is_youth>
@@ -31,7 +31,7 @@
     </payment_state_summary>
 
     <party_details>
-        <party_id>9</party_id>
+        <party_id>10001</party_id>
         <organisation_flag>true</organisation_flag>
 
         <organisation_details>
