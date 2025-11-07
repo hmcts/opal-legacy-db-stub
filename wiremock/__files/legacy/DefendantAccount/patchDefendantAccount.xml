@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <version>1</version>
+  <defendant_account_id>77</defendant_account_id>
+  <comment_and_notes>
+    <account_comment>patch DefAcc comment legacy test</account_comment>
+    <free_text_note_1>patch DefAcc note one legacy test</free_text_note_1>
+    <free_text_note_2>patch DefAcc note two legacy test</free_text_note_2>
+    <free_text_note_3>patch DefAcc note three legacy test</free_text_note_3>
+  </comment_and_notes>
+</response>
