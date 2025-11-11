@@ -8,6 +8,11 @@
       }
     }
   },
+  "bodyPatterns": [
+    {
+      "matchesJsonPath": "$[?(@.version != 5)]"
+    }
+  ],
   "response": {
     "status": 200,
     "headers": {
