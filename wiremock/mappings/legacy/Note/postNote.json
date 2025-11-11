@@ -6,13 +6,13 @@
       "actionType": {
         "equalTo": "LIBRA.add_note"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.version != 5)]"
+      }
+    ]
   },
-  "bodyPatterns": [
-    {
-      "matchesJsonPath": "$[?(@.version != 5)]"
-    }
-  ],
   "response": {
     "status": 200,
     "headers": {
