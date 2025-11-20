@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <version>3</version>
+
+  <defendant_account_party>
+    <defendant_account_party_type>Defendant</defendant_account_party_type>
+    <is_debtor>true</is_debtor>
+
+    <party_details>
+      <party_id>P-000123</party_id>
+      <organisation_flag>false</organisation_flag>
+      <individual_details>
+        <title>Ms</title>
+        <forenames>Ada Grace</forenames>
+        <surname>Lovelace</surname>
+        <date_of_birth>1815-12-10</date_of_birth>
+        <age>36</age>
+        <national_insurance_number>QQ123456C</national_insurance_number>
+      </individual_details>
+    </party_details>
+
+    <address>
+      <address_line_1>1 Example Street</address_line_1>
+      <address_line_2>Flat 2</address_line_2>
+      <address_line_3>Bloomsbury</address_line_3>
+      <address_line_4>London</address_line_4>
+      <address_line_5>United Kingdom</address_line_5>
+      <postcode>WC1A 1AA</postcode>
+    </address>
+
+    <contact_details>
+      <primary_email_address>ada@example.test</primary_email_address>
+      <secondary_email_address>contact@example.test</secondary_email_address>
+      <mobile_telephone_number>07123 456789</mobile_telephone_number>
+      <home_telephone_number>020 7946 0958</home_telephone_number>
+      <work_telephone_number>020 7946 0000</work_telephone_number>
+    </contact_details>
+
+    <vehicle_details>
+      <vehicle_make_and_model>Ford Focus</vehicle_make_and_model>
+      <vehicle_registration>AA11 AAA</vehicle_registration>
+    </vehicle_details>
+
+    <employer_details>
+      <employer_name>Example Widgets Ltd</employer_name>
+      <employer_reference>EW-REF-42</employer_reference>
+      <employer_email_address>hr@examplewidgets.test</employer_email_address>
+      <employer_telephone_number>020 7000 0000</employer_telephone_number>
+      <employer_address>
+        <address_line_1>100 Business Park</address_line_1>
+        <address_line_2>Suite 12</address_line_2>
+        <address_line_3>Southwark</address_line_3>
+        <address_line_4>London</address_line_4>
+        <address_line_5>United Kingdom</address_line_5>
+        <postcode>SE1 2AB</postcode>
+      </employer_address>
+    </employer_details>
+
+    <language_preferences>
+      <document_language_preference>
+        <language_code>EN</language_code>
+        <language_display_name>English only</language_display_name>
+      </document_language_preference>
+      <hearing_language_preference>
+        <language_code>CY</language_code>
+        <language_display_name>Welsh and English</language_display_name>
+      </hearing_language_preference>
+    </language_preferences>
+  </defendant_account_party>
+</response>

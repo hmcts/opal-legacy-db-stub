@@ -1,0 +1,18 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": { "equalTo": "LIBRA.replace_defendant_account_party" }
+    },
+    "bodyPatterns": [
+      { "matchesJsonPath": "$[?(@.defendant_account_id == '77')]"}
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/xml" },
+    "bodyFileName": "legacy/DefendantAccount/putReplaceDefendantAccountParty.xml"
+  }
+}
