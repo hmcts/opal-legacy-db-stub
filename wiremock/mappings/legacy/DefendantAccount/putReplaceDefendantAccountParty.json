@@ -7,7 +7,7 @@
       "actionType": { "equalTo": "LIBRA.replace_defendant_account_party" }
     },
     "bodyPatterns": [
-      { "matchesJsonPath": "$[?(@.defendant_account_id == '77')]" }
+      { "matchesJsonPath": "$[?(@.defendant_account_id == '77')]"}
     ]
   },
   "response": {
