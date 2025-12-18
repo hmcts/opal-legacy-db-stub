@@ -6,7 +6,7 @@ plugins {
   id 'org.springframework.boot' version '3.5.7'
   id 'org.owasp.dependencycheck' version '12.1.6'
   id 'com.github.ben-manes.versions' version '0.53.0'
-  id 'org.sonarqube' version '7.2.0.6526'
+  id 'org.sonarqube' version '7.2.2.6593'
   id 'uk.gov.hmcts.java' version '0.12.67'
 }
 group = 'uk.gov.hmcts.opal'
