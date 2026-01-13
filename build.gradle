@@ -222,7 +222,7 @@ dependencies {
   implementation "org.apache.logging.log4j:log4j-to-slf4j:${log4JVersion}"
 
   implementation 'io.rest-assured:rest-assured'
-  implementation 'com.github.tomakehurst:wiremock-standalone:3.0.1'
+  implementation 'org.wiremock:wiremock-standalone:3.13.2'
 
   compileOnly 'org.projectlombok:lombok:1.18.42'
   annotationProcessor 'org.projectlombok:lombok:1.18.42'
