@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <party_details>
+    <party_id>JEDI-1977</party_id>
+    <organisation_flag>false</organisation_flag>
+    <individual_details>
+      <title>Mr</title>
+      <forenames>Luke</forenames>
+      <surname>Skywalker</surname>
+      <date_of_birth>1977-05-27</date_of_birth>
+      <age>23</age>
+      <national_insurance_number>LS1977SW</national_insurance_number>
+      <individual_aliases>
+        <individual_aliases_element>
+          <alias_id>AL-001</alias_id>
+          <sequence_number>1</sequence_number>
+          <surname>Skywalker</surname>
+          <forenames>Red Five</forenames>
+        </individual_aliases_element>
+        <individual_aliases_element>
+          <alias_id>AL-002</alias_id>
+          <sequence_number>2</sequence_number>
+          <surname>Skywalker</surname>
+          <forenames>Jedi Knight</forenames>
+        </individual_aliases_element>
+      </individual_aliases>
+    </individual_details>
+  </party_details>
+
+  <address>
+    <address_line_1>Lars Homestead</address_line_1>
+    <address_line_2>Dune Sea</address_line_2>
+    <address_line_3>Tatooine</address_line_3>
+    <address_line_4>Outer Rim Territories</address_line_4>
+    <address_line_5>Desert Planet</address_line_5>
+    <postcode>TAT-1977</postcode>
+  </address>
+
+  <creditor_account_id>900000000000456</creditor_account_id>
+  <creditor_account_version>1</creditor_account_version>
+
+  <defendant>
+    <account_number>12345678</account_number>
+    <account_id>456789123</account_id>
+  </defendant>
+
+  <payment>
+    <is_bacs>true</is_bacs>
+    <hold_payment>false</hold_payment>
+  </payment>
+</response>
+
