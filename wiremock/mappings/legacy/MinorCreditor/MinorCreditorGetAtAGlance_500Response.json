@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.get_minor_creditors_account_at_a_glance"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.creditorAccountId",
+          "equalTo": "500"
+        }
+      }
+    ]
+  },
+
+  "response": {
+    "status": 500,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/InternalServerError/internalServerErrorResponse.xml"
+  }
+}
