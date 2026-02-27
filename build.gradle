@@ -14,7 +14,7 @@ version = '0.0.1'
 
 java {
   toolchain {
-    languageVersion = JavaLanguageVersion.of(17)
+    languageVersion = JavaLanguageVersion.of(21)
   }
 }
 
@@ -111,12 +111,12 @@ tasks.register('smoke', Test) {
 
 checkstyle {
   maxWarnings = 0
-  toolVersion = '12.3.1'
+  toolVersion = '13.2.0'
   getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
 pmd {
-  toolVersion = "7.20.0"
+  toolVersion = "7.21.0"
 
   sourceSets = [
     sourceSets["main"],
@@ -217,7 +217,7 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-json'
   implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.15'
 
-  implementation 'com.github.hmcts.java-logging:logging:7.0.0'
+  implementation 'com.github.hmcts.java-logging:logging:8.0.0'
 
   implementation "org.apache.logging.log4j:log4j-api:${log4JVersion}"
   implementation "org.apache.logging.log4j:log4j-to-slf4j:${log4JVersion}"
