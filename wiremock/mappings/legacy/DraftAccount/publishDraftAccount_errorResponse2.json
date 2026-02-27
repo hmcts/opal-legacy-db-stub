@@ -1,0 +1,17 @@
+{
+  "priority": 99,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.business_unit_id == '73')]"
+    } ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/DraftAccount/createDefendantAccountErrorResponse.xml"
+  }
+}
