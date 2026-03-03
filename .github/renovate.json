@@ -40,14 +40,14 @@
     {
       "description": "Group all Spring dependencies (Minor/Patch)",
       "matchManagers": ["gradle"],
-      "matchPackagePrefixes": ["org.springframework", "org.springdoc"],
+      "matchPackagePrefixes": ["org.springframework"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "Spring Dependencies (Minor/Patch)"
     },
     {
       "description": "Group all Spring dependencies (Major)",
       "matchManagers": ["gradle"],
-      "matchPackagePrefixes": ["org.springframework", "org.springdoc"],
+      "matchPackagePrefixes": ["org.springframework"],
       "matchUpdateTypes": ["major"],
       "groupName": "Spring Dependencies (Major)"
     },
