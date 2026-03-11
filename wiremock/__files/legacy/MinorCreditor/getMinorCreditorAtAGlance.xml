@@ -42,6 +42,9 @@
   <defendant>
     <account_number>12345678</account_number>
     <account_id>456789123</account_id>
+    <title>Mr</title>
+    <forenames>Obi Wan</forenames>
+    <surname>Kenobi</surname>
   </defendant>
 
   <payment>
