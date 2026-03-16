@@ -1,4 +1,5 @@
 {
+  "priority": 1,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
@@ -9,7 +10,10 @@
     },
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.account_number == 'FAIL')]"
+        "matchesJsonPath": {
+          "expression": "$.account_number",
+          "equalTo": "FAIL"
+        }
       }
     ]
   },
