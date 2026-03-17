@@ -10,7 +10,7 @@ plugins {
   id 'uk.gov.hmcts.java' version '0.12.68'
 }
 group = 'uk.gov.hmcts.opal'
-version = '0.0.1'
+version = '0.0.2'
 
 java {
   toolchain {
