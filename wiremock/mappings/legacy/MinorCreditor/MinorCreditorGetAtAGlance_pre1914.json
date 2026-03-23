@@ -11,7 +11,7 @@
       {
         "matchesJsonPath": {
           "expression": "$.creditorAccountId",
-          "equalTo": "99000000000801"
+          "equalTo": "1"
         }
       }
     ]
@@ -22,6 +22,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorAtAGlance.xml"
+    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorAtAGlance_pre1914.xml"
   }
 }
