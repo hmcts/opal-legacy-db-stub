@@ -11,7 +11,7 @@
       {
         "matchesJsonPath": {
           "expression": "$.creditorAccountId",
-          "equalTo": "99000000000801"
+          "equalTo": "1"
         }
       }
     ]
