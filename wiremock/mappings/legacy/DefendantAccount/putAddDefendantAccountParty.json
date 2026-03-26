@@ -7,7 +7,8 @@
       "actionType": { "equalTo": "LIBRA.add_defendant_account_party" }
     },
     "bodyPatterns": [
-      { "matchesJsonPath": "$[?(@.defendant_account_id == '77')]"}
+      { "matchesJsonPath": "$[?(@.defendant_account_id == '555' || @.defendantAccountId == '555')]" },
+      { "matchesJsonPath": "$[?(@.defendant_account_party_id == '555' || @.defendantAccountPartyId == '555')]" }
     ]
   },
   "response": {
