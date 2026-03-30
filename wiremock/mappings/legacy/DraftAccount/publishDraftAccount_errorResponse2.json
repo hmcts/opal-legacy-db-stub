@@ -1,8 +1,12 @@
 {
-  "priority": 99,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "createAccount"
+      }
+    },
     "bodyPatterns" : [ {
       "matchesJsonPath" : "$[?(@.business_unit_id == 73)]"
     } ]
