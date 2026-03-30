@@ -9,7 +9,7 @@
       }
     },
     "bodyPatterns" : [ {
-      "matchesJsonPath" : "$[?(@.business_unit_id == '501')]"
+      "matchesJsonPath" : "$[?(@.business_unit_id == 501)]"
     } ]
   },
   "response": {

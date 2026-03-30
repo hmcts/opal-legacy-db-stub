@@ -4,7 +4,7 @@
     "method": "POST",
     "urlPathPattern": "/opal",
     "bodyPatterns" : [ {
-      "matchesJsonPath" : "$[?(@.business_unit_id == '73')]"
+      "matchesJsonPath" : "$[?(@.business_unit_id == 73)]"
     } ]
   },
   "response": {
