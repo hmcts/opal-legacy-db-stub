@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <version>20</version>
+  <enforcement_overview>
+    <days_in_default>101</days_in_default>
+    <enforcement_court>
+      <court_id>780000000185</court_id>
+      <court_name>CH17</court_name>
+    </enforcement_court>
+    <collection_order>
+      <collectionOrderCode>XX</collectionOrderCode>
+      <collection_order_flag>true</collection_order_flag>
+      <collectionOrderDate>2024-02-18</collectionOrderDate>
+    </collection_order>
+  </enforcement_overview>
+  <enforcement_override>
+    <enforcement_override_result>
+      <enforcement_override_result_id>FWEC</enforcement_override_result_id>
+      <enforcement_override_result_name>Further Warrant Execution Cancelled</enforcement_override_result_name>
+    </enforcement_override_result>
+    <enforcer>
+      <enforcer_id>780000000021</enforcer_id>
+      <enforcer_name>North East Enforcement</enforcer_name>
+    </enforcer>
+    <lja>
+      <lja_id>240</lja_id>
+      <lja_name>Tyne &amp; Wear LJA</lja_name>
+    </lja>
+  </enforcement_override>
+  <last_enforcement_action>
+    <result_reference>
+      <result_id>MPSO</result_id>
+      <result_title>Money Payment Supervision Order</result_title>
+    </result_reference>
+    <reason>Late Payment</reason>
+    <enforcer>
+      <enforcer_id>21</enforcer_id>
+      <enforcer_name>North East Enforcement</enforcer_name>
+    </enforcer>
+    <warrant_number>Warrent007</warrant_number>
+    <date_added>2025-02-13T10:05:10</date_added>
+    <result_responses>
+      <parameter_name>reason</parameter_name>
+      <response>Evasion of Prison</response>
+    </result_responses>
+  </last_enforcement_action>
+  <account_status_reference>
+    <account_status_code>L</account_status_code>
+    <account_status_display_name>Live</account_status_display_name>
+  </account_status_reference>
+  <employer_flag>true</employer_flag>
+</response>

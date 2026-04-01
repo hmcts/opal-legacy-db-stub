@@ -18,6 +18,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/of_add_defendant_account_pcr_500.xml"
+    "bodyFileName": "legacy/DefendantAccount/internalServerErrorResponse.xml"
   }
 }

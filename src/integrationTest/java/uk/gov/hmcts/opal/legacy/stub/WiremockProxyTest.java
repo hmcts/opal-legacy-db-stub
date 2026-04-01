@@ -58,11 +58,11 @@ class WiremockProxyTest extends IntegrationTestBase {
     static class TestResponse {
         private String result;
 
-        public String getResult() {
+        String getResult() {
             return result;
         }
 
-        public void setResult(String result) {
+        void setResult(String result) {
             this.result = result;
         }
     }

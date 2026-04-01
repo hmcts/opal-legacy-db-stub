@@ -4,13 +4,19 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "createAccount"
+        "equalTo": "LIBRA.get_minor_creditors_account_at_a_glance"
       }
     },
-    "bodyPatterns" : [ {
-      "matchesJsonPath" : "$[?(@.business_unit_id == 500)]"
-    } ]
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.creditorAccountId",
+          "equalTo": "500"
+        }
+      }
+    ]
   },
+
   "response": {
     "status": 500,
     "headers": {

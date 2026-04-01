@@ -1,27 +1,27 @@
 {
-  "priority": 1,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.search_minor_creditors"
+        "equalTo": "LIBRA.get_minor_creditors_account_at_a_glance"
       }
     },
     "bodyPatterns": [
       {
         "matchesJsonPath": {
-          "expression": "$.account_number",
-          "equalTo": "FAIL"
+          "expression": "$.creditorAccountId",
+          "equalTo": "1"
         }
       }
     ]
   },
+
   "response": {
-    "status": 500,
+    "status": 200,
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/InternalServerError/internalServerErrorResponse.xml"
+    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorAtAGlance_pre1914.xml"
   }
 }

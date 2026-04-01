@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <party_details>
+    <party_id>99000000000901</party_id>
+    <organisation_flag>true</organisation_flag>
+    <organisation_details>
+      <organisation_name>Speed Camera Services Ltd</organisation_name>
+    </organisation_details>
+  </party_details>
+
+  <address>
+    <address_line_1>10 Technology Way</address_line_1>
+    <address_line_2>Reading</address_line_2>
+    <postcode>RG6 1PT</postcode>
+  </address>
+
+  <creditor_account_id>99000000000801</creditor_account_id>
+
+  <defendant>
+    <account_number>12345678</account_number>
+    <account_id>99000000000001</account_id>
+    <title>Mr</title>
+    <forenames>Michael James</forenames>
+    <surname>Johnson</surname>
+  </defendant>
+
+  <payment>
+    <is_bacs>true</is_bacs>
+    <hold_payment>false</hold_payment>
+  </payment>
+</response>
+

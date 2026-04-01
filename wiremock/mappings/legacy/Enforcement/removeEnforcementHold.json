@@ -1,11 +1,10 @@
 {
-  "priority": 5,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.search_minor_creditors"
+        "equalTo": "LIBRA.of_remove_defendant_account_enf_hold"
       }
     }
   },
@@ -14,6 +13,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/MinorCreditor/searchMinorCreditors.xml"
+    "bodyFileName": "legacy/Enforcement/removeEnforcementHold.xml"
   }
 }

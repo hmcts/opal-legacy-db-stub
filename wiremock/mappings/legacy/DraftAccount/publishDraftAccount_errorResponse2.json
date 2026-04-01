@@ -8,14 +8,14 @@
       }
     },
     "bodyPatterns" : [ {
-      "matchesJsonPath" : "$[?(@.business_unit_id == 500)]"
+      "matchesJsonPath" : "$[?(@.business_unit_id == 73)]"
     } ]
   },
   "response": {
-    "status": 500,
+    "status": 200,
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/InternalServerError/internalServerErrorResponse.xml"
+    "bodyFileName": "legacy/DraftAccount/createDefendantAccountErrorResponse.xml"
   }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <defendant_account_id>1</defendant_account_id>
+  <version>1</version>
+  <payment_terms>
+    <days_in_default>14</days_in_default>
+    <date_days_in_default_imposed>2026-02-01</date_days_in_default_imposed>
+    <extension>true</extension>
+    <reason_for_extension>Temporary financial hardship</reason_for_extension>
+    <payment_terms_type>
+      <payment_terms_type_code>I</payment_terms_type_code>
+    </payment_terms_type>
+    <effective_date>2026-02-20</effective_date>
+    <instalment_period>
+      <instalment_period_code>M</instalment_period_code>
+    </instalment_period>
+    <lump_sum_amount>100.00</lump_sum_amount>
+    <instalment_amount>25.00</instalment_amount>
+    <posted_details>
+      <posted_date>2026-02-20</posted_date>
+      <posted_by>OPAL_USER_01</posted_by>
+      <posted_by_name>Opal Caseworker</posted_by_name>
+    </posted_details>
+  </payment_terms>
+  <payment_card_last_requested>2026-02-20</payment_card_last_requested>
+  <last_enforcement>NOTICE_SENT</last_enforcement>
+</response>

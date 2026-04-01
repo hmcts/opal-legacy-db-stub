@@ -1,0 +1,44 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.of_remove_defendant_account_enf_hold"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.defendantAccountId",
+          "equalTo": "99000000000001"
+        }
+      },
+      {
+        "matchesJsonPath": {
+          "expression": "$.businessUnitId",
+          "equalTo": "1"
+        }
+      },
+      {
+        "matchesJsonPath": {
+          "expression": "$.businessUnitUserId",
+          "equalTo": "12345"
+        }
+      },
+      {
+        "matchesJsonPath": {
+          "expression": "$.version",
+          "equalTo": "1"
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/DefendantAccount/removeDefendantAccountEnforcementHold.xml"
+  }
+}

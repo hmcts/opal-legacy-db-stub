@@ -1,19 +1,23 @@
 {
-  "priority": 5,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.search_minor_creditors"
+        "equalTo": "LIBRA.addEnforcement"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.defendant_account_id == '72')]"
+      }
+    ]
   },
   "response": {
     "status": 200,
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/MinorCreditor/searchMinorCreditors.xml"
+    "bodyFileName": "legacy/DefendantAccount/AddEnforcement.xml"
   }
 }

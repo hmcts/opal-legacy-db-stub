@@ -9,7 +9,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.AntPathMatcher;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -113,11 +112,9 @@ public class WiremockRequestForwardingController {
         log.info(":forwardRequest: response body: {}\n", new String(httpResponse.body(), StandardCharsets.UTF_8));
 
 
-        return new ResponseEntity<>(
-                httpResponse.body(),
-                copyResponseHeaders(httpResponse),
-                httpResponse.statusCode()
-        );
+        return ResponseEntity.status(httpResponse.statusCode())
+                .headers(copyResponseHeaders(httpResponse))
+                .body(httpResponse.body());
 
 
     }
@@ -138,8 +135,8 @@ public class WiremockRequestForwardingController {
         });
     }
 
-    private MultiValueMap<String, String> copyResponseHeaders(HttpResponse<?> response) {
-        MultiValueMap<String, String> headers = new HttpHeaders();
+    private HttpHeaders copyResponseHeaders(HttpResponse<?> response) {
+        HttpHeaders headers = new HttpHeaders();
         response.headers().map().forEach((key, values) -> {
             if (key != null && !"transfer-encoding".equalsIgnoreCase(key) && !key.startsWith(":")) {
                 headers.addAll(key, values);

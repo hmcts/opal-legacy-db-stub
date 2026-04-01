@@ -3,18 +3,18 @@ plugins {
   id 'pmd'
   id 'jacoco'
   id 'io.spring.dependency-management' version '1.1.7'
-  id 'org.springframework.boot' version '3.5.7'
-  id 'org.owasp.dependencycheck' version '12.1.6'
+  id 'org.springframework.boot' version '4.0.5'
+  id 'org.owasp.dependencycheck' version '12.2.0'
   id 'com.github.ben-manes.versions' version '0.53.0'
-  id 'org.sonarqube' version '7.0.1.6134'
-  id 'uk.gov.hmcts.java' version '0.12.67'
+  id 'org.sonarqube' version '7.2.3.7755'
+  id 'uk.gov.hmcts.java' version '0.12.68'
 }
 group = 'uk.gov.hmcts.opal'
 version = '0.0.1'
 
 java {
   toolchain {
-    languageVersion = JavaLanguageVersion.of(17)
+    languageVersion = JavaLanguageVersion.of(21)
   }
 }
 
@@ -67,7 +67,7 @@ configurations {
   smokeTestRuntimeOnly.extendsFrom runtimeOnly
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
   options.compilerArgs << "-Xlint:unchecked" << "-Werror"
 }
 
@@ -76,7 +76,7 @@ tasks.withType(JavaExec).configureEach {
   javaLauncher.set(javaToolchains.launcherFor(java.toolchain))
 }
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
   useJUnitPlatform()
 
   testLogging {
@@ -88,14 +88,14 @@ test {
   failFast = true
 }
 
-task functional(type: Test) {
+tasks.register('functional', Test) {
   description = "Runs functional tests"
   group = "Verification"
   testClassesDirs = sourceSets.functionalTest.output.classesDirs
   classpath = sourceSets.functionalTest.runtimeClasspath
 }
 
-task integration(type: Test) {
+tasks.register('integration', Test) {
   description = "Runs integration tests"
   group = "Verification"
   testClassesDirs = sourceSets.integrationTest.output.classesDirs
@@ -103,7 +103,7 @@ task integration(type: Test) {
   failFast = true
 }
 
-task smoke(type: Test) {
+tasks.register('smoke', Test) {
   description = "Runs Smoke Tests"
   testClassesDirs = sourceSets.smokeTest.output.classesDirs
   classpath = sourceSets.smokeTest.runtimeClasspath
@@ -111,14 +111,22 @@ task smoke(type: Test) {
 
 checkstyle {
   maxWarnings = 0
-  toolVersion = '12.1.2'
+  toolVersion = '13.4.0'
   getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
 pmd {
-  toolVersion = "7.18.0"
-  sourceSets = [sourceSets.main, sourceSets.test, sourceSets.functionalTest, sourceSets.integrationTest, sourceSets.smokeTest]
-  reportsDir = file("$project.buildDir/reports/pmd")
+  toolVersion = "7.23.0"
+
+  sourceSets = [
+    sourceSets["main"],
+    sourceSets["test"],
+    sourceSets["functionalTest"],
+    sourceSets["integrationTest"],
+    sourceSets["smokeTest"]
+  ] as Collection<SourceSet>
+
+  reportsDir = layout.buildDirectory.dir("reports/pmd").get().asFile
   // https://github.com/pmd/pmd/issues/876
   ruleSets = []
   ruleSetFiles = files("config/pmd/ruleset.xml")
@@ -133,8 +141,12 @@ jacocoTestReport {
   }
 }
 
-project.tasks['sonarqube'].dependsOn jacocoTestReport
-project.tasks['check'].dependsOn integration
+tasks.named("sonarqube") {
+  dependsOn(tasks.named("jacocoTestReport"))
+}
+tasks.named("check") {
+  dependsOn(tasks.named("integration"))
+}
 
 def sonarExclusions = [
   '**/uk/gov/hmcts/opal/stub/services/config/**',
@@ -171,10 +183,6 @@ dependencyCheck {
 
   failOnError = false
 
-  analyzers {
-    // Disable scanning of .NET related binaries
-    assemblyEnabled = false
-  }
   skipConfigurations = [
     "checkstyle",
     "compileOnly",
@@ -191,41 +199,42 @@ repositories {
   mavenLocal()
   mavenCentral()
   maven {
-    url 'https://pkgs.dev.azure.com/hmcts/Artifacts/_packaging/hmcts-lib/maven/v1'
+    url = 'https://pkgs.dev.azure.com/hmcts/Artifacts/_packaging/hmcts-lib/maven/v1'
   }
 }
 
 ext {
-  log4JVersion = "2.25.2"
+  log4JVersion = "2.25.4"
 }
 
 ext['tomcat.version'] = '10.1.42'
 ext['snakeyaml.version'] = '2.0'
 
 dependencies {
-  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
-  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
-  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
-  implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.8.14'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'org.springframework.boot:spring-boot-starter-actuator'
+  implementation 'org.springframework.boot:spring-boot-starter-aspectj'
+  implementation 'org.springframework.boot:spring-boot-starter-json'
+  implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.2'
 
-  implementation group: 'com.github.hmcts.java-logging', name: 'logging', version: '6.1.9'
+  implementation 'com.github.hmcts.java-logging:logging:8.0.0'
 
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: log4JVersion
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: log4JVersion
+  implementation "org.apache.logging.log4j:log4j-api:${log4JVersion}"
+  implementation "org.apache.logging.log4j:log4j-to-slf4j:${log4JVersion}"
 
-  implementation group: 'io.rest-assured', name: 'rest-assured'
-  implementation (group: 'com.github.tomakehurst', name: 'wiremock-standalone', version: '3.0.1')
+  implementation 'io.rest-assured:rest-assured:6.0.0'
+  implementation 'com.github.tomakehurst:wiremock-standalone:3.0.1'
 
-  compileOnly 'org.projectlombok:lombok:1.18.42'
-  annotationProcessor 'org.projectlombok:lombok:1.18.42'
+  compileOnly 'org.projectlombok:lombok:1.18.44'
+  annotationProcessor 'org.projectlombok:lombok:1.18.44'
 
-  testImplementation(platform('org.junit:junit-bom:6.0.1'))
+  testImplementation(platform('org.junit:junit-bom:6.0.3'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-  testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', {
+  testImplementation 'org.springframework.boot:spring-boot-starter-test', {
     exclude group: 'junit', module: 'junit'
     exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
   }
+  testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 }
 
 application {
