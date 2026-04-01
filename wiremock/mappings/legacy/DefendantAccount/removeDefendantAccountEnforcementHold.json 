@@ -39,6 +39,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/Enforcement/removeDefendantAccountEnforcementHold.xml"
+    "bodyFileName": "legacy/DefendantAccount/removeDefendantAccountEnforcementHold.xml"
   }
 }
