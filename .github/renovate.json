@@ -24,6 +24,12 @@
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
+      "description": "springdoc 3.x requires Spring Boot 4.x; keep on 2.x until Boot 4 migration",
+      "matchManagers": ["gradle"],
+      "matchPackageNames": ["org.springdoc:springdoc-openapi-starter-webmvc-ui"],
+      "allowedVersions": "<3.0.0"
+    },
+    {
       "description": "Group all Gradle plugins (Minor/Patch)",
       "matchManagers": ["gradle"],
       "matchPackagePatterns": ["^org\\.springframework\\.boot$", "^io\\.spring\\.dependency-management$", "^com\\.github\\.ben-manes\\.versions$", "^org\\.sonarqube$", "^uk\\.gov\\.hmcts\\.java$", "^org\\.flywaydb\\.flyway$", "^net\\.serenity-bdd\\.serenity-gradle-plugin$", "^org\\.openapi.generator$"],
@@ -40,14 +46,14 @@
     {
       "description": "Group all Spring dependencies (Minor/Patch)",
       "matchManagers": ["gradle"],
-      "matchPackagePrefixes": ["org.springframework", "org.springdoc"],
+      "matchPackagePrefixes": "org.springframework",
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "Spring Dependencies (Minor/Patch)"
     },
     {
       "description": "Group all Spring dependencies (Major)",
       "matchManagers": ["gradle"],
-      "matchPackagePrefixes": ["org.springframework", "org.springdoc"],
+      "matchPackagePrefixes": "org.springframework",
       "matchUpdateTypes": ["major"],
       "groupName": "Spring Dependencies (Major)"
     },
