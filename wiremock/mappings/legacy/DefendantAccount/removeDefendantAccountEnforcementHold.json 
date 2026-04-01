@@ -4,7 +4,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.of_remove_defendant_account_ef_hold"
+        "equalTo": "LIBRA.of_remove_defendant_account_enf_hold"
       }
     },
     "bodyPatterns": [
@@ -39,6 +39,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/Enforcement/removeDefendantAccountEnforcementHold.xml"
+    "bodyFileName": "legacy/DefendantAccount/removeDefendantAccountEnforcementHold.xml"
   }
 }
