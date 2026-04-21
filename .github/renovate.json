@@ -35,14 +35,14 @@
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "Gradle Plugins - Minor/Patch",
       "matchPackageNames": [
-        "/^org\.springframework\.boot$/",
-        "/^io\.spring\.dependency-management$/",
-        "/^com\.github\.ben-manes\.versions$/",
-        "/^org\.sonarqube$/",
-        "/^uk\.gov\.hmcts\.java$/",
-        "/^org\.flywaydb\.flyway$/",
-        "/^net\.serenity-bdd\.serenity-gradle-plugin$/",
-        "/^org\.openapi.generator$/"
+        "/^org\\.springframework\\.boot$/",
+        "/^io\\.spring\\.dependency-management$/",
+        "/^com\\.github\\.ben-manes\\.versions$/",
+        "/^org\\.sonarqube$/",
+        "/^uk\\.gov\\.hmcts\\.java$/",
+        "/^org\\.flywaydb\\.flyway$/",
+        "/^net\\.serenity-bdd\\.serenity-gradle-plugin$/",
+        "/^org\\.openapi.generator$/"
       ]
     },
     {
@@ -51,14 +51,14 @@
       "matchUpdateTypes": ["major"],
       "groupName": "Gradle Plugins - Major",
       "matchPackageNames": [
-        "/^org\.springframework\.boot$/",
-        "/^io\.spring\.dependency-management$/",
-        "/^com\.github\.ben-manes\.versions$/",
-        "/^org\.sonarqube$/",
-        "/^uk\.gov\.hmcts\.java$/",
-        "/^org\.flywaydb\.flyway$/",
-        "/^net\.serenity-bdd\.serenity-gradle-plugin$/",
-        "/^org\.openapi.generator$/"
+        "/^org\\.springframework\\.boot$/",
+        "/^io\\.spring\\.dependency-management$/",
+        "/^com\\.github\\.ben-manes\\.versions$/",
+        "/^org\\.sonarqube$/",
+        "/^uk\\.gov\\.hmcts\\.java$/",
+        "/^org\\.flywaydb\\.flyway$/",
+        "/^net\\.serenity-bdd\\.serenity-gradle-plugin$/",
+        "/^org\\.openapi.generator$/"
       ]
     },
     {
@@ -85,10 +85,10 @@
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "Test Dependencies - Minor/Patch",
       "matchPackageNames": [
-        "/^io\.cucumber.*/",
-        "/^net\.serenity-bdd.*/",
-        "/^org\.junit.*/",
-        "/^org\.mockito.*/"
+        "/^io\\.cucumber.*/",
+        "/^net\\.serenity-bdd.*/",
+        "/^org\\.junit.*/",
+        "/^org\\.mockito.*/"
       ]
     },
     {
@@ -97,10 +97,10 @@
       "matchUpdateTypes": ["major"],
       "groupName": "Test Dependencies - Major",
       "matchPackageNames": [
-        "/^io\.cucumber.*/",
-        "/^net\.serenity-bdd.*/",
-        "/^org\.junit.*/",
-        "/^org\.mockito.*/"
+        "/^io\\.cucumber.*/",
+        "/^net\\.serenity-bdd.*/",
+        "/^org\\.junit.*/",
+        "/^org\\.mockito.*/"
       ]
     },
     {
@@ -109,8 +109,8 @@
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "Database Dependencies - Minor/Patch",
       "matchPackageNames": [
-        "/^org\.flywaydb.*/",
-        "/^org\.postgresql.*/"
+        "/^org\\.flywaydb.*/",
+        "/^org\\.postgresql.*/"
       ]
     },
     {
@@ -119,8 +119,8 @@
       "matchUpdateTypes": ["major"],
       "groupName": "Database Dependencies - Major",
       "matchPackageNames": [
-        "/^org\.flywaydb.*/",
-        "/^org\.postgresql.*/"
+        "/^org\\.flywaydb.*/",
+        "/^org\\.postgresql.*/"
       ]
     },
     {
@@ -129,8 +129,8 @@
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "OpenAPI/Swagger Dependencies - Minor/Patch",
       "matchPackageNames": [
-        "/^org\.openapi.*/",
-        "/^io\.swagger.*/"
+        "/^org\\.openapi.*/",
+        "/^io\\.swagger.*/"
       ]
     },
     {
@@ -139,8 +139,8 @@
       "matchUpdateTypes": ["major"],
       "groupName": "OpenAPI/Swagger Dependencies - Major",
       "matchPackageNames": [
-        "/^org\.openapi.*/",
-        "/^io\.swagger.*/"
+        "/^org\\.openapi.*/",
+        "/^io\\.swagger.*/"
       ]
     },
     {
@@ -149,7 +149,7 @@
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "HMCTS Dependencies - Minor/Patch",
       "matchPackageNames": [
-        "/^uk\.gov\.hmcts.*/",
+        "/^uk\\.gov\\.hmcts.*/",
         "/.*hmcts.*/"
       ]
     },
@@ -159,7 +159,7 @@
       "matchUpdateTypes": ["major"],
       "groupName": "HMCTS Dependencies - Major",
       "matchPackageNames": [
-        "/^uk\.gov\.hmcts.*/",
+        "/^uk\\.gov\\.hmcts.*/",
         "/.*hmcts.*/"
       ]
     },
@@ -189,5 +189,5 @@
     }
   ],
   "description": "Schedule for Wednesdays only.",
-  "schedule": [ "* * * * 3" ]
+  "schedule": ["* * * * 3"]
 }
