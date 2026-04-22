@@ -225,8 +225,8 @@ dependencies {
   implementation 'io.rest-assured:rest-assured:6.0.0'
   implementation 'org.wiremock:wiremock-standalone:3.13.2'
 
-  compileOnly 'org.projectlombok:lombok:1.18.44'
-  annotationProcessor 'org.projectlombok:lombok:1.18.44'
+  compileOnly 'org.projectlombok:lombok:1.18.46'
+  annotationProcessor 'org.projectlombok:lombok:1.18.46'
 
   testImplementation(platform('org.junit:junit-bom:6.0.3'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
