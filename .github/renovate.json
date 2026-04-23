@@ -1,8 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>hmcts/.github:renovate-config",
-    "local>hmcts/.github//renovate/automerge-all"
+    "local>hmcts/.github:renovate-config"
   ],
   "packageRules": [
     {
@@ -22,12 +21,6 @@
       "matchManagers": ["gradle"],
       "matchPackageNames": ["org.hibernate.orm:hibernate-jpamodelgen"],
       "matchUpdateTypes": ["minor", "patch"]
-    },
-    {
-      "description": "springdoc 3.x requires Spring Boot 4.x; keep on 2.x until Boot 4 migration",
-      "matchManagers": ["gradle"],
-      "matchPackageNames": ["org.springdoc:springdoc-openapi-starter-webmvc-ui"],
-      "allowedVersions": "<3.0.0"
     },
     {
       "description": "Group all Gradle plugins - Minor/Patch",
