@@ -1,0 +1,19 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.remove_defendant_account_party"
+      }
+    }
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/InternalServerError/internalServerErrorResponse.xml"
+  }
+}
