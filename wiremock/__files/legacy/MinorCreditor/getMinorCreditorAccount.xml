@@ -25,6 +25,4 @@
     <pay_by_bacs>true</pay_by_bacs>
     <hold_payment>false</hold_payment>
   </payment>
-
-  <business_unit_id>77</business_unit_id>
 </response>
