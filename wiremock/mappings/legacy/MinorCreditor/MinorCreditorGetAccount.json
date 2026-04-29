@@ -22,6 +22,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorAccountPartyResponse.xml"
+    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorAccount.xml"
   }
 }
