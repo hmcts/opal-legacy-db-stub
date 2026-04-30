@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "GET_MINOR_CREDITOR_ACCOUNT_PARTY"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.accountId",
+          "equalTo": "99000000000801"
+        }
+      }
+    ]
+  },
+
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorAccount.xml"
+  }
+}

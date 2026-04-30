@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <account_version>1</account_version>
+  <creditor_account_id>99000000000801</creditor_account_id>
+
+  <party_details>
+    <party_id>99000000000901</party_id>
+    <organisation_flag>true</organisation_flag>
+    <organisation_details>
+      <organisation_name>Speed Camera Services Ltd</organisation_name>
+    </organisation_details>
+  </party_details>
+
+  <address>
+    <address_line_1>10 Technology Way</address_line_1>
+    <address_line_2>Reading</address_line_2>
+    <postcode>RG6 1PT</postcode>
+  </address>
+
+  <payment>
+    <account_name>Speed Camera Services</account_name>
+    <sort_code>123456</sort_code>
+    <account_number>12345678</account_number>
+    <account_reference>SCREF001</account_reference>
+    <pay_by_bacs>true</pay_by_bacs>
+    <hold_payment>false</hold_payment>
+  </payment>
+</response>
