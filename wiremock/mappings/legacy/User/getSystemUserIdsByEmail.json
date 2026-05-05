@@ -14,5 +14,12 @@
       "Content-Type": "application/xml"
     },
     "bodyFileName": "legacy/User/getSystemUserIdsByEmail.xml"
+  },
+  "metadata": {
+    "actionType": "GetSystemUserIdsByEmail",
+    "usedInTests": [
+      "PO-2843",
+      "PO-YYYY"
+    ]
   }
 }
