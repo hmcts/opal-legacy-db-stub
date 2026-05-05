@@ -6,7 +6,489 @@
   },
   "item": [
     {
-      "name": "Requests for PO-XXXX",
+      "name": "getTestUserTokens",
+      "item": [
+        {
+          "name": "getToken opal-test",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "2211e0e5-3dc0-410d-b073-572fe5e8dece",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "type": "text"
+              },
+              {
+                "key": "X-User-Email",
+                "value": "opal-test@dev.platform.hmcts.net",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{user_url}}/testing-support/token/user",
+              "host": [
+                "{{user_url}}"
+              ],
+              "path": [
+                "testing-support",
+                "token",
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getToken opal-test-6",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "dc6dcf27-bee1-47e7-b431-fe5532cf8222",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "type": "text"
+              },
+              {
+                "key": "X-User-Email",
+                "value": "opal-test-6@dev.platform.hmcts.net",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{user_url}}/testing-support/token/user",
+              "host": [
+                "{{user_url}}"
+              ],
+              "path": [
+                "testing-support",
+                "token",
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getToken opal-test-10",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "596afd9a-9aaa-43be-842a-096d2ed50462",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "type": "text"
+              },
+              {
+                "key": "X-User-Email",
+                "value": "opal-test-10@dev.platform.hmcts.net",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{user_url}}/testing-support/token/user",
+              "host": [
+                "{{user_url}}"
+              ],
+              "path": [
+                "testing-support",
+                "token",
+                "user"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "c28e829f-eea9-4927-8645-272ab2c5e38c",
+      "description": "Requests to get the token from different test users. Single variable `token_opal-test` overwritten. Intended use is to change user used in tests."
+    },
+    {
+      "name": "Requests for PO-XXXX Template",
+      "item": [
+        {
+          "name": "getLegacyBuuidByEmail",
+          "item": [
+            {
+              "name": "findMappingByMetaData",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "512cb300-62a5-4895-8062-ca8757721c32",
+                    "exec": [
+                      "var jsonData = pm.response.json();",
+                      "pm.collectionVariables.set('BUUID_By_email_1_UUID', jsonData.mappings[0].id);",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                },
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "7483802f-3e60-4e58-af87-d0dd3f6cffb7",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "id": "535fc401-d6b3-4ce7-8cff-2a8b98d9f52a",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"and\": [\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.actionType\",\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        },\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.usedInTest\",\n                \"equalTo\": \"PO-2843\"\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/find-by-metadata",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "find-by-metadata"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getMappingsID",
+              "id": "c1261018-baa2-49c6-8b3b-8099b92f936d",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BUUID_By_email_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BUUID_By_email_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "putBuuidByEmailResp",
+              "id": "8ec85b7f-53e8-4539-8706-5b272dc23135",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"email_address\",\n                    \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 3,\n            \"libra_user_ids\": [\n                \"L077JG\"\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BUUID_By_email_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BUUID_By_email_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "restoreBuuidByEmailResp",
+              "id": "2895e57b-f429-426a-879b-5013083bf80e",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"email_address\",\n                    \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 3,\n            \"libra_user_ids\": [\n                \"L077JG\"\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BUUID_By_email_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BUUID_By_email_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "id": "6397547d-f444-4491-bece-769809554ed3"
+        },
+        {
+          "name": "getBUMappingForBUUID",
+          "item": [
+            {
+              "name": "findMappingByMetaData",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "512cb300-62a5-4895-8062-ca8757721c32",
+                    "exec": [
+                      "var jsonData = pm.response.json();",
+                      "pm.collectionVariables.set('BU_For_BUUID_1_UUID', jsonData.mappings[0].id);",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                },
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "7483802f-3e60-4e58-af87-d0dd3f6cffb7",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "id": "b206bc04-063e-48a3-8a8b-a19bc9e1d67a",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"and\": [\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.actionType\",\n                \"equalTo\": \"GetBUUserIdsBySystemUserIds\"\n            }\n        },\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.usedInTest\",\n                \"equalTo\": \"PO-2843\"\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/find-by-metadata",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "find-by-metadata"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getMappingsID Copy",
+              "id": "1650b0a7-c40e-42a1-a828-fcef8b0968f9",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BU_For_BUUID_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BU_For_BUUID_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "putBUForBuuidResp",
+              "id": "b1454025-b6bb-4f72-a1a4-10f1c85d0155",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetBUUserIdsBySystemUserIds\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"libra_user_ids[0]\",\n                    \"equalTo\": \"L077JG\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 1,\n            \"business_unit_user_ids\": [\n                {\n                    \"business_unit_user_id\": \"L077JG\",\n                    \"business_unit_id\": \"77\"\n                }\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetBUUserIdsBySystemUserIds\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BU_For_BUUID_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BU_For_BUUID_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "restoreBUForBuuidResp",
+              "id": "afab972e-652a-4fcf-bb90-f5ef463b2587",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetBUUserIdsBySystemUserIds\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"libra_user_ids[0]\",\n                    \"equalTo\": \"L077JG\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 1,\n            \"business_unit_user_ids\": [\n                {\n                    \"business_unit_user_id\": \"L077JG\",\n                    \"business_unit_id\": \"77\"\n                }\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetBUUserIdsBySystemUserIds\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BU_For_BUUID_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BU_For_BUUID_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "id": "08d95f22-4da8-4cf0-96d6-ae0c4fb11a39"
+        },
+        {
+          "name": "getUserState",
+          "id": "93da56e7-2b14-4331-8539-74f39417bc33",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_opal-test}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"active_accounts_only\": true,\n  \"business_unit_ids\": [\n    0\n  ],\n  \"consolidation_search\": false,\n  \"defendant\": {\n    \"defendant_account_id\": null,\n    \"forenames\": null,\n    \"exact_match_forenames\": false,\n    \"organisation\": false,\n    \"exact_match_organisation_name\": null,\n    \"organisation_name\": null,\n    \"surname\": \"\",\n    \"exact_match_surname\": false,\n    \"postcode\": \"AB1 2CD\",\n    \"national_insurance_number\": null,\n    \"include_aliases\": false,\n    \"birth_date\": null,\n    \"address_line_1\": null\n    },\n  \"reference_number\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{user_url}}/users/0/state",
+              "host": [
+                "{{user_url}}"
+              ],
+              "path": [
+                "users",
+                "0",
+                "state"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "057a3bef-c0e8-41a8-8330-d5b850ddd04d",
+      "description": "Tests for test \"Activate user on first successful alignment\"\n\nJira link - [https://tools.hmcts.net/jira/browse/PO-2843](https://tools.hmcts.net/jira/browse/PO-2843)"
+    },
+    {
+      "name": "Requests for Account Search POC",
       "item": [
         {
           "name": "findMappingByMetaData",
@@ -187,140 +669,289 @@
       "name": "Requests for PO-2843",
       "item": [
         {
-          "name": "findMappingByMetaData",
-          "event": [
+          "name": "getLegacyBuuidByEmail",
+          "item": [
             {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "var jsonData = pm.response.json();",
-                  "pm.collectionVariables.set('searchAccount_1_UUID', jsonData.mappings[0].id);",
-                  ""
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
-              }
+              "name": "findMappingByMetaData",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "512cb300-62a5-4895-8062-ca8757721c32",
+                    "exec": [
+                      "var jsonData = pm.response.json();",
+                      "pm.collectionVariables.set('BUUID_By_email_1_UUID', jsonData.mappings[0].id);",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                },
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "7483802f-3e60-4e58-af87-d0dd3f6cffb7",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "id": "4c33cf3b-cd54-47ba-b98e-3093852824fe",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"and\": [\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.actionType\",\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        },\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.usedInTest\",\n                \"equalTo\": \"PO-2843\"\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/find-by-metadata",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "find-by-metadata"
+                  ]
+                }
+              },
+              "response": []
             },
             {
-              "listen": "prerequest",
-              "script": {
-                "exec": [
-                  ""
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
-              }
+              "name": "getMappingsID",
+              "id": "8ac60848-a8d3-4fea-96d4-d2d48e1338d4",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BUUID_By_email_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BUUID_By_email_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "putBuuidByEmailResp",
+              "id": "71e4702e-021e-48ff-bc7e-b01b1beabc28",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"email_address\",\n                    \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 3,\n            \"libra_user_ids\": [\n                \"L077JG\"\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BUUID_By_email_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BUUID_By_email_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "restoreBuuidByEmailResp",
+              "id": "dae88d6b-6d81-4eac-8ad9-56ced3700d6b",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"email_address\",\n                    \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 3,\n            \"libra_user_ids\": [\n                \"L077JG\"\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BUUID_By_email_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BUUID_By_email_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
             }
           ],
-          "id": "5270498c-1c65-423f-8017-a129dddf82b5",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"contains\": \"searchDefendantAccounts\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
+          "id": "fde2f2bb-c5dd-4e49-af95-411c740c33a2"
+        },
+        {
+          "name": "getBUMappingForBUUID",
+          "item": [
+            {
+              "name": "findMappingByMetaData",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "512cb300-62a5-4895-8062-ca8757721c32",
+                    "exec": [
+                      "var jsonData = pm.response.json();",
+                      "pm.collectionVariables.set('BU_For_BUUID_1_UUID', jsonData.mappings[0].id);",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                },
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "7483802f-3e60-4e58-af87-d0dd3f6cffb7",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
                 }
-              }
-            },
-            "url": {
-              "raw": "{{stub_url}}/__admin/mappings/find-by-metadata",
-              "host": [
-                "{{stub_url}}"
               ],
-              "path": [
-                "__admin",
-                "mappings",
-                "find-by-metadata"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "getMappingsID",
-          "id": "8ac60848-a8d3-4fea-96d4-d2d48e1338d4",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
-              "host": [
-                "{{stub_url}}"
-              ],
-              "path": [
-                "__admin",
-                "mappings",
-                "{{searchAccount_1_UUID}}"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "putSearchResponse00",
-          "id": "9073be90-185b-4ade-9f05-a8e69c229fd5",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"searchDefendantAccounts\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"defendant.postcode\",\n          \"equalTo\": \"AB1 2CD\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/DefendantAccount/searchDefendantAccounts.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"searchDefendantAccounts\"\n  }\n}\n",
-              "options": {
-                "raw": {
-                  "language": "json"
+              "id": "03904bc9-77e0-4ece-94b5-c39dd2440dbd",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"and\": [\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.actionType\",\n                \"equalTo\": \"GetBUUserIdsBySystemUserIds\"\n            }\n        },\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.usedInTest\",\n                \"equalTo\": \"PO-2843\"\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/find-by-metadata",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "find-by-metadata"
+                  ]
                 }
-              }
+              },
+              "response": []
             },
-            "url": {
-              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
-              "host": [
-                "{{stub_url}}"
-              ],
-              "path": [
-                "__admin",
-                "mappings",
-                "{{searchAccount_1_UUID}}"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "putSearchResponse01",
-          "id": "87b7ab22-c1b4-45a6-a828-10a74e362c66",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"searchDefendantAccounts\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"defendant.postcode\",\n          \"equalTo\": \"AB1 2CD\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/DefendantAccount/searchDefendantAccounts1.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"searchDefendantAccounts\"\n  }\n}\n",
-              "options": {
-                "raw": {
-                  "language": "json"
+            {
+              "name": "getMappingsID Copy",
+              "id": "bb89f4fe-0a60-41a7-8c57-602bd86efafa",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BU_For_BUUID_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BU_For_BUUID_1_UUID}}"
+                  ]
                 }
-              }
+              },
+              "response": []
             },
-            "url": {
-              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
-              "host": [
-                "{{stub_url}}"
-              ],
-              "path": [
-                "__admin",
-                "mappings",
-                "{{searchAccount_1_UUID}}"
-              ]
+            {
+              "name": "putBUForBuuidResp",
+              "id": "053ff6e7-b066-419a-9c3d-bd4097edceaf",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetBUUserIdsBySystemUserIds\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"libra_user_ids[0]\",\n                    \"equalTo\": \"L077JG\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 1,\n            \"business_unit_user_ids\": [\n                {\n                    \"business_unit_user_id\": \"L077JG\",\n                    \"business_unit_id\": \"77\"\n                }\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetBUUserIdsBySystemUserIds\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BU_For_BUUID_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BU_For_BUUID_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "restoreBUForBuuidResp",
+              "id": "a710acda-917d-41df-a717-eecaa6ab9239",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetBUUserIdsBySystemUserIds\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"libra_user_ids[0]\",\n                    \"equalTo\": \"L077JG\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 1,\n            \"business_unit_user_ids\": [\n                {\n                    \"business_unit_user_id\": \"L077JG\",\n                    \"business_unit_id\": \"77\"\n                }\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetBUUserIdsBySystemUserIds\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{stub_url}}/__admin/mappings/{{BU_For_BUUID_1_UUID}}",
+                  "host": [
+                    "{{stub_url}}"
+                  ],
+                  "path": [
+                    "__admin",
+                    "mappings",
+                    "{{BU_For_BUUID_1_UUID}}"
+                  ]
+                }
+              },
+              "response": []
             }
-          },
-          "response": []
+          ],
+          "id": "e37fd61d-541e-47ef-9584-c5199e06c856"
         },
         {
-          "name": "accountSearch",
+          "name": "getUserState",
           "id": "e27c794b-d093-472d-b27f-a96c769c273a",
           "request": {
             "auth": {
@@ -333,7 +964,7 @@
                 }
               ]
             },
-            "method": "POST",
+            "method": "GET",
             "header": [],
             "body": {
               "mode": "raw",
@@ -345,13 +976,14 @@
               }
             },
             "url": {
-              "raw": "{{fines_url}}/defendant-accounts/search",
+              "raw": "{{user_url}}/users/0/state",
               "host": [
-                "{{fines_url}}"
+                "{{user_url}}"
               ],
               "path": [
-                "defendant-accounts",
-                "search"
+                "users",
+                "0",
+                "state"
               ]
             }
           },
@@ -360,187 +992,45 @@
       ],
       "id": "409130bf-4287-4a74-a35f-3d3d37fb5c20",
       "description": "Tests for test \"Activate user on first successful alignment\"\n\nJira link - [https://tools.hmcts.net/jira/browse/PO-2843](https://tools.hmcts.net/jira/browse/PO-2843)"
-    },
-    {
-      "name": "getTestUserTokens",
-      "item": [
-        {
-          "name": "getToken opal-test",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "    var jsonData = pm.response.json();",
-                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
-                  ""
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
-              }
-            }
-          ],
-          "id": "2211e0e5-3dc0-410d-b073-572fe5e8dece",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "*/*",
-                "type": "text"
-              },
-              {
-                "key": "X-User-Email",
-                "value": "opal-test@dev.platform.hmcts.net",
-                "type": "text"
-              }
-            ],
-            "url": {
-              "raw": "{{user_url}}/testing-support/token/user",
-              "host": [
-                "{{user_url}}"
-              ],
-              "path": [
-                "testing-support",
-                "token",
-                "user"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "getToken opal-test-6",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "    var jsonData = pm.response.json();",
-                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
-                  ""
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
-              }
-            }
-          ],
-          "id": "dc6dcf27-bee1-47e7-b431-fe5532cf8222",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "*/*",
-                "type": "text"
-              },
-              {
-                "key": "X-User-Email",
-                "value": "opal-test-6@dev.platform.hmcts.net",
-                "type": "text"
-              }
-            ],
-            "url": {
-              "raw": "{{user_url}}/testing-support/token/user",
-              "host": [
-                "{{user_url}}"
-              ],
-              "path": [
-                "testing-support",
-                "token",
-                "user"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "getToken opal-test-10",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "    var jsonData = pm.response.json();",
-                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
-                  ""
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
-              }
-            }
-          ],
-          "id": "596afd9a-9aaa-43be-842a-096d2ed50462",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "*/*",
-                "type": "text"
-              },
-              {
-                "key": "X-User-Email",
-                "value": "opal-test-10@dev.platform.hmcts.net",
-                "type": "text"
-              }
-            ],
-            "url": {
-              "raw": "{{user_url}}/testing-support/token/user",
-              "host": [
-                "{{user_url}}"
-              ],
-              "path": [
-                "testing-support",
-                "token",
-                "user"
-              ]
-            }
-          },
-          "response": []
-        }
-      ],
-      "id": "c28e829f-eea9-4927-8645-272ab2c5e38c",
-      "description": "Requests to get the token from different test users. Single variable `token_opal-test` overwritten. Intended use is to change user used in tests."
     }
   ],
   "variable": [
     {
-      "id": "ded5dd02-3d29-476a-9d8b-bcc20c685085",
+      "id": "17dc4c11-00dc-4677-aab7-8f8558a59b58",
       "key": "searchAccount_1_UUID",
       "value": ""
     },
     {
-      "id": "3f3873a7-366a-4540-b7bc-65d018dc958a",
+      "id": "3b0b6735-008b-4c49-8808-419027ff82e8",
       "key": "user_url",
       "value": ""
     },
     {
-      "id": "0db9115e-b549-4f80-befc-a974f19cba2e",
+      "id": "eff208d6-3a44-4afd-a2a2-30a64cfe93fc",
       "key": "fines_url",
       "value": ""
     },
     {
-      "id": "3bf078ca-442f-40fe-a658-8d9c54b076fe",
+      "id": "8bd3f538-467d-4e5a-8764-ecfbef5a9d8b",
       "key": "stub_url",
       "value": ""
     },
     {
-      "id": "82302ed3-2f56-4743-af8b-41704290a201",
+      "id": "3caf3d56-ac6b-41a0-9f65-c90a3e13ede2",
       "key": "token_opal-test",
       "value": ""
+    },
+    {
+      "id": "6c9c3611-6fde-4c97-a158-8f09c6d10aa1",
+      "key": "BUUID_By_email_1_UUID",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "id": "b734933c-a3e0-4dee-9d07-a98cfe892334",
+      "key": "BU_For_BUUID_1_UUID",
+      "value": "",
+      "type": "default"
     }
   ]
 }
