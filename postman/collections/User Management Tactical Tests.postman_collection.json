@@ -1,0 +1,546 @@
+{
+  "info": {
+    "_postman_id": "bf010c87-2842-4403-b28c-a1683134b65c",
+    "name": "User Management Tactical Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Requests for PO-XXXX",
+      "item": [
+        {
+          "name": "findMappingByMetaData",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "pm.collectionVariables.set('searchAccount_1_UUID', jsonData.mappings[0].id);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "7a46acaa-bc54-4ce9-b70b-6ec3922cd769",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"and\": [\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.actionType\",\n                \"equalTo\": \"searchDefendantAccounts\"\n            }\n        },\n        {\n            \"matchesJsonPath\": {\n                \"expression\": \"$.usedInTest\",\n                \"equalTo\": \"PO-XXXX\"\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{stub_url}}/__admin/mappings/find-by-metadata",
+              "host": [
+                "{{stub_url}}"
+              ],
+              "path": [
+                "__admin",
+                "mappings",
+                "find-by-metadata"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMappingsID",
+          "id": "561acb9d-58c6-46c8-9e43-4b0f41260ba7",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
+              "host": [
+                "{{stub_url}}"
+              ],
+              "path": [
+                "__admin",
+                "mappings",
+                "{{searchAccount_1_UUID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "putSearchResponse00",
+          "id": "461077e8-ee5c-4b69-a991-9dee817e1ef3",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"searchDefendantAccounts\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"defendant.postcode\",\n          \"equalTo\": \"AB1 2CD\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/DefendantAccount/searchDefendantAccounts.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"searchDefendantAccounts\"\n  }\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
+              "host": [
+                "{{stub_url}}"
+              ],
+              "path": [
+                "__admin",
+                "mappings",
+                "{{searchAccount_1_UUID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "putSearchResponse01",
+          "id": "e8698fe7-de96-4b69-b81a-192d7e819f9a",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"searchDefendantAccounts\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"defendant.postcode\",\n          \"equalTo\": \"AB1 2CD\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/DefendantAccount/searchDefendantAccounts1.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"searchDefendantAccounts\"\n  }\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
+              "host": [
+                "{{stub_url}}"
+              ],
+              "path": [
+                "__admin",
+                "mappings",
+                "{{searchAccount_1_UUID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "accountSearch",
+          "id": "fe8c3776-0152-441a-93ad-66dace99935e",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_opal-test}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"active_accounts_only\": true,\n  \"business_unit_ids\": [\n    0\n  ],\n  \"consolidation_search\": false,\n  \"defendant\": {\n    \"defendant_account_id\": null,\n    \"forenames\": null,\n    \"exact_match_forenames\": false,\n    \"organisation\": false,\n    \"exact_match_organisation_name\": null,\n    \"organisation_name\": null,\n    \"surname\": \"\",\n    \"exact_match_surname\": false,\n    \"postcode\": \"AB1 2CD\",\n    \"national_insurance_number\": null,\n    \"include_aliases\": false,\n    \"birth_date\": null,\n    \"address_line_1\": null\n    },\n  \"reference_number\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{fines_url}}/defendant-accounts/search",
+              "host": [
+                "{{fines_url}}"
+              ],
+              "path": [
+                "defendant-accounts",
+                "search"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "f072cec7-f27a-48d5-a96e-d0c247162191",
+      "description": "Tests for test \"Test Name\"\n\nJira link - PO-XXXX"
+    },
+    {
+      "name": "Requests for PO-2843",
+      "item": [
+        {
+          "name": "findMappingByMetaData",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "pm.collectionVariables.set('searchAccount_1_UUID', jsonData.mappings[0].id);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "5270498c-1c65-423f-8017-a129dddf82b5",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"contains\": \"searchDefendantAccounts\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{stub_url}}/__admin/mappings/find-by-metadata",
+              "host": [
+                "{{stub_url}}"
+              ],
+              "path": [
+                "__admin",
+                "mappings",
+                "find-by-metadata"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMappingsID",
+          "id": "8ac60848-a8d3-4fea-96d4-d2d48e1338d4",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
+              "host": [
+                "{{stub_url}}"
+              ],
+              "path": [
+                "__admin",
+                "mappings",
+                "{{searchAccount_1_UUID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "putSearchResponse00",
+          "id": "9073be90-185b-4ade-9f05-a8e69c229fd5",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"searchDefendantAccounts\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"defendant.postcode\",\n          \"equalTo\": \"AB1 2CD\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/DefendantAccount/searchDefendantAccounts.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"searchDefendantAccounts\"\n  }\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
+              "host": [
+                "{{stub_url}}"
+              ],
+              "path": [
+                "__admin",
+                "mappings",
+                "{{searchAccount_1_UUID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "putSearchResponse01",
+          "id": "87b7ab22-c1b4-45a6-a828-10a74e362c66",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"searchDefendantAccounts\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"defendant.postcode\",\n          \"equalTo\": \"AB1 2CD\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/DefendantAccount/searchDefendantAccounts1.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"searchDefendantAccounts\"\n  }\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{stub_url}}/__admin/mappings/{{searchAccount_1_UUID}}",
+              "host": [
+                "{{stub_url}}"
+              ],
+              "path": [
+                "__admin",
+                "mappings",
+                "{{searchAccount_1_UUID}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "accountSearch",
+          "id": "e27c794b-d093-472d-b27f-a96c769c273a",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_opal-test}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"active_accounts_only\": true,\n  \"business_unit_ids\": [\n    0\n  ],\n  \"consolidation_search\": false,\n  \"defendant\": {\n    \"defendant_account_id\": null,\n    \"forenames\": null,\n    \"exact_match_forenames\": false,\n    \"organisation\": false,\n    \"exact_match_organisation_name\": null,\n    \"organisation_name\": null,\n    \"surname\": \"\",\n    \"exact_match_surname\": false,\n    \"postcode\": \"AB1 2CD\",\n    \"national_insurance_number\": null,\n    \"include_aliases\": false,\n    \"birth_date\": null,\n    \"address_line_1\": null\n    },\n  \"reference_number\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{fines_url}}/defendant-accounts/search",
+              "host": [
+                "{{fines_url}}"
+              ],
+              "path": [
+                "defendant-accounts",
+                "search"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "409130bf-4287-4a74-a35f-3d3d37fb5c20",
+      "description": "Tests for test \"Activate user on first successful alignment\"\n\nJira link - [https://tools.hmcts.net/jira/browse/PO-2843](https://tools.hmcts.net/jira/browse/PO-2843)"
+    },
+    {
+      "name": "getTestUserTokens",
+      "item": [
+        {
+          "name": "getToken opal-test",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "2211e0e5-3dc0-410d-b073-572fe5e8dece",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "type": "text"
+              },
+              {
+                "key": "X-User-Email",
+                "value": "opal-test@dev.platform.hmcts.net",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{user_url}}/testing-support/token/user",
+              "host": [
+                "{{user_url}}"
+              ],
+              "path": [
+                "testing-support",
+                "token",
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getToken opal-test-6",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "dc6dcf27-bee1-47e7-b431-fe5532cf8222",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "type": "text"
+              },
+              {
+                "key": "X-User-Email",
+                "value": "opal-test-6@dev.platform.hmcts.net",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{user_url}}/testing-support/token/user",
+              "host": [
+                "{{user_url}}"
+              ],
+              "path": [
+                "testing-support",
+                "token",
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getToken opal-test-10",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('token_opal-test', jsonData.access_token);",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "596afd9a-9aaa-43be-842a-096d2ed50462",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "type": "text"
+              },
+              {
+                "key": "X-User-Email",
+                "value": "opal-test-10@dev.platform.hmcts.net",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{user_url}}/testing-support/token/user",
+              "host": [
+                "{{user_url}}"
+              ],
+              "path": [
+                "testing-support",
+                "token",
+                "user"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "c28e829f-eea9-4927-8645-272ab2c5e38c",
+      "description": "Requests to get the token from different test users. Single variable `token_opal-test` overwritten. Intended use is to change user used in tests."
+    }
+  ],
+  "variable": [
+    {
+      "id": "ded5dd02-3d29-476a-9d8b-bcc20c685085",
+      "key": "searchAccount_1_UUID",
+      "value": ""
+    },
+    {
+      "id": "3f3873a7-366a-4540-b7bc-65d018dc958a",
+      "key": "user_url",
+      "value": ""
+    },
+    {
+      "id": "0db9115e-b549-4f80-befc-a974f19cba2e",
+      "key": "fines_url",
+      "value": ""
+    },
+    {
+      "id": "3bf078ca-442f-40fe-a658-8d9c54b076fe",
+      "key": "stub_url",
+      "value": ""
+    },
+    {
+      "id": "82302ed3-2f56-4743-af8b-41704290a201",
+      "key": "token_opal-test",
+      "value": ""
+    }
+  ]
+}
