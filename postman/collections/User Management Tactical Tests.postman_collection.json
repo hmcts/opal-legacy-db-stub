@@ -250,7 +250,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"email_address\",\n                    \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 3,\n            \"libra_user_ids\": [\n                \"L077JG\"\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"email_address\",\n          \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"body\": \"<root><count>3</count><libra_user_ids><item>L077JG</item></libra_user_ids></root>\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -391,7 +391,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetBUUserIdsBySystemUserIds\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"libra_user_ids[0]\",\n                    \"equalTo\": \"L077JG\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 1,\n            \"business_unit_user_ids\": [\n                {\n                    \"business_unit_user_id\": \"L077JG\",\n                    \"business_unit_id\": \"77\"\n                }\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetBUUserIdsBySystemUserIds\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        }\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"body\": \"<root><count>1</count><business_unit_user_ids><item><business_unit_user_id>L077JG</business_unit_user_id><business_unit_id>77</business_unit_id></item></business_unit_user_ids></root>\"\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -758,7 +758,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"email_address\",\n                    \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 3,\n            \"libra_user_ids\": [\n                \"L077JG\"\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"email_address\",\n          \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"body\": \"<root><count>3</count><libra_user_ids><item>L077JG</item></libra_user_ids></root>\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -899,7 +899,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetBUUserIdsBySystemUserIds\"\n            }\n        },\n        \"bodyPatterns\": [\n            {\n                \"matchesJsonPath\": {\n                    \"expression\": \"libra_user_ids[0]\",\n                    \"equalTo\": \"L077JG\"\n                }\n            }\n        ]\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"jsonBody\": {\n            \"count\": 1,\n            \"business_unit_user_ids\": [\n                {\n                    \"business_unit_user_id\": \"L077JG\",\n                    \"business_unit_id\": \"77\"\n                }\n            ]\n        }\n    },\n    \"metadata\": {\n        \"actionType\": \"GetBUUserIdsBySystemUserIds\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    }\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"body\": \"<root><count>1</count><business_unit_user_ids><item><business_unit_user_id>L077JG</business_unit_user_id><business_unit_id>77</business_unit_id></item></business_unit_user_ids></root>\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -998,38 +998,38 @@
   ],
   "variable": [
     {
-      "id": "9938f12a-5746-4b34-a289-0d621c8c05a6",
+      "id": "832dbb20-6ddb-489e-85b3-3e86d0f41416",
       "key": "searchAccount_1_UUID",
       "value": ""
     },
     {
-      "id": "10e7a747-41fa-4490-a2b6-45e770c53a89",
+      "id": "0d6ea729-57a3-4fbf-b8ce-e5f190ff9097",
       "key": "user_url",
       "value": ""
     },
     {
-      "id": "b12dad28-3bbf-4457-80a8-439473e214c2",
+      "id": "76eec817-4486-4f8b-856a-76ffcba73218",
       "key": "fines_url",
       "value": ""
     },
     {
-      "id": "ab7d60c7-b57d-4f46-afa9-07f44dca2b92",
+      "id": "45010b2c-695e-49b7-a224-8bde432a8bdb",
       "key": "stub_url",
       "value": ""
     },
     {
-      "id": "de46364b-4442-4e86-8a06-37497b67621f",
+      "id": "85d7a82f-67a7-4659-bf54-c2baecefc99f",
       "key": "token_opal-test",
       "value": ""
     },
     {
-      "id": "93993a2a-44c0-47d7-9210-fee7c3c51597",
+      "id": "0c5261fc-3076-4bd8-b506-3215af0e15b6",
       "key": "BUUID_By_email_1_UUID",
       "value": "",
       "type": "default"
     },
     {
-      "id": "26799ac8-ffa8-4318-92f6-e087383a518e",
+      "id": "a6df4b3d-c8a0-4c24-bb9f-aadb18b3b402",
       "key": "BU_For_BUUID_1_UUID",
       "value": "",
       "type": "default"
