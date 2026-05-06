@@ -250,7 +250,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"email_address\",\n          \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"body\": \"<root><count>3</count><libra_user_ids><item>L077JG</item></libra_user_ids></root>\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
+                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"email_address\",\n          \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/User/usertacticalsolutiontests/getSystemUserIdsByEmail_singleLibraUser_l077jg.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -391,7 +391,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        }\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"body\": \"<root><count>1</count><business_unit_user_ids><item><business_unit_user_id>L077JG</business_unit_user_id><business_unit_id>77</business_unit_id></item></business_unit_user_ids></root>\"\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
+                  "raw": "{\n    \"request\": {\n        \"method\": \"POST\",\n        \"urlPathPattern\": \"/opal\",\n        \"queryParameters\": {\n            \"actionType\": {\n                \"equalTo\": \"GetSystemUserIdsByEmail\"\n            }\n        }\n    },\n    \"response\": {\n        \"status\": 200,\n        \"headers\": {\n            \"Content-Type\": \"application/xml\"\n        },\n        \"bodyFileName\": \"legacy/User/usertacticalsolutiontests/getBUUserIdsBySystemUserIds_singleBusinessUnitUser_l077jg_bu77.xml\"\n    },\n    \"metadata\": {\n        \"actionType\": \"GetSystemUserIdsByEmail\",\n        \"usedInTests\": [\n            \"PO-2843\",\n            \"PO-YYYY\"\n        ]\n    }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -758,7 +758,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"email_address\",\n          \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"body\": \"<root><count>3</count><libra_user_ids><item>L077JG</item></libra_user_ids></root>\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
+                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    },\n    \"bodyPatterns\": [\n      {\n        \"matchesJsonPath\": {\n          \"expression\": \"email_address\",\n          \"equalTo\": \"opal-test@dev.platform.hmcts.net\"\n        }\n      }\n    ]\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/User/usertacticalsolutiontests/getSystemUserIdsByEmail_singleLibraUser_l077jg.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -899,7 +899,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    }\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"body\": \"<root><count>1</count><business_unit_user_ids><item><business_unit_user_id>L077JG</business_unit_user_id><business_unit_id>77</business_unit_id></item></business_unit_user_ids></root>\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
+                  "raw": "{\n  \"request\": {\n    \"method\": \"POST\",\n    \"urlPathPattern\": \"/opal\",\n    \"queryParameters\": {\n      \"actionType\": {\n        \"equalTo\": \"GetSystemUserIdsByEmail\"\n      }\n    }\n  },\n  \"response\": {\n    \"status\": 200,\n    \"headers\": {\n      \"Content-Type\": \"application/xml\"\n    },\n    \"bodyFileName\": \"legacy/User/usertacticalsolutiontests/getBUUserIdsBySystemUserIds_singleBusinessUnitUser_l077jg_bu77.xml\"\n  },\n  \"metadata\": {\n    \"actionType\": \"GetSystemUserIdsByEmail\",\n    \"usedInTests\": [\n      \"PO-2843\",\n      \"PO-YYYY\"\n    ]\n  }\n}",
                   "options": {
                     "raw": {
                       "language": "json"
