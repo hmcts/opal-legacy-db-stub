@@ -9,14 +9,14 @@
       }
     },
     "bodyPatterns": [ {
-      "matchesJsonPath": "$[?(@.creditor_account_id == '500')]"
+      "matchesJsonPath": "$[?(@.creditor_account_id == '404')]"
     } ]
   },
   "response": {
-    "status": 500,
+    "status": 404,
     "headers": {
-      "Content-Type": "text/plain"
+      "Content-Type": "application/xml"
     },
-    "body": "Legacy minor creditor update failed"
+    "body": "<error><message>Minor creditor account not found</message></error>"
   }
 }

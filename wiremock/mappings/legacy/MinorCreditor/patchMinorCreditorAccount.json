@@ -1,38 +1,15 @@
 {
   "request": {
     "method": "POST",
-    "urlPath": "/opal",
+    "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
         "equalTo": "LIBRA.of_update_minor_creditor_account"
       }
     },
-    "bodyPatterns": [
-      {
-        "matchesJsonPath": {
-          "expression": "$.creditor_account_id",
-          "equalTo": "607"
-        }
-      },
-      {
-        "matchesJsonPath": {
-          "expression": "$.business_unit_id",
-          "equalTo": "10"
-        }
-      },
-      {
-        "matchesJsonPath": {
-          "expression": "$.business_unit_user_id",
-          "equalTo": "USER01"
-        }
-      },
-      {
-        "matchesJsonPath": {
-          "expression": "$.account_version",
-          "equalTo": "1"
-        }
-      }
-    ]
+    "bodyPatterns": [ {
+      "matchesJsonPath": "$[?(@.creditor_account_id == '607')]"
+    } ]
   },
   "response": {
     "status": 200,

@@ -9,14 +9,14 @@
       }
     },
     "bodyPatterns": [ {
-      "matchesJsonPath": "$[?(@.creditor_account_id == '500')]"
+      "matchesJsonPath": "$[?(@.creditor_account_id == '503')]"
     } ]
   },
   "response": {
-    "status": 500,
+    "status": 503,
     "headers": {
       "Content-Type": "text/plain"
     },
-    "body": "Legacy minor creditor update failed"
+    "body": "Legacy minor creditor update unavailable"
   }
 }
