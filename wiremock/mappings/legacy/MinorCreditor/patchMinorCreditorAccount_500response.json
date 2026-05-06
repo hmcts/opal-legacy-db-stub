@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.of_update_minor_creditor_account"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.creditor_account_id",
+          "equalTo": "500"
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "Content-Type": "text/plain"
+    },
+    "body": "Legacy minor creditor update failed"
+  }
+}
