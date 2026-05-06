@@ -1,6 +1,6 @@
-<root>
-  <count>3</count>
-  <libra_user_ids>
-    <item>L077JG</item>
-  </libra_user_ids>
-</root>
+<LibraUserIds>
+  <count>2</count>
+  <libra_user_ids>L077JG</libra_user_ids>
+  <libra_user_ids>L073JG</libra_user_ids>
+</LibraUserIds>
+
