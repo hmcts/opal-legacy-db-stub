@@ -1,13 +1,17 @@
 {
   "priority": 1,
   "request": {
-    "method": "DELETE",
+    "method": "POST",
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
         "equalTo": "LIBRA.remove_defendant_account_party"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.defendant_account_id == '500')]"
+      } ]
   },
   "response": {
     "status": 500,

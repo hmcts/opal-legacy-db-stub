@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<removeDefendantAccountPartyLegacyRequest>
+<response>
   <defendant_account_id>99000000000002</defendant_account_id>
   <defendant_account_party_id>99000000000002</defendant_account_party_id>
   <business_unit_id>99000000000002</business_unit_id>
   <business_unit_user_id>99000000000002</business_unit_user_id>
   <version>1</version>
-</removeDefendantAccountPartyLegacyRequest>
+</response>
