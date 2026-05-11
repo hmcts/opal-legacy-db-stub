@@ -7,12 +7,12 @@
       "actionType": { "equalTo": "LIBRA.remove_defendant_account_party" }
     },
     "bodyPatterns": [
-        { "matchesJsonPath": "$[?(@.defendant_account_id == '77')]" }
+        { "matchesJsonPath": "$[?(@.defendant_account_id == '666')]" }
       ]
   },
   "response": {
     "status": 200,
     "headers": { "Content-Type": "application/xml" },
-    "bodyFileName": "legacy/DefendantAccount/removeDefendantAccountPartyLegacy.xml"
+    "bodyFileName": "legacy/DefendantAccount/removeDefendantAccountPartyLegacy_Individual.xml"
   }
 }
