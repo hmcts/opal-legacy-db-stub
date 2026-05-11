@@ -9,6 +9,12 @@
       "allowedVersions": "4.2.1"
     },
     {
+      "description": "Temporarily suppress OWASP dependency-check updates while Jenkins dependency-check DB/schema issues are unresolved. Revisit after 2026-08-01.",
+      "matchManagers": ["gradle"],
+      "matchPackageNames": ["org.owasp.dependencycheck"],
+      "enabled": false
+    },
+    {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["postgres"],
       "enabled": false
