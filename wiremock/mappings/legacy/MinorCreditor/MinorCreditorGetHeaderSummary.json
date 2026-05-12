@@ -4,24 +4,23 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.get_minor_creditors_account_at_a_glance"
+        "equalTo": "LIBRA.get_minor_creditors_account_header_summary"
       }
     },
     "bodyPatterns": [
       {
         "matchesJsonPath": {
           "expression": "$.creditorAccountId",
-          "equalTo": "1"
+          "equalTo": "99000000000800"
         }
       }
     ]
   },
-
   "response": {
     "status": 200,
     "headers": {
-      "Content-Type": "application/xml"
-    },
-    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorAtAGlance_pre1914.xml"
+    "Content-Type": "application/xml"
+  },
+  "bodyFileName": "legacy/MinorCreditor/getMinorCreditorHeaderSummary.xml"
   }
 }
