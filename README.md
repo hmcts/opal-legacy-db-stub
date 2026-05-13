@@ -1,6 +1,35 @@
 # opal-legacy-db-stub
 This is the stub test service for replicating the legacy GoB DB in environments where it is not available.
 
+## How Opal Uses This Stub
+
+Within Opal, this repository is primarily used as a legacy response provider.
+
+Typical use cases include:
+
+- `opal-fines-service` legacy-mode flows
+- `opal-user-service` legacy lookup integration work
+- local live-smoke and integration testing where a legacy response is needed
+
+The normal expectation is:
+
+- Opal services point `legacy-gateway.url` at this stub
+- this stub returns a realistic XML response for the requested legacy `actionType`
+- tests or local runs then verify that the calling service can handle that response correctly
+
+### Current Testing Stance
+
+At this time, we do **not** want to use this stub as a heavy request-validation harness for routine Opal integration tests.
+
+In practice, that means:
+
+- use the stub mainly to provide good test responses
+- keep integration tests focused on successful calls and response mapping
+- prefer unit tests for detailed request-construction assertions where needed
+- avoid overly complicated integration tests built around WireMock admin/request-log inspection unless there is a strong reason
+
+So for most Opal work, this stub should stay a maintainable legacy-response tool rather than a low-level request-auditing layer.
+
 ## Developement
 
 ### 'Mocking' an XML Legacy Response
