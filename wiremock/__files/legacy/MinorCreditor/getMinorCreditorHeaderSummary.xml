@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <party_details>
+    <party_id>99000000000900</party_id>
+    <organisation_flag>true</organisation_flag>
+    <organisation_details>
+      <organisation_name>Minor Creditor Test Ltd</organisation_name>
+    </organisation_details>
+  </party_details>
+
+  <business_unit>
+    <business_unit_id>77</business_unit_id>
+    <business_unit_name>Camberwell Green</business_unit_name>
+    <welsh_speaking>N</welsh_speaking>
+  </business_unit>
+
+  <creditor>
+    <account_version>1</account_version>
+    <account_id>99000000000800</account_id>
+    <account_number>87654321</account_number>
+    <account_type>
+      <account_type>MN</account_type>
+    </account_type>
+    <has_associated_defendant>false</has_associated_defendant>
+  </creditor>
+
+  <financials>
+    <awarded>0</awarded>
+    <paid_out>0</paid_out>
+    <awaiting_payout>0</awaiting_payout>
+    <outstanding>0</outstanding>
+  </financials>
+</response>
