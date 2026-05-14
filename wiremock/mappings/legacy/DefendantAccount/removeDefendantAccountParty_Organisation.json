@@ -1,0 +1,17 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": { "equalTo": "LIBRA.remove_defendant_account_party" }
+    },
+    "bodyPatterns": [
+        { "matchesJsonPath": "$[?(@.defendant_account_id == '555')]" }
+      ]
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/xml" },
+    "bodyFileName": "legacy/DefendantAccount/removeDefendantAccountPartyLegacy_Organisation.xml"
+  }
+}

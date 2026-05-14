@@ -29,3 +29,7 @@ Clone the `opal-dev-agent-skills` repository and follow its README to install th
 - Do not run this on default ports at the same time as `opal-file-handler`, which also defaults to `4553`.
 - Baseline validation is usually `./gradlew build`.
 - This repo also has `integration`, `functional`, and `smoke` Gradle tasks.
+- Treat this repo primarily as a legacy response provider for other Opal services, especially `opal-fines-service` and `opal-user-service`.
+- When adding or changing mappings, optimise for realistic and useful legacy responses rather than turning the stub into a heavy request-validation layer.
+- Do not default to adding complex WireMock admin/request-log assertions to downstream integration tests that use this stub.
+- Prefer simple downstream integration tests that prove the caller can make the legacy call and map or handle the returned response correctly.
