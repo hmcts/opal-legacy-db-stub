@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <account_version>2</account_version>
+  <creditor_account_id>607</creditor_account_id>
+
+  <party_details>
+    <party_id>99008</party_id>
+    <organisation_flag>false</organisation_flag>
+    <individual_details>
+      <surname>Updated</surname>
+      <forenames>Creditor</forenames>
+    </individual_details>
+  </party_details>
+
+  <address>
+    <address_line_1>99 Updated Road</address_line_1>
+    <postcode>NW1 1AA</postcode>
+  </address>
+
+  <payment>
+    <account_name>Hold Test</account_name>
+    <sort_code>123456</sort_code>
+    <account_number>12345678</account_number>
+    <account_reference>HOLDREF</account_reference>
+    <pay_by_bacs>true</pay_by_bacs>
+    <hold_payment>true</hold_payment>
+  </payment>
+</response>

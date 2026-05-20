@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.update_minor_creditor"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/MinorCreditor/updateMinorCreditorPayoutHold.xml"
+  }
+}
