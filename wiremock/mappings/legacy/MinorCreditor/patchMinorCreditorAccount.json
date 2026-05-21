@@ -9,6 +9,20 @@
     },
     "bodyPatterns": [ {
       "matchesJsonPath": "$[?(@.creditor_account_id == '607')]"
+    }, {
+      "matchesJsonPath": "$[?(@.business_unit_id == '10')]"
+    }, {
+      "matchesJsonPath": "$[?(@.business_unit_user_id == 'USER01')]"
+    }, {
+      "matchesJsonPath": "$[?(@.account_version == 1)]"
+    }, {
+      "matchesJsonPath": "$[?(@.party_details.party_id == '99008')]"
+    }, {
+      "matchesJsonPath": "$[?(@.address.address_line_1 == '99 Updated Road')]"
+    }, {
+      "matchesJsonPath": "$[?(@.payment.account_reference == 'Ref-01')]"
+    }, {
+      "matchesJsonPath": "$[?(@.payment.hold_payment == true)]"
     } ]
   },
   "response": {
