@@ -10,6 +10,10 @@
     },
     "bodyPatterns": [ {
       "matchesJsonPath": "$[?(@.creditor_account_id == '503')]"
+    }, {
+      "matchesJsonPath": "$[?(@.business_unit_id == '10')]"
+    }, {
+      "matchesJsonPath": "$[?(@.account_version == 1)]"
     } ]
   },
   "response": {
