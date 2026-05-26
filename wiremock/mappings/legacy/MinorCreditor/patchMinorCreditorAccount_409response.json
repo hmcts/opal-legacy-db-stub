@@ -13,7 +13,7 @@
     }, {
       "matchesJsonPath": "$[?(@.business_unit_id == '10')]"
     }, {
-      "matchesJsonPath": "$[?(@.account_version == 1)]"
+      "matchesJsonPath": "$[?(@.account_version == 2)]"
     } ]
   },
   "response": {
