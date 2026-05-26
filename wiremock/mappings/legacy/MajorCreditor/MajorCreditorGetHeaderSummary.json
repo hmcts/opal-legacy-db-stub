@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.get_major_creditor_account_header_summary"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.creditorAccountId",
+          "equalTo": "99000000000800"
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/MajorCreditor/getMajorCreditorHeaderSummary.xml"
+  }
+}
