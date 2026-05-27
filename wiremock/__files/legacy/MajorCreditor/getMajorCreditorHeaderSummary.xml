@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <major_creditor>
+    <creditor_account_id>99000000000800</creditor_account_id>
+    <account_version>7</account_version>
+    <account_number>87654321</account_number>
+    <name>Major Creditor Test Ltd</name>
+    <account_reference>
+      <account_type>MJ</account_type>
+    </account_reference>
+  </major_creditor>
+
+  <business_unit_details>
+    <business_unit_id>77</business_unit_id>
+    <business_unit_name>Camberwell Green</business_unit_name>
+    <welsh_speaking>N</welsh_speaking>
+  </business_unit_details>
+
+  <awaiting_payout>123.45</awaiting_payout>
+</response>
