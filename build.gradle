@@ -116,7 +116,7 @@ checkstyle {
 }
 
 pmd {
-  toolVersion = "7.24.0"
+  toolVersion = "7.25.0"
 
   sourceSets = [
     sourceSets["main"],
