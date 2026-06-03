@@ -6,13 +6,18 @@
       "actionType": {
         "equalTo": "GetBUUserIdsBySystemUserIds"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.libra_user_ids[?(@ == 'L073JG' && @ == 'L077JG')]"
+      }
+    ]
   },
   "response": {
     "status": 200,
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/User/getBUUserIdsBySystemUserIds.xml"
+    "bodyFileName": "legacy/User/getBUUserIdsBySystemUserIds-user0.xml"
   }
 }

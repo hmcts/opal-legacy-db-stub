@@ -6,14 +6,19 @@
       "actionType": {
         "equalTo": "GetSystemUserIdsByEmail"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.email_address == 'opal-test@dev.platform.hmcts.net')]"
+      }
+    ]
   },
   "response": {
     "status": 200,
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/User/getSystemUserIdsByEmail.xml"
+    "bodyFileName": "legacy/User/getSystemUserIdsByEmail-user0.xml"
   },
   "metadata": {
     "actionType": "GetSystemUserIdsByEmail",
