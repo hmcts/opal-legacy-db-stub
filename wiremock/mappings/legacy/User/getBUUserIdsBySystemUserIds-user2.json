@@ -9,7 +9,7 @@
     },
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$.libra_user_ids[?(@ == 'L073JG')]"
+        "matchesJsonPath": "$[?(@.libra_user_ids.size() == 1 && @.libra_user_ids[0] == 'L073JG')]"
       }
     ]
   },
