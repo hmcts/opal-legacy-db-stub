@@ -9,7 +9,7 @@
     },
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.email_address == 'opal-test@HMCTS.NET' || @.email_address == 'legacy.user@hmcts.net')]"
+        "matchesJsonPath": "$[?(@.email_address == 'opal-test@dev.platform.hmcts.net')]"
       }
     ]
   },
@@ -18,7 +18,7 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/User/getSystemUserIdsByEmail.xml"
+    "bodyFileName": "legacy/User/getSystemUserIdsByEmail-user0.xml"
   },
   "metadata": {
     "actionType": "GetSystemUserIdsByEmail",
