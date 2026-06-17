@@ -4,7 +4,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "GetBUUserIdsBySystemUserIds"
+        "equalTo": "getBusinessUnitUserIDs"
       }
     }
   },

@@ -1,5 +1,14 @@
-<LibraUserIds>
-  <count>2</count>
-  <libra_user_ids>SU001</libra_user_ids>
-  <libra_user_ids>SU002</libra_user_ids>
-</LibraUserIds>
+<response>
+  <libra_user_ids>
+    <libra_user_ids_element>869</libra_user_ids_element>
+    <libra_user_ids_element>632</libra_user_ids_element>
+    <libra_user_ids_element>609</libra_user_ids_element>
+    <libra_user_ids_element>388</libra_user_ids_element>
+    <libra_user_ids_element>1607</libra_user_ids_element>
+    <libra_user_ids_element>1568</libra_user_ids_element>
+    <libra_user_ids_element>1648</libra_user_ids_element>
+    <libra_user_ids_element>1627</libra_user_ids_element>
+    <libra_user_ids_element>1628</libra_user_ids_element>
+    <libra_user_ids_element>1758</libra_user_ids_element>
+  </libra_user_ids>
+</response>
