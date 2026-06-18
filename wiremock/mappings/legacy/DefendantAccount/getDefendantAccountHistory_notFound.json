@@ -1,0 +1,22 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.get_defendant_account_history"
+      }
+    },
+    "bodyPatterns": [
+      { "matchesJsonPath": "$[?(@.defendant_account_id == '99999999999999')]" }
+    ]
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "body": "<error><message>Defendant account history not found</message></error>"
+  }
+}
