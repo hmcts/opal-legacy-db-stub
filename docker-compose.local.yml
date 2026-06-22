@@ -1,0 +1,9 @@
+services:
+  opal-legacy-db-stub:
+    image: opal-legacy-db-stub:local
+    build:
+      context: ../opal-legacy-db-stub
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
