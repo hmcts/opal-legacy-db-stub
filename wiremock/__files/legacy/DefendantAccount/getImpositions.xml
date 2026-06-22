@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <version>1</version>
+  <impositions>
+    <balance>540</balance>
+    <creditor>
+      <account_type>MN</account_type>
+      <creditor_account_id>99000000000806</creditor_account_id>
+      <display_name>Minor Creditor</display_name>
+      <major_creditor_id></major_creditor_id>
+      <minor_creditor_party_id>99000000000906</minor_creditor_party_id>
+      <name>Metropolitan Traffic Unit</name>
+    </creditor>
+    <date_added>2026-05-06</date_added>
+    <date_imposed></date_imposed>
+    <imposed_amount>600</imposed_amount>
+    <imposed_by></imposed_by>
+    <imposition>
+      <result_id>ABDC</result_id>
+      <result_title>Application made for Benefit Deductions</result_title>
+    </imposition>
+    <imposition_id>99000000003006</imposition_id>
+    <offence>
+      <code>OFF0006</code>
+      <id></id>
+      <title>Test Offence 6</title>
+    </offence>
+    <paid_amount>60</paid_amount>
+  </impositions>
+</response>
