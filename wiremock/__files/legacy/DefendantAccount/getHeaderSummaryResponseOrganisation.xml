@@ -50,4 +50,6 @@
             </organisation_aliases>
         </organisation_details>
     </party_details>
+
+    <has_consolidated_accounts>false</has_consolidated_accounts>
 </response>

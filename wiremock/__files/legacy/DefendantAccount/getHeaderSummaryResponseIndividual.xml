@@ -51,4 +51,6 @@
       </individual_aliases>
     </individual_details>
   </party_details>
+
+  <has_consolidated_accounts>true</has_consolidated_accounts>
 </response>
