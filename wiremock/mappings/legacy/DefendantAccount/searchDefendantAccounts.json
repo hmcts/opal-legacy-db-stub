@@ -1,4 +1,5 @@
 {
+  "priority": 1,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
@@ -10,9 +11,18 @@
     "bodyPatterns": [
       {
         "matchesJsonPath": {
-          "expression": "defendant.postcode",
+          "expression": "$.defendant.postcode",
           "equalTo": "AB1 2CD"
         }
+      },
+      {
+        "matchesJsonPath": {
+          "expression": "$.defendant.surname",
+          "equalTo": "Smith"
+        }
+      },
+      {
+        "matchesJsonPath": "$.business_unit_ids[?(@ == 78)]"
       }
     ]
   },
