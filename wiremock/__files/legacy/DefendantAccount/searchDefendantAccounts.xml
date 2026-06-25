@@ -3,16 +3,13 @@
     <count>1</count>
     <defendant_accounts>
         <defendant_accounts_element>
-        <defendant_account_id>1</defendant_account_id>
-        <account_number>100A</account_number>
-            <organisation>true</organisation>
-            <defendant_title>Acme Ltd</defendant_title>
-            <defendant_firstnames>Johnny</defendant_firstnames>
+            <defendant_account_id>1</defendant_account_id>
+            <account_number>100A</account_number>
+            <organisation>false</organisation>
+            <defendant_title>Mr</defendant_title>
+            <defendant_firstnames>John</defendant_firstnames>
             <defendant_surname>Smith</defendant_surname>
-            <birth_date>1980-01-01</birth_date>
-            <national_insurance_number>AB123456C</national_insurance_number>
-            <parent_guardian_surname>Jones</parent_guardian_surname>
-            <parent_guardian_firstnames>Sarah</parent_guardian_firstnames>
+            <birth_date>1985-06-15</birth_date>
             <aliases>
                 <aliases_element>
                     <alias_number>1</alias_number>
@@ -21,7 +18,8 @@
                 </aliases_element>
                 <aliases_element>
                     <alias_number>2</alias_number>
-                    <organisation_name>London</organisation_name>
+                    <surname>Smyth</surname>
+                    <forenames>John</forenames>
                 </aliases_element>
             </aliases>
             <address_line_1>Lumber House</address_line_1>

@@ -1,5 +1,5 @@
 {
-  "priority": 1,
+  "priority": 10,
   "request": {
     "method": "POST",
     "urlPathPattern": "/opal",
@@ -11,7 +11,7 @@
     "bodyPatterns": [
       {
         "matchesJsonPath": {
-          "expression": "defendant.surname",
+          "expression": "$.defendant.surname",
           "equalTo": "ShouldNotMatchAnythingXYZ"
         }
       }
