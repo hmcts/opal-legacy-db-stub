@@ -191,7 +191,7 @@ ext {
   set('spring-framework.version', "7.0.8")
 }
 
-ext['tomcat.version'] = '11.0.22'
+ext['tomcat.version'] = '11.0.23'
 ext['snakeyaml.version'] = '2.0'
 
 dependencies {
