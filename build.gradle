@@ -67,6 +67,15 @@ configurations {
   smokeTestRuntimeOnly.extendsFrom runtimeOnly
 }
 
+configurations.configureEach {
+  resolutionStrategy.eachDependency { details ->
+    if (details.requested.group in ['org.eclipse.jetty', 'org.eclipse.jetty.http2']) {
+      details.useVersion '12.0.30'
+      details.because 'wiremock-jetty12 3.13.2 expects Jetty 12.0.x modules to remain aligned'
+    }
+  }
+}
+
 tasks.withType(JavaCompile).configureEach {
   options.compilerArgs << "-Xlint:unchecked" << "-Werror"
 }
@@ -207,7 +216,7 @@ dependencies {
   implementation "org.apache.logging.log4j:log4j-to-slf4j:${log4JVersion}"
 
   implementation 'io.rest-assured:rest-assured:6.0.0'
-  implementation 'org.wiremock:wiremock-standalone:3.13.2'
+  implementation 'org.wiremock:wiremock-jetty12:3.13.2'
 
   compileOnly 'org.projectlombok:lombok:1.18.46'
   annotationProcessor 'org.projectlombok:lombok:1.18.46'
