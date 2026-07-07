@@ -1,56 +1,56 @@
 <response>
   <version>7</version>
-  <historyItems>
-    <historyItems_element>
-      <postedDetails>
+  <history_items>
+    <history_items_element>
+      <posted_details>
         <posted_date>2026-05-12T13:00:00</posted_date>
         <posted_by>legacy-note</posted_by>
         <posted_by_name>Legacy Note User</posted_by_name>
-      </postedDetails>
+      </posted_details>
       <type>Note</type>
       <details>
-        <noteText>Legacy account note</noteText>
+        <note_text>Legacy account note</note_text>
       </details>
-    </historyItems_element>
-    <historyItems_element>
-      <postedDetails>
+    </history_items_element>
+    <history_items_element>
+      <posted_details>
         <posted_date>2026-05-12T12:00:00</posted_date>
         <posted_by>legacy-fin</posted_by>
         <posted_by_name>Legacy Financial User</posted_by_name>
-      </postedDetails>
+      </posted_details>
       <type>Financial</type>
       <details>
-        <transactionType>
-          <transactionType>PAYMNT</transactionType>
-          <transactionTypeDisplayName>Payment</transactionTypeDisplayName>
-        </transactionType>
-        <paymentMethod>
-          <paymentMethod>NC</paymentMethod>
-          <paymentMethodDisplayName>National cheque</paymentMethodDisplayName>
-        </paymentMethod>
-        <paymentReference>PAY123</paymentReference>
-        <additionalInformation>Legacy payment</additionalInformation>
+        <transaction_type>
+          <transaction_type>PAYMNT</transaction_type>
+          <transaction_type_display_name>Payment</transaction_type_display_name>
+        </transaction_type>
+        <payment_method>
+          <payment_method>NC</payment_method>
+          <payment_method_display_name>National cheque</payment_method_display_name>
+        </payment_method>
+        <payment_reference>PAY123</payment_reference>
+        <additional_information>Legacy payment</additional_information>
         <status>
-          <defendantTransactionStatus>P</defendantTransactionStatus>
-          <defendantTransactionStatusDisplayName>Partially-reversed</defendantTransactionStatusDisplayName>
+          <defendant_transaction_status>P</defendant_transaction_status>
+          <defendant_transaction_status_display_name>Partially-reversed</defendant_transaction_status_display_name>
         </status>
-        <statusDate>2026-05-12T12:05:00</statusDate>
-        <associatedRecordType>defendant_accounts</associatedRecordType>
-        <associatedRecordId>99000000000001</associatedRecordId>
-        <accountNumber>ACC-99000000000001</accountNumber>
-        <sendingCourt>Legacy Court</sendingCourt>
+        <status_date>2026-05-12T12:05:00</status_date>
+        <associated_record_type>defendant_accounts</associated_record_type>
+        <associated_record_id>99000000000001</associated_record_id>
+        <account_number>ACC-99000000000001</account_number>
+        <sending_court>Legacy Court</sending_court>
       </details>
       <amount>-25.50</amount>
-    </historyItems_element>
-    <historyItems_element>
-      <postedDetails>
+    </history_items_element>
+    <history_items_element>
+      <posted_details>
         <posted_date>2026-05-12T09:30:00</posted_date>
         <posted_by>legacy-pt</posted_by>
         <posted_by_name>Legacy Terms User</posted_by_name>
-      </postedDetails>
+      </posted_details>
       <type>Payment terms</type>
       <details>
-        <daysInDefault>7</daysInDefault>
+        <days_in_default>7</days_in_default>
         <date_days_in_default_imposed>2026-05-12</date_days_in_default_imposed>
         <reason_for_extension>Legacy extension</reason_for_extension>
         <payment_terms_type>
@@ -63,34 +63,34 @@
         <lump_sum_amount>100.00</lump_sum_amount>
         <instalment_amount>25.00</instalment_amount>
       </details>
-    </historyItems_element>
-    <historyItems_element>
-      <postedDetails>
+    </history_items_element>
+    <history_items_element>
+      <posted_details>
         <posted_date>2026-05-11T15:00:00</posted_date>
         <posted_by>legacy-enf</posted_by>
         <posted_by_name>Legacy Enforcement User</posted_by_name>
-      </postedDetails>
+      </posted_details>
       <type>Enforcement</type>
       <details>
-        <enforcementAction>FSN</enforcementAction>
-        <daysInDefault>14</daysInDefault>
-        <warrantNumber>WR123</warrantNumber>
-        <caseNumber>CASE-1</caseNumber>
+        <enforcement_action>FSN</enforcement_action>
+        <days_in_default>14</days_in_default>
+        <warrant_number>WR123</warrant_number>
+        <case_number>CASE-1</case_number>
         <reason>Test enforcement</reason>
       </details>
-    </historyItems_element>
-    <historyItems_element>
-      <postedDetails>
+    </history_items_element>
+    <history_items_element>
+      <posted_details>
         <posted_date>2026-05-10T11:00:00</posted_date>
         <posted_by>legacy-amend</posted_by>
         <posted_by_name>Legacy Amend User</posted_by_name>
-      </postedDetails>
+      </posted_details>
       <type>Amendment</type>
       <details>
-        <attributeName>Account status</attributeName>
-        <oldValue>Old</oldValue>
-        <newValue>New</newValue>
+        <attribute_name>Account status</attribute_name>
+        <old_value>Old</old_value>
+        <new_value>New</new_value>
       </details>
-    </historyItems_element>
-  </historyItems>
+    </history_items_element>
+  </history_items>
 </response>
