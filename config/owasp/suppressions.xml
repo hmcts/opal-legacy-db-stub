@@ -31,5 +31,20 @@
     <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.core/jackson\-databind@.*$</packageUrl>
     <cve>CVE-2026-54515</cve>
   </suppress>
+  <suppress until="2026-12-31Z">
+    <notes><![CDATA[
+      wiremock-standalone 3.13.2 shades its runtime dependencies, so Gradle cannot override the affected embedded
+      libraries directly. Maven Central has no newer stable 3.x wiremock-standalone release and WireMock 4 is still
+      beta. Remove this suppression and upgrade to the stable WireMock 4 standalone artifact once available.
+    ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.wiremock/wiremock\-standalone@3\.13\.2$</packageUrl>
+    <cve>CVE-2026-54428</cve>
+    <cve>CVE-2026-1605</cve>
+    <cve>CVE-2025-11143</cve>
+    <cve>CVE-2026-5795</cve>
+    <cve>CVE-2026-2332</cve>
+    <cve>CVE-2025-48924</cve>
+    <cve>CVE-2026-54399</cve>
+  </suppress>
   <!--End of false positives section -->
 </suppressions>
