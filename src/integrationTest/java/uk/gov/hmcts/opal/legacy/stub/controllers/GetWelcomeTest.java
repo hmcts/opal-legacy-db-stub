@@ -1,10 +1,10 @@
 package uk.gov.hmcts.opal.legacy.stub.controllers;
 
-import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import org.springframework.http.HttpStatus;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
@@ -23,6 +23,6 @@ class GetWelcomeTest {
     void welcomeRootEndpoint() throws Exception {
         MvcResult response = mockMvc.perform(get("/")).andExpect(status().isOk()).andReturn();
 
-        assertThat(response.getResponse().getStatus()).isEqualTo(HttpStatus.SC_OK);
+        assertThat(response.getResponse().getStatus()).isEqualTo(HttpStatus.OK.value());
     }
 }
