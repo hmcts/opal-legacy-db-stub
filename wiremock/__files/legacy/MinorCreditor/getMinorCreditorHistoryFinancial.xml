@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <!-- PO-2645: financial-only fixture for representative filtered history requests. -->
+  <history_items>
+    <history_items_element>
+      <posted_details>
+        <posted_date>2026-05-20</posted_date>
+        <posted_by>L036DO</posted_by>
+        <posted_by_name>Legacy User</posted_by_name>
+      </posted_details>
+      <type>Financial</type>
+      <details>
+        <transaction_type>
+          <transaction_type>PAYMNT</transaction_type>
+          <transaction_type_display_name>PAYMNT</transaction_type_display_name>
+        </transaction_type>
+        <payment_reference>PMT000020</payment_reference>
+        <status>
+          <creditor_transaction_status>C</creditor_transaction_status>
+          <creditor_transaction_status_display_name>C</creditor_transaction_status_display_name>
+        </status>
+        <status_date>2026-05-20T12:37:55</status_date>
+        <associated_record_type>defendant_accounts</associated_record_type>
+        <associated_record_id>99000000000008</associated_record_id>
+        <account_number>MC000808</account_number>
+        <defendant_account_number>DEF000808</defendant_account_number>
+        <defendant_account_id>99000000000008</defendant_account_id>
+      </details>
+      <amount>150.00</amount>
+    </history_items_element>
+    <history_items_element>
+      <posted_details>
+        <posted_date>2026-05-19</posted_date>
+        <posted_by>L036DO</posted_by>
+        <posted_by_name>Legacy User</posted_by_name>
+      </posted_details>
+      <type>Financial</type>
+      <details>
+        <transaction_type>
+          <transaction_type>PAYMNT</transaction_type>
+          <transaction_type_display_name>PAYMNT</transaction_type_display_name>
+        </transaction_type>
+        <payment_reference>PMT000019</payment_reference>
+        <status>
+          <creditor_transaction_status>C</creditor_transaction_status>
+          <creditor_transaction_status_display_name>C</creditor_transaction_status_display_name>
+        </status>
+        <status_date>2026-05-19T12:37:55</status_date>
+        <associated_record_type>defendant_accounts</associated_record_type>
+        <associated_record_id>99000000000008</associated_record_id>
+        <account_number>MC000808</account_number>
+        <defendant_account_number>DEF000808</defendant_account_number>
+        <defendant_account_id>99000000000008</defendant_account_id>
+      </details>
+      <amount>125.00</amount>
+    </history_items_element>
+  </history_items>
+</response>
