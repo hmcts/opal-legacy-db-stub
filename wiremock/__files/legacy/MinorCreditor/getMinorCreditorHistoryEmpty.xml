@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <!-- PO-2645: valid legacy response when the account exists but has no history rows. -->
+  <history_items/>
+</response>
