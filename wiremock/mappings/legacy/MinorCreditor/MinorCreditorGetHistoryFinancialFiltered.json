@@ -1,0 +1,42 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.get_minor_creditor_account_history"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.creditor_account_id",
+          "equalTo": "99000000000808"
+        }
+      },
+      {
+        "matchesJsonPath": {
+          "expression": "$.from_date",
+          "equalTo": "2026-05-01"
+        }
+      },
+      {
+        "matchesJsonPath": {
+          "expression": "$.to_date",
+          "equalTo": "2026-05-31"
+        }
+      },
+      {
+        "matchesJsonPath": "$.item_types[?(@ == 'Financial')]"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorHistoryFinancial.xml"
+  }
+}
