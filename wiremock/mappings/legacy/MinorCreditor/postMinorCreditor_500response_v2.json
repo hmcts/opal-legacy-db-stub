@@ -1,0 +1,27 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "getMinorCreditorAccount"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.account_number",
+          "equalTo": "FAIL"
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/InternalServerError/internalServerErrorResponse.xml"
+  }
+}
