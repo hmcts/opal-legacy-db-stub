@@ -13,6 +13,6 @@
   "response": {
     "status": 200,
     "headers": { "Content-Type": "application/xml" },
-    "bodyFileName": "legacy/DefendantAccount/putReplaceDefendantAccountParty.xml"
+    "bodyFileName": "legacy/DefendantAccount/putReplaceDefendantAccountParty_v2.xml"
   }
 }

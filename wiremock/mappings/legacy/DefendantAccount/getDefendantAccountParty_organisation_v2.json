@@ -14,6 +14,6 @@
   "response": {
     "status": 200,
     "headers": { "Content-Type": "application/xml" },
-    "bodyFileName": "legacy/DefendantAccount/getDefendantAccountPartyResponse_organisation.xml"
+    "bodyFileName": "legacy/DefendantAccount/getDefendantAccountPartyResponse_organisation_v2.xml"
   }
 }

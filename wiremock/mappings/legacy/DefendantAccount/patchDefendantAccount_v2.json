@@ -13,6 +13,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/patchDefendantAccount.xml"
+    "bodyFileName": "legacy/DefendantAccount/patchDefendantAccount_v2.xml"
   }
 }

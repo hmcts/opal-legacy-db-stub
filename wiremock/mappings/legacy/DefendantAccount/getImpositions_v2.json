@@ -13,6 +13,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/getImpositions.xml"
+    "bodyFileName": "legacy/DefendantAccount/getImpositions_v2.xml"
   }
 }

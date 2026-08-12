@@ -18,6 +18,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/addPaymentTerms.xml"
+    "bodyFileName": "legacy/DefendantAccount/addPaymentTerms_v2.xml"
   }
 }
