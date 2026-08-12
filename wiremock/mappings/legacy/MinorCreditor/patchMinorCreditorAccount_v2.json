@@ -30,6 +30,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/MinorCreditor/patchMinorCreditorAccount.xml"
+    "bodyFileName": "legacy/MinorCreditor/patchMinorCreditorAccount_v2.xml"
   }
 }

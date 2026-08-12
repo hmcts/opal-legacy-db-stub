@@ -14,6 +14,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/getDefendantAtAGlance.xml"
+    "bodyFileName": "legacy/DefendantAccount/getDefendantAtAGlance_v2.xml"
   }
 }

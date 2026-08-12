@@ -14,6 +14,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/getEnforcementStatus.xml"
+    "bodyFileName": "legacy/DefendantAccount/getEnforcementStatus_v2.xml"
   }
 }

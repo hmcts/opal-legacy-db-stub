@@ -21,6 +21,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/getHeaderSummaryResponseOrganisation.xml"
+    "bodyFileName": "legacy/DefendantAccount/getHeaderSummaryResponseOrganisation_v2.xml"
   }
 }

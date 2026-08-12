@@ -13,6 +13,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/Enforcement/removeEnforcementHold.xml"
+    "bodyFileName": "legacy/Enforcement/removeEnforcementHold_v2.xml"
   }
 }

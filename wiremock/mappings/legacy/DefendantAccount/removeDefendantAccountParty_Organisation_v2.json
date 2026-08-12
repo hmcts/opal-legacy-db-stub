@@ -12,6 +12,6 @@
   "response": {
     "status": 200,
     "headers": { "Content-Type": "application/xml" },
-    "bodyFileName": "legacy/DefendantAccount/removeDefendantAccountPartyLegacy_Organisation.xml"
+    "bodyFileName": "legacy/DefendantAccount/removeDefendantAccountPartyLegacy_Organisation_v2.xml"
   }
 }
