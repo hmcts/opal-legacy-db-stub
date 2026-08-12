@@ -11,6 +11,7 @@ import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
 import static java.util.stream.Collectors.joining;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class WiremockV2VersionTest {
@@ -44,6 +45,15 @@ class WiremockV2VersionTest {
             .toList();
 
         assertTrue(failures.isEmpty(), "v2 bodies contain fixed-width version values: " + String.join(", ", failures));
+    }
+
+    @Test
+    void creditorResponsesHaveVersionedV2Bodies() throws IOException {
+        assertV2BodyHasOverLongVersion("legacy/MajorCreditor/getMajorCreditorAtAGlance_v2.xml");
+        assertV2BodyHasOverLongVersion("legacy/MajorCreditor/getMajorCreditorHeaderSummary_v2.xml");
+        assertV2BodyHasOverLongVersion("legacy/MinorCreditor/getMinorCreditorAtAGlance_v2.xml");
+        assertV2BodyHasOverLongVersion("legacy/MinorCreditor/getMinorCreditorHeaderSummary_v2.xml");
+        assertV2BodyHasOverLongVersion("legacy/MinorCreditor/getMinorCreditorAccount_v2.xml");
     }
 
     private static boolean usesVersionedNonV2Body(Path mappingPath) {
@@ -84,5 +94,12 @@ class WiremockV2VersionTest {
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
+    }
+
+    private static void assertV2BodyHasOverLongVersion(String bodyFileName) throws IOException {
+        String body = Files.readString(BODY_ROOT.resolve(bodyFileName));
+        assertTrue(body.contains(OVER_LONG_MAX_VALUE), bodyFileName + " should contain an over-long version value");
+        assertFalse(hasWrongVersionValue(BODY_ROOT.resolve(bodyFileName)),
+                    bodyFileName + " should not contain fixed-width version values");
     }
 }
