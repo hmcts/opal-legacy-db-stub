@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "LIBRA.get_minor_creditors_account_at_a_glance"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": {
+          "expression": "$.creditorAccountId",
+          "equalTo": "99000000000802"
+        }
+      }
+    ]
+  },
+
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "legacy/MinorCreditor/getMinorCreditorAtAGlance_v2.xml"
+  }
+}
