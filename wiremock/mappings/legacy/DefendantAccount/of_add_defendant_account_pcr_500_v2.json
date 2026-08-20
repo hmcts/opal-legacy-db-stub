@@ -18,6 +18,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/internalServerErrorResponse.xml"
+    "bodyFileName": "legacy/InternalServerError/internalServerErrorResponse.xml"
   }
 }
