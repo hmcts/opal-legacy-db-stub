@@ -5,7 +5,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.of_get_defendant_account_enf_status"
+        "equalTo": "getDefendantAccountEnforcementStatus"
       }
     }
   },

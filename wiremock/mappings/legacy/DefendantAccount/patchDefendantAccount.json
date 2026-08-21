@@ -4,7 +4,7 @@
     "urlPath": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.patchDefendantAccount"
+        "equalTo": "updateDefendantAccount"
       }
     }
   },
