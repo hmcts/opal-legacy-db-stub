@@ -5,7 +5,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "getDefendantAccountPaymentTerms"
+        "equalTo": "LIBRA.get_payment_terms"
       }
     },
     "bodyPatterns" : [ {

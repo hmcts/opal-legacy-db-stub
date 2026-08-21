@@ -4,7 +4,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "getDefendantAccountHeaderSummary"
+        "equalTo": "LIBRA.get_header_summary"
       }
     },
     "bodyPatterns": [

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <response>
-  <version>9223372036854775808</version>
+  <version>1</version>
   <defendant_account_id>77</defendant_account_id>
   <comment_and_notes>
     <account_comment>patch DefAcc comment legacy test</account_comment>
