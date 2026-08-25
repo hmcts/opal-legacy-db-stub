@@ -1,6 +1,49 @@
 # opal-legacy-db-stub
 This is the stub test service for replicating the legacy GoB DB in environments where it is not available.
 
+## Important: Refreshing The Published Local Stub Image
+
+Several Opal services use the published Docker image when running local integration tests:
+
+```text
+hmctsprod.azurecr.io/opal/legacy-db-stub:latest
+```
+
+If local tests are failing with unexpected legacy `404 Not Found` responses, or logs mention mappings/config files that
+have already been removed from this repository, first check that Docker is not using a stale cached `latest` image or an
+old container still running on port `4553`.
+
+Pull the current published image:
+
+```bash
+docker pull hmctsprod.azurecr.io/opal/legacy-db-stub:latest
+```
+
+If you are running this repository's master image via Docker Compose, refresh it with:
+
+```bash
+docker compose -f docker-compose.master.yml pull
+```
+
+If the pull fails because you are not authenticated with HMCTS ACR, log in and pull again:
+
+```bash
+az login
+az acr login --name hmctsprod
+docker pull hmctsprod.azurecr.io/opal/legacy-db-stub:latest
+```
+
+Also check that the running container is actually the refreshed image and that nothing stale is bound to port `4553`:
+
+```bash
+docker ps --format '{{.Names}} {{.Image}} {{.Ports}}'
+docker image inspect hmctsprod.azurecr.io/opal/legacy-db-stub:latest --format '{{.Id}} {{.Created}}'
+```
+
+Some downstream Gradle integration tests try to refresh this image automatically before they start. If that refresh cannot
+run because Docker, Azure CLI, ACR auth, or local `PATH` setup is wrong, the test may continue with whatever cached image
+is already present locally.
+
 ## How Opal Uses This Stub
 
 Within Opal, this repository is primarily used as a legacy response provider.
