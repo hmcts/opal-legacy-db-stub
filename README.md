@@ -1,17 +1,20 @@
 # opal-legacy-db-stub
 This is the stub test service for replicating the legacy GoB DB in environments where it is not available.
 
-## Important: Refreshing The Published Local Stub Image
+## Refreshing The Published Local Stub Image
 
-Several Opal services use the published Docker image when running local integration tests:
+> [!IMPORTANT]
+> Several Opal services use the published Docker image when running local integration tests. If local tests are failing
+> with unexpected legacy `404 Not Found` responses, or logs mention mappings/config files that have already been removed
+> from this repository, refresh the published image before debugging application code.
+
+Published image:
 
 ```text
 hmctsprod.azurecr.io/opal/legacy-db-stub:latest
 ```
 
-If local tests are failing with unexpected legacy `404 Not Found` responses, or logs mention mappings/config files that
-have already been removed from this repository, first check that Docker is not using a stale cached `latest` image or an
-old container still running on port `4553`.
+First check that Docker is not using a stale cached `latest` image or an old container still running on port `4553`.
 
 Pull the current published image:
 
