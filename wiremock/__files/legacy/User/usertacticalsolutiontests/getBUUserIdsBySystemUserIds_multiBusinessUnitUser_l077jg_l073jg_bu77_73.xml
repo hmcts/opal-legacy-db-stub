@@ -1,0 +1,11 @@
+<BusinessUnitUserIds>
+  <count>2</count>
+  <business_unit_user_ids>
+      <business_unit_user_id>L077JG</business_unit_user_id>
+      <business_unit_id>77</business_unit_id>
+    </business_unit_user_ids>
+    <business_unit_user_ids>
+      <business_unit_user_id>L073JG</business_unit_user_id>
+      <business_unit_id>73</business_unit_id>
+  </business_unit_user_ids>
+</BusinessUnitUserIds>
