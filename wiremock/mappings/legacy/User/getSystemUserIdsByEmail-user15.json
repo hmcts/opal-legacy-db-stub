@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPathPattern": "/opal",
+    "queryParameters": {
+      "actionType": {
+        "equalTo": "GetSystemUserIdsByEmail"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.email_address == 'opal-test-15@dev.platform.hmcts.net')]"
+      }
+    ]
+  },
+        "response": {
+          "status": 200,
+          "headers": {
+            "Content-Type": "application/xml"
+          },
+          "bodyFileName": "legacy/User/getSystemUserIdsByEmail-user15.xml"
+        },
+        "metadata": {
+          "actionType": "GetSystemUserIdsByEmail",
+          "usedInTests": [
+            "PO-2843",
+            "PO-YYYY"
+          ]
+        }
+      }
