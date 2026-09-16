@@ -4,15 +4,15 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "getBusinessUnitUserIDs"
+        "equalTo": "GetBUUserIdsBySystemUserIds"
       }
     },
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$.libra_user_ids[?(@ == 'SU001')]"
+        "matchesJsonPath": "$.libra_user_ids[?(@ == 'L073JG')]"
       },
       {
-        "matchesJsonPath": "$.libra_user_ids[?(@ == 'SU002')]"
+        "matchesJsonPath": "$.libra_user_ids[?(@ == 'L077JG')]"
       }
     ]
   },
@@ -21,6 +21,6 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/User/getBUUserIdsBySystemUserIds.xml"
+    "bodyFileName": "legacy/User/getBUUserIdsBySystemUserIds-user0.xml"
   }
 }
