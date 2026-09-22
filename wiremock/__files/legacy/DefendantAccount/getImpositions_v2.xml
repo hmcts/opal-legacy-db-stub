@@ -4,9 +4,9 @@
   <impositions>
     <balance>540</balance>
     <creditor>
-      <creditor_account_type>
-        <account_type>MN</account_type>
-      </creditor_account_type>
+      <creditor_account_type_reference>
+        <creditor_account_type>MN</creditor_account_type>
+      </creditor_account_type_reference>
       <creditor_account_id>99000000000806</creditor_account_id>
       <minor_creditor_organisation_flag>true</minor_creditor_organisation_flag>
       <company_name>
