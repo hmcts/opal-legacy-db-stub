@@ -4,25 +4,24 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
-import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
-import static java.util.stream.Collectors.joining;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class WiremockV2VersionTest {
 
-    private static final String OVER_LONG_MAX_VALUE = "9223372036854775808";
+    private static final BigInteger LONG_MAX_VALUE = BigInteger.valueOf(Long.MAX_VALUE);
     private static final Path WIREMOCK_ROOT = Path.of("wiremock");
     private static final Path MAPPINGS_ROOT = WIREMOCK_ROOT.resolve("mappings/legacy");
     private static final Path BODY_ROOT = WIREMOCK_ROOT.resolve("__files");
     private static final Pattern BODY_FILE_NAME_PATTERN = Pattern.compile("\"bodyFileName\"\\s*:\\s*\"([^\"]+)\"");
     private static final Pattern VERSION_ELEMENT_PATTERN = Pattern.compile(
-        "<(version|account_version|creditor_account_version)>[^<]+</\\1>"
+        "<(version|account_version|creditor_account_version)>([^<]+)</\\1>"
     );
 
     @Test
@@ -84,13 +83,10 @@ class WiremockV2VersionTest {
 
     private static boolean hasWrongVersionValue(Path bodyPath) {
         try {
-            String wrongValues = VERSION_ELEMENT_PATTERN.matcher(Files.readString(bodyPath))
+            return VERSION_ELEMENT_PATTERN.matcher(Files.readString(bodyPath))
                 .results()
-                .map(MatchResult::group)
-                .filter(element -> !element.contains(OVER_LONG_MAX_VALUE))
-                .collect(joining(", "));
-
-            return !wrongValues.isEmpty();
+                .map(result -> new BigInteger(result.group(2)))
+                .anyMatch(version -> version.compareTo(LONG_MAX_VALUE) <= 0);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
@@ -98,8 +94,8 @@ class WiremockV2VersionTest {
 
     private static void assertV2BodyHasOverLongVersion(String bodyFileName) throws IOException {
         String body = Files.readString(BODY_ROOT.resolve(bodyFileName));
-        assertTrue(body.contains(OVER_LONG_MAX_VALUE), bodyFileName + " should contain an over-long version value");
+        assertTrue(VERSION_ELEMENT_PATTERN.matcher(body).find(), bodyFileName + " should contain a version value");
         assertFalse(hasWrongVersionValue(BODY_ROOT.resolve(bodyFileName)),
-                    bodyFileName + " should not contain fixed-width version values");
+            bodyFileName + " should not contain fixed-width version values");
     }
 }
