@@ -5,6 +5,11 @@
   ],
   "packageRules": [
     {
+      "description": "Keep the build JDK on Java 21 until a newer Java version is deliberately adopted",
+      "matchDatasources": ["java-version"],
+      "allowedVersions": "/^21(?:[.+-]|$)/"
+    },
+    {
       "matchPackageNames": ["net.serenity-bdd.serenity-gradle-plugin"],
       "allowedVersions": "4.2.1"
     },
