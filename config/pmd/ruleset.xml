@@ -37,7 +37,6 @@
   </rule>
   <rule ref="category/java/design.xml">
     <exclude name="AvoidCatchingGenericException"/>
-    <exclude name="UseUtilityClass"/>
     <exclude name="LoosePackageCoupling"/>
     <exclude name="DataClass"/>
     <exclude name="LawOfDemeter"/>
