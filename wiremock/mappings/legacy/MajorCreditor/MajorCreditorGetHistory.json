@@ -10,10 +10,7 @@
     },
     "bodyPatterns": [
       {
-        "matchesJsonPath": {
-          "expression": "$.creditor_account_id",
-          "equalTo": "10770000000041"
-        }
+        "matchesJsonPath": "$[?(@.creditor_account_id == '10770000000041' || @.creditor_account_id == '99264300000001')]"
       }
     ]
   },
