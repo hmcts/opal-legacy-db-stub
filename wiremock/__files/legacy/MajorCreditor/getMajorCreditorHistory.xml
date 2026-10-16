@@ -22,9 +22,9 @@
         <status_date>2026-01-31</status_date>
         <associated_record_type>creditor_accounts</associated_record_type>
         <associated_record_id>{{jsonPath request.body '$.creditor_account_id'}}</associated_record_id>
-          <account_number>87654321</account_number>
-          <defendant_account_number>12345678</defendant_account_number>
-          <defendant_account_id>99000000000001</defendant_account_id>
+        <account_number>87654321</account_number>
+        <defendant_account_number>12345678</defendant_account_number>
+        <defendant_account_id>99000000000001</defendant_account_id>
       </details>
       <amount>-31.00</amount>
     </history_items_element>
@@ -75,23 +75,10 @@
         <associated_record_type>creditor_accounts</associated_record_type>
         <associated_record_id>{{jsonPath request.body '$.creditor_account_id'}}</associated_record_id>
         <account_number>87654321</account_number>
-          <defendant_account_number>12345678</defendant_account_number>
-          <defendant_account_id>99000000000001</defendant_account_id>
-        </details>
-        <amount>-25.50</amount>
-    </history_items_element>
-    <history_items_element>
-      <posted_details>
-        <posted_date>2026-01-27T14:00:00</posted_date>
-        <posted_by>MJUSR1</posted_by>
-        <posted_by_name>Major User One</posted_by_name>
-      </posted_details>
-      <type>Note</type>
-      <details>
-        <associated_record_type>creditor_accounts</associated_record_type>
-        <associated_record_id>10770000000041</associated_record_id>
-        <account_number>MJ000041</account_number>
+        <defendant_account_number>12345678</defendant_account_number>
+        <defendant_account_id>99000000000001</defendant_account_id>
       </details>
+      <amount>-25.50</amount>
     </history_items_element>
   </history_items>
 </response>
