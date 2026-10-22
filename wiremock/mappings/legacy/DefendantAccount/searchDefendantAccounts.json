@@ -32,5 +32,12 @@
       "Content-Type": "application/xml"
     },
     "bodyFileName": "legacy/DefendantAccount/searchDefendantAccounts.xml"
+  },
+  "metadata": {
+    "actionType": "searchDefendantAccounts",
+    "usedInTests": [
+      "PO-XXXX",
+      "PO-YYYY"
+    ]
   }
 }
