@@ -19,7 +19,7 @@
           <creditor_transaction_status>C</creditor_transaction_status>
           <creditor_transaction_status_display_name>C</creditor_transaction_status_display_name>
         </status>
-        <status_date>2026-01-31T10:30:00</status_date>
+        <status_date>2026-01-31</status_date>
         <associated_record_type>creditor_accounts</associated_record_type>
         <associated_record_id>10770000000041</associated_record_id>
         <account_number>MJ000041</account_number>
@@ -45,7 +45,7 @@
           <creditor_transaction_status>C</creditor_transaction_status>
           <creditor_transaction_status_display_name>C</creditor_transaction_status_display_name>
         </status>
-        <status_date>2026-01-25T12:30:00</status_date>
+        <status_date>2026-01-25</status_date>
         <associated_record_type>creditor_accounts</associated_record_type>
         <associated_record_id>10770000000041</associated_record_id>
         <account_number>MJ000041</account_number>
