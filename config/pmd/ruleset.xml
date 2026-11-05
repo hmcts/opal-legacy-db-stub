@@ -13,6 +13,8 @@
   <rule ref="category/java/codestyle.xml">
     <exclude name="AtLeastOneConstructor"/>
     <exclude name="LocalVariableCouldBeFinal"/>
+    <!-- Declare and initialize local variables near their first use, which is how Java has always been -->
+    <exclude name="LocalVariableDeclarationShouldBeAtStartOfBlock"/>
     <exclude name="LongVariable"/>
     <exclude name="MethodArgumentCouldBeFinal"/>
     <exclude name="OnlyOneReturn"/>
