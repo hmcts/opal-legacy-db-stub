@@ -4,7 +4,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.get_minor_creditors_account_header_summary"
+        "matches": "^(?:LIBRA\\.get_minor_creditors_account_header_summary|getMinorCreditorAccountHeaderSummary)$"
       }
     },
     "bodyPatterns": [
