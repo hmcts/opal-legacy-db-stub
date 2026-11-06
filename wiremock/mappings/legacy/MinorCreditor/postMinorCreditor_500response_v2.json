@@ -5,7 +5,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "getMinorCreditorAccount"
+        "matches": "^(?:getMinorCreditorAccount|searchMinorCreditorAccounts)$"
       }
     },
     "bodyPatterns": [

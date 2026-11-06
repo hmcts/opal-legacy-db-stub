@@ -6,7 +6,7 @@
     "urlPathPattern": "/opal",
     "queryParameters": {
       "actionType": {
-        "equalTo": "LIBRA.get_major_creditor_account_history"
+        "matches": "^(?:LIBRA\\.get_major_creditor_account_history|getMajorCreditorAccountHistory)$"
       }
     },
     "bodyPatterns": [
