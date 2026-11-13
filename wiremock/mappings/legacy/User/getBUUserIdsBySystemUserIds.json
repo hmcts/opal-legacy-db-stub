@@ -6,7 +6,15 @@
       "actionType": {
         "equalTo": "getBusinessUnitUserIDs"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.libra_user_ids[?(@ == 'SU001')]"
+      },
+      {
+        "matchesJsonPath": "$.libra_user_ids[?(@ == 'SU002')]"
+      }
+    ]
   },
   "response": {
     "status": 200,
