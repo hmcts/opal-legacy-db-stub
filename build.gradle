@@ -86,6 +86,7 @@ tasks.withType(Test).configureEach {
 
 test {
   failFast = true
+  inputs.dir('wiremock')
 }
 
 tasks.register('functional', Test) {
