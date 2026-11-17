@@ -22,6 +22,9 @@
     "headers": {
       "Content-Type": "application/xml"
     },
-    "bodyFileName": "legacy/DefendantAccount/getDefendantAccountHistoryResponse_v2.xml"
+    "bodyFileName": "legacy/DefendantAccount/getDefendantAccountHistoryResponse_v2.xml",
+    "transformers": [
+      "legacy-history-filters"
+    ]
   }
 }

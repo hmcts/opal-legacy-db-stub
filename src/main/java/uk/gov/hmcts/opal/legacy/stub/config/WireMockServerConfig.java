@@ -59,7 +59,7 @@ public class WireMockServerConfig {
     }
 
     public static Extension[] bespokeBehaviourExtensions() {
-        return new Extension[]{new StringLengthExtension(), new CustomDataExtension()};
+        return new Extension[]{new StringLengthExtension(), new CustomDataExtension(), new LegacyHistoryFilter()};
     }
 
     private static final class StringLengthExtension implements TemplateHelperProviderExtension {
