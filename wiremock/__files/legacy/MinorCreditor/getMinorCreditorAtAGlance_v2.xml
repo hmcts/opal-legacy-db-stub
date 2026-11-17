@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <response>
-  <party_details>
+  <party>
     <party_id>99000000000901</party_id>
     <organisation_flag>true</organisation_flag>
     <organisation_details>
       <organisation_name>Speed Camera Services Ltd</organisation_name>
     </organisation_details>
-  </party_details>
+  </party>
 
   <address>
     <address_line_1>10 Technology Way</address_line_1>
