@@ -2,7 +2,7 @@
 <response>
   <count>2</count>
   <creditor_accounts>
-    <creditorAccount>
+    <creditor_accounts_element>
       <creditor_account_id>104</creditor_account_id>
       <account_number>12345678A</account_number>
       <organisation>false</organisation>
@@ -20,8 +20,8 @@
         <firstnames xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         <surname xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
       </defendant>
-    </creditorAccount>
-    <creditorAccount>
+    </creditor_accounts_element>
+    <creditor_accounts_element>
       <creditor_account_id>105</creditor_account_id>
       <account_number>12345678</account_number>
       <organisation>false</organisation>
@@ -39,6 +39,6 @@
         <firstnames xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         <surname xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
       </defendant>
-    </creditorAccount>
+    </creditor_accounts_element>
   </creditor_accounts>
 </response>
