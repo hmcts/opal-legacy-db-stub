@@ -6,7 +6,12 @@
       "actionType": {
         "equalTo": "getLibraSystemUserIDs"
       }
-    }
+    },
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.email_address == 'opal-test@HMCTS.NET' || @.email_address == 'legacy.user@hmcts.net')]"
+      }
+    ]
   },
   "response": {
     "status": 200,
@@ -14,5 +19,12 @@
       "Content-Type": "application/xml"
     },
     "bodyFileName": "legacy/User/getSystemUserIdsByEmail.xml"
+  },
+  "metadata": {
+    "actionType": "GetSystemUserIdsByEmail",
+    "usedInTests": [
+      "PO-2843",
+      "PO-YYYY"
+    ]
   }
 }
