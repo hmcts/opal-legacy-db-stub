@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <response>
-  <party_details>
+  <party>
     <party_id>99000000000900</party_id>
     <organisation_flag>true</organisation_flag>
     <organisation_details>
       <organisation_name>Minor Creditor Test Ltd</organisation_name>
     </organisation_details>
-  </party_details>
+  </party>
 
   <business_unit>
     <business_unit_id>77</business_unit_id>

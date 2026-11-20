@@ -11,7 +11,7 @@
     "bodyPatterns": [
       {
         "matchesJsonPath": {
-          "expression": "$.accountId",
+          "expression": "$.creditor_account_id",
           "equalTo": "500"
         }
       }
