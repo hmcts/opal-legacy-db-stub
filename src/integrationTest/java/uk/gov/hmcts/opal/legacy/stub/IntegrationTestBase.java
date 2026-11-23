@@ -6,6 +6,7 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SuppressWarnings("removal")
 public class IntegrationTestBase {
 
     @LocalServerPort
