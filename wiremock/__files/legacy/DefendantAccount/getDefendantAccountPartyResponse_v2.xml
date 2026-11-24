@@ -14,6 +14,20 @@
                 <date_of_birth>1980-02-03</date_of_birth>
                 <age>33</age>
                 <national_insurance_number>A11111A</national_insurance_number>
+                <individual_aliases>
+                    <individual_aliases_element>
+                        <alias_id>777</alias_id>
+                        <sequence_number>1</sequence_number>
+                        <surname>HAS WELSH CHARACTERS</surname>
+                        <forenames>welsh test account</forenames>
+                    </individual_aliases_element>
+                    <individual_aliases_element>
+                        <alias_id>778</alias_id>
+                        <sequence_number>2</sequence_number>
+                        <surname>ALIAS 2 LN</surname>
+                        <forenames>Alias 2 fn</forenames>
+                    </individual_aliases_element>
+                </individual_aliases>
             </individual_details>
         </party_details>
 
